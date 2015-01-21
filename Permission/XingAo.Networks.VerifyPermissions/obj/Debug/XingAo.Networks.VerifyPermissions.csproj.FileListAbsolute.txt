@@ -1,0 +1,5 @@
+E:\Projects\Branch\s生本教育网\Trunk\XingAo.Networks.VerifyPermissions\bin\Debug\XingAo.NetWorks.VerifyPermissions.dll
+E:\Projects\Branch\s生本教育网\Trunk\XingAo.Networks.VerifyPermissions\bin\Debug\XingAo.NetWorks.VerifyPermissions.pdb
+E:\Projects\Branch\s生本教育网\Trunk\XingAo.Networks.VerifyPermissions\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\Branch\s生本教育网\Trunk\XingAo.Networks.VerifyPermissions\obj\Debug\XingAo.NetWorks.VerifyPermissions.dll
+E:\Projects\Branch\s生本教育网\Trunk\XingAo.Networks.VerifyPermissions\obj\Debug\XingAo.NetWorks.VerifyPermissions.pdb

@@ -2482,10 +2482,6 @@
     <None Include="Manager\themes\default\images\panel\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Branch\s生本教育网\Trunk\XingAo.Networks.VerifyPermissions\XingAo.Networks.VerifyPermissions.csproj">
-      <Project>{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}</Project>
-      <Name>XingAo.Networks.VerifyPermissions</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Core\XingAo.Core.Data\XingAo.Core.Data.csproj">
       <Project>{4CC6880C-ED52-433E-B42D-A82967756762}</Project>
       <Name>XingAo.Core.Data</Name>
@@ -2497,10 +2493,6 @@
     <ProjectReference Include="..\..\WeChat\XingAo.Networks.WeChat\XingAo.Networks.WeChat.csproj">
       <Project>{BA5F4142-17E8-49F0-850C-5BF3C8660AC2}</Project>
       <Name>XingAo.Networks.WeChat</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\XingAo.Networks.CMS.HttpModule\XingAo.Networks.CMS.HttpModule.csproj">
-      <Project>{504AF9BC-44AD-41CF-8861-63E92B654A30}</Project>
-      <Name>XingAo.Networks.CMS.HttpModule</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\XingAo.Networks.CMS.Model\XingAo.Networks.CMS.Model.csproj">
       <Project>{471479F5-FA31-47A1-9D01-176839D90561}</Project>

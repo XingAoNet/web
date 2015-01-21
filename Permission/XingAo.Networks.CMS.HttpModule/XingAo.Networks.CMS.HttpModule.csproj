@@ -49,11 +49,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\XingAo.Core\XingAo.Core.csproj">
+    <ProjectReference Include="..\..\Core\XingAo.Core\XingAo.Core.csproj">
       <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
       <Name>XingAo.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\XingAo.Networks.CMS.Model\XingAo.Networks.CMS.Model.csproj">
+    <ProjectReference Include="..\..\XingAo.Networks.CMS.Model\XingAo.Networks.CMS.Model.csproj">
       <Project>{471479F5-FA31-47A1-9D01-176839D90561}</Project>
       <Name>XingAo.Networks.CMS.Model</Name>
     </ProjectReference>
