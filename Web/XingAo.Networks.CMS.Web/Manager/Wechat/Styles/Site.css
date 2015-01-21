@@ -1,0 +1,44 @@
+﻿#header{height:35px}
+#leftside, #container, #splitBar, #splitBarProxy{top:40px}
+.btn {
+	position: relative;
+	padding: 4px 12px;
+	margin: 0;
+	color: #333;
+	-webkit-text-shadow: 0 1px 0 #fff;
+	text-shadow: 0 1px 0 white;
+	white-space: nowrap;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-background-clip: padding;
+	-moz-background-clip: padding;
+	background-clip: padding;
+	background-color: #F3F3F3;
+	background-repeat: repeat-x;
+    border: 1px solid gainsboro;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-image: linear-gradient(to bottom, whiteSmoke, #F1F1F1);
+}
+
+	
+.Container_Table {
+	display: table;
+	border-collapse: collapse;
+}
+.Container_Table div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.classtd{display:table-cell; border-color:#cc0;}
+.hide{ display:none;}
+.grid .gridTbody td.pictureTd div{height:auto;}
+

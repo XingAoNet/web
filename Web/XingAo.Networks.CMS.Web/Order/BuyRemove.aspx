@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BuyRemove.aspx.cs" Inherits="XingAo.Networks.CMS.Web.Order.BuyRemove" %>

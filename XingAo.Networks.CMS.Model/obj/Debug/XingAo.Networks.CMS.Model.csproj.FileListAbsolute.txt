@@ -1,0 +1,11 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\bin\Debug\XingAo.Networks.CMS.Model.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\bin\Debug\XingAo.Networks.CMS.Model.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\bin\Debug\EntityFramework.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\bin\Debug\EntityFramework.xml
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\obj\Debug\XingAo.Networks.CMS.Model.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\obj\Debug\XingAo.Networks.CMS.Model.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\bin\Debug\XingAo.Core.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\bin\Debug\XingAo.Core.Data.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Model\bin\Debug\XingAo.Core.Data.pdb

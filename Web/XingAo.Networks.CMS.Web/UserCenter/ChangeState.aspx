@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangeState.aspx.cs" Inherits="XingAo.Networks.CMS.Web.UserCenter.ChangeState" %>

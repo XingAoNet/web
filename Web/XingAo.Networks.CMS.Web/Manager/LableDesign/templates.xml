@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<bookstore>
+  <book genre="autobiography">
+    <title>Java</title>
+    <author>
+      <first-name>Mark</first-name>
+      <last-name>Michaelis</last-name>
+    </author>
+    <price>49.99</price>
+    <zk>0.5</zk>
+  </book>
+  <book genre="autobiography">
+    <title>PHP</title>
+    <author>
+      <first-name>Jeffrey</first-name>
+      <last-name>Richter</last-name>
+    </author>
+    <price>59.99</price>
+    <zk>0.6</zk>
+  </book>
+  <book genre="autobiography">
+    <title>C#</title>
+    <author>
+      <first-name>Bill</first-name>
+      <last-name>Wagner</last-name>
+    </author>
+    <price>39.99</price>
+    <zk>0.7</zk>
+  </book>
+</bookstore>

@@ -1,0 +1,15 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.Networks.CMS.HttpModule.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.Networks.CMS.HttpModule.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.Networks.CMS.Model.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.NetWorks.VerifyPermissions.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\EntityFramework.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.Networks.CMS.Model.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.NetWorks.VerifyPermissions.xml
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\EntityFramework.xml
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\obj\Debug\XingAo.Networks.CMS.HttpModule.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\obj\Debug\XingAo.Networks.CMS.HttpModule.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.Core.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.Core.Data.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.HttpModule\bin\Debug\XingAo.Core.Data.pdb

@@ -1,0 +1,169 @@
+﻿body{ margin:0px;font-size:12px;color:#333;}
+a { font-size: 12px; color: #333; }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; color: #333; }
+a:hover { text-decoration: underline; color: #333; }
+a:active { text-decoration: none; color: #444; }
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0;  padding:0;}
+body,button, input, select, textarea { font-family:宋体, tahoma, Arial, \5b8b\4f53, sans-serif;}
+h1, h2, h3, h4, h5, h6{ font-size:100%;}
+legend{ color:#000;}
+fieldset,img{ border:0;}
+button, input, select, textarea{ font-size:100%;}
+.Clear{ clear:both; height:0;}
+.GrayBorder{ border:1px solid #D1D1D1}
+
+.Box{ width:1000px; overflow:hidden; margin:auto;}
+/*首页顶部的通知公告*/
+.TopNotice{ height:30px; overflow:hidden; background:url(/Themes/Default/Images/TopNoticeBG.jpg)}
+.TopNotice .Box div{ width:500px; line-height:30px; height:30px; overflow:hidden; float:left;}
+.TopNotice .Box .NoticeTitle { width:80px; text-align:right;}
+.TopNotice .Box .Notice ul{list-style:none;height:30px;overflow:hidden;margin:0; width:300px;}
+.TopNotice .Box .Notice ul li{margin:0;height:30px; line-height:30px; clear:both; overflow:hidden; width:300px;}
+.TopNotice .Box .Notice ul li a{text-decoration:none;}
+.TopNotice .Box div.AddFav{ width:140px; float:right;}
+.TopNotice .Box .TopLogin{ float:left; width:250px; text-align:right;}
+
+
+.LogoSearch{ height:117px;}
+.LogoSearch .Logo{ width:360px; height:83px; margin:18px 0 0 21px; float:left}
+.LogoSearch .Search{ float:right; margin:18px 16px 0 0; width:550px;}
+.LogoSearch .Search .SearchClass{background:url(/Themes/Default/Images/TopSearchClassBG2.jpg); height:28px; overflow:hidden;}
+.LogoSearch .Search .SearchClass ul{ margin:0; padding:0; list-style:none; margin-left:-3px;}
+.LogoSearch .Search .SearchClass ul li{ float:left; width:70px; overflow:hidden; height:28px; line-height:28px; text-align:center; margin:0 3px; font-size:14px; cursor:pointer}
+.LogoSearch .Search ul li.Select{ background:url(/Themes/Default/Images/TopSearchClassBG.jpg) no-repeat; font-weight:bold;}
+.LogoSearch .SearchForm{ clear:both; height:40px; border:1px solid #D3D3D3; border-top:0; background:#F5F5F5}
+.LogoSearch .SearchForm .SearchInput{ float:left; width:426px;_width:416px; height:29px; border:1px solid #C9C9C9; border-right:0; overflow:hidden; margin:5px; margin-right:0}
+.LogoSearch .SearchForm .SearchInput input{ width:100%; height:100%;height:29px; border:0; padding-left:15px; line-height:29px;}
+.LogoSearch .SearchForm .SearchBtn{ float:right; margin:5px 5px 0 0;}
+
+.TopMenu{ background:#2870AB; height:65px; overflow:hidden;}
+.TopMenu .Box{ height:53px; margin-top:6px;}
+.TopMenu dl,.TopMenu dt,.TopMenu dd{ float:left; height:53px;}
+.TopMenu dl{ background:url(/Themes/Default/Images/MenuItemLeft.jpg) left top no-repeat #538DBD; height:53px; margin-right:8px;}
+.TopMenu dt{ width:33px; height:53px;padding-left:5px; font-weight:bold; line-height:78px; color:#FFF}
+.TopMenu dd a,.TopMenu dd a:visited{ color:#D9E7F2; line-height:24px; height:24px;}
+.TopMenu .Item1{ width:181px; margin-left:2px;}
+.TopMenu .Item1 dt{  background:url(/Themes/Default/Images/TopMenuICO.gif) no-repeat;}
+.TopMenu .Item1 dd{ width:135px; background:url(/Themes/Default/Images/MenuItemRight.jpg) top right no-repeat; padding:4px;}
+.TopMenu .Item2{ width:148px;}
+.TopMenu .Item2 dt{  background:url(/Themes/Default/Images/TopMenuICO.gif) -38px 0 no-repeat;}
+.TopMenu .Item2 dd{ width:102px; background:url(/Themes/Default/Images/MenuItemRight.jpg) top right no-repeat; padding:4px;}
+.TopMenu .Item3{ width:115px;}
+.TopMenu .Item3 dt{  background:url(/Themes/Default/Images/TopMenuICO.gif) -76px 0 no-repeat;}
+.TopMenu .Item3 dd{ width:69px; background:url(/Themes/Default/Images/MenuItemRight.jpg) top right no-repeat; padding:4px;}
+.TopMenu .Item4{ width:524px; margin-right:0}
+.TopMenu .Item4 dt{  background:url(/Themes/Default/Images/TopMenuICO.gif) -114px 0 no-repeat;}
+.TopMenu .Item4 dd{ width:478px; background:url(/Themes/Default/Images/MenuItemRight.jpg) top right no-repeat; padding:4px;}
+
+.IndexBox1{ height:493px; width:998px;}
+.IndexBox1 .Left{ float:left; width:217px; border-right:1px solid #E4E4E4; height:493px;}
+.IndexBox1 .Left h1{ padding:10px 0 10px 15px; font-size:14px}
+.IndexBox1 .Left ul{  list-style:none; padding:0 }
+.IndexBox1 .Left ul li{height:46px;padding:5px 0 0 15px;}
+.IndexBox1 .Left ul li:hover{ background:#F7FEFF;}
+.IndexBox1 .Left .ICO{ display:block; background:url(/Themes/Default/Images/LeftICO.gif) no-repeat; height:19px; padding-left:22px; line-height:19px; font-size:14px; font-weight:bold}
+.IndexBox1 .Left .Link{ height:24px; line-height:24px; overflow:hidden;}
+.IndexBox1 .Left .Link a,.IndexBox1 .Left .Link a:visited,.IndexBox1 .Left .Link a:hover{ color:#989898; text-decoration: none;}
+.IndexBox1 .Left ul li .subMenu{ position:absolute; border:1px solid #c8c8c8; display:none; background:#F7FEFF; padding:12px 17px; z-index:999;width:437px; margin:-50px auto auto 202px;}
+
+
+.IndexBox1 .Mid{float:left; width:574px;}
+.IndexBox1 .Mid .MidTab{ width:554px; margin:auto; margin-top:12px;}
+.IndexBox1 .Mid .MidTab .navTab{ margin:0; padding:0; list-style:none;}
+.IndexBox1 .Mid .MidTab .navTab li{ float:left; padding:0 15px; text-align:center; font-size:14px; cursor:pointer; height:26px; line-height:26px;}
+.IndexBox1 .Mid .MidTab .navTab li.Select{ color:#FFF; font-weight:bold; background:#458FCE}
+.IndexBox1 .Mid .MidTab .navTab li.More{ float: right; margin-right:3px; font-size:12px; cursor:auto}
+.IndexBox1 .Mid .MidTab .List{ border-top:1px solid #458FCE; padding-top:8px;}
+.IndexBox1 .Mid .MidTab .List ul li.news_list{padding:5px 15px;display:block; height:20px; background: url("/Themes/Default/Images/Point.jpg") no-repeat scroll 5px 12px rgba(0, 0, 0, 0);}
+.IndexBox1 .Mid .MidTab .List ul li.news_list span{float:right;}
+
+.IndexBox1 .Right{float:left; width:205px;border-left:1px solid #E4E4E4}
+.IndexBox1 .Right .Login{ width:90%; margin:auto; height:200px; overflow:hidden;}
+.IndexBox1 .Right .Login h1{ padding:10px 0; font-size:16px}
+.IndexBox1 .Right .Login .FormInpu div{ padding:3px 0;_padding:4px 0; width:175px; margin:auto;text-align:center;}
+.IndexBox1 .Right .Login div.Btn{width:100%}
+.IndexBox1 .Right .Login #UserLoginForm .FormInpu Input{ width:110px; height:22px; border:1px solid #CCC; line-height:22px; padding-left:5px;}
+.IndexBox1 .Right .Login #UserLoginForm #Login_VCode{ width:48px; vertical-align:middle;}
+.IndexBox1 .Right .Login #UserLoginForm #ImageCode{ vertical-align:middle;}
+.IndexBox1 .Right .Login .loginUtitly{ padding:5px 0;_padding:3px 0; text-align:center;}
+.IndexBox1 .Right .Statistics{ width:95%; border:1px solid #DEDEDE; border-left:0; border-right:0; margin:5px auto; line-height:25px; text-align:center; padding:8px 0}
+.IndexBox1 .Right .Statistics span{ font-weight:bold; color:#E6393B}
+.IndexBox1 .Right .FastService h2{ background:url(/Themes/Default/Images/ICO.jpg) 10px 11px no-repeat; padding:8px 0 8px 25px;}
+.IndexBox1 .Right .FastService ul{ width:88%; margin:auto; list-style:none;}
+.IndexBox1 .Right .FastService ul li{ float:left; background:url(/Themes/Default/Images/Point.jpg) 0 12px no-repeat; height:29px; line-height:29px; width:80px; padding-left:5px; overflow:hidden;}
+
+.IndexBox2{ height:350px; width:998px; margin-top:8px;}
+.BoxTitle{ border-bottom:2px solid #0769B0; height:50px; overflow:hidden;}
+.BoxTitle img{ vertical-align:middle; margin-right:20px;}
+.IndexBox2 .left,.IndexBox2 .right{ float:left; overflow: hidden;}
+.IndexBox2 .left{ width:204px; border-right:1px solid #E4E4E4;}
+.IndexBox2 .left h2{ background:url(/Themes/Default/Images/ICO.jpg) 10px 8px no-repeat; padding:5px 0 5px 25px;}
+.IndexBox2 .left ul{ width:184px; margin:auto; margin-top:15px; padding:0; list-style:none;}
+.IndexBox2 .left li{ width:92px; height:65px; overflow:hidden; text-align:center; float:left;}
+.IndexBox2 .left li div{ width:42px; height:42px; text-indent: -11cm; background:url(/Themes/Default/Images/TypeClassICO.jpg) no-repeat; margin:0 auto 3px auto}
+.IndexBox2 .left li a,.IndexBox2 .left li a:visited{ color:#ACACAC}
+.IndexBox2 .right{ width:793px;}
+.IndexBox2 .right ul{ width:750px; margin:auto; margin-top:15px; padding:0; list-style:none; overflow:hidden;}
+.IndexBox2 .right li{ float:left; width:144px; margin:0 3px; _margin:0 2px; height:205px; overflow:hidden;}
+.IndexBox2 .right li span{ font-weight:bold; color:#CA0000}
+.IndexBox2 .right li div{ word-break:break-all; width:144px; height:44px; line-height:22px; overflow:hidden;}
+.IndexBox2 .right .recommendation{ clear:both; height:61px; padding-left:35px; width:720px; margin:auto; margin-top:8px; overflow:hidden; background:url(/Themes/Default/Images/recommendation.jpg) #F5F5F5 no-repeat}
+.IndexBox2 .right .recommendation ul{ width:720px; margin:8px auto 0 auto;}
+.IndexBox2 .right .recommendation li{ width:350px; height:22px; line-height:22px; overflow:hidden; margin:0; background:url(/Themes/Default/Images/Point2.jpg) left center no-repeat; padding-left: 10px}
+
+.IndexBox3{ height:350px; width:998px; margin-top:8px;}
+.IndexBox3 .List div{ float:left; border-right:1px solid #E4E4E4; height:350px;}
+.IndexBox3 .List div h2{background:url(/Themes/Default/Images/ICO.jpg) 10px 13px no-repeat; padding:10px 0 10px 25px; font-size:14px}
+.IndexBox3 .List ul{ width:334px; margin:auto; overflow:hidden;}
+.IndexBox3 .List ul li{ margin-left:20px; list-style:disc; height:30px; line-height:30px;}
+.IndexBox3 .List ul li.First{ margin:0; height:75px; padding:0 8px 5px 8px; line-height:23px; width:98%; background:url(/Themes/Default/Images/BlueLine.jpg) left bottom repeat-x;}
+.IndexBox3 .List ul li.First img{ float:left; margin:0 5px 5px 0; width:130px; height:75px;}
+.IndexBox3 .List ul li.First .Info{ float:right; width:58%; word-break:break-all; height:75px; overflow:hidden; text-overflow: ellipsis;}
+.IndexBox3 .List ul li.First .Info h1{ color:#096AB7}
+.IndexBox3 .List .Left{ width:359px}
+.IndexBox3 .List .Mid{ width:362px}
+.IndexBox3 .List .Right{ width:275px; border:0}
+.IndexBox3 .List .Right ul{ width:95%; margin:auto; padding:0; overflow:hidden;}
+.IndexBox3 .List .Right li{ height:25px; line-height:25px; padding-left:18px; background:url(/Themes/Default/Images/HitICO.jpg) no-repeat; list-style:none;}
+.IndexBox3 .List .Right img{ margin:12px auto 3px 15px;}
+
+
+.IndexBox4{ height:290px; width:998px; margin-top:8px;}
+.IndexBox4 .List div{ float:left; border-right:1px solid #E4E4E4; height:350px;}
+.IndexBox4 .List div h2{background:url(/Themes/Default/Images/ICO.jpg) 10px 13px no-repeat; padding:10px 0 10px 25px; font-size:14px}
+.IndexBox4 .List .Left{ width:174px}
+.IndexBox4 .List .Left ul{ width:145px; margin:auto; overflow:hidden; margin-top:-5px;}
+.IndexBox4 .List .Left li{ background:url(/Themes/Default/Images/BlueLine.jpg) left bottom repeat-x; padding:3px 0; font-weight:bold; line-height:22px;}
+.IndexBox4 .List .Left li a,.IndexBox4 .List .Left li a:hover,.IndexBox4 .List .Left li a:visited{ font-weight:normal; color:#666;}
+.IndexBox4 .List .Mid{ width:547px}
+.IndexBox4 .List .Mid ul{ width:523px; margin:9px auto 0 auto;}
+.IndexBox4 .List .Mid ul li{width:245px; float:left; padding-left:15px; height:23px; line-height:23px;background: url(/Themes/Default/Images/Point.jpg) 3px center no-repeat; list-style:none; }
+.IndexBox4 .List .Mid ul li.First{ padding:0;width:99%; height:110px; line-height:22px; overflow:hidden; float:none; background:none}
+.IndexBox4 .List .Mid ul li.First img{ width:190px; height:110px; float:left}
+.IndexBox4 .List .Mid ul li.First .Info{ float:right; width:308px; height:110px; overflow:hidden; margin-right:10px;_margin-right:5px; word-break:break-all; border:0; color:#8D8D8D}
+.IndexBox4 .List .Mid ul li.First .Info h1{color:#FC6D0D}
+.IndexBox4 .List .Mid ul li.title{ clear:both; padding:0; width:99%; height:25px; line-height:25px; overflow:hidden; float:none; background:none}
+.IndexBox4 .List .Mid ul li.title h2{ padding:0 0 0 15px; background-position:0 center;}
+.IndexBox4 .List .Right{ width:275px; border:0}
+.IndexBox4 .List .Right ul{ width:255px; margin:-10px auto 0 auto; padding:0; overflow:hidden;}
+.IndexBox4 .List .Right li{ height:21px; line-height:21px;padding:0 0 0 18px; background:url(/Themes/Default/Images/Point.jpg) 5px center no-repeat; list-style:none; clear:both;}
+.IndexBox4 .List .Right li.First{ background:url(/Themes/Default/Images/BlueLine.jpg) left bottom repeat-x; height:75px; padding:6px 0; width:99%;}
+.IndexBox4 .List .Right li.First img{ float:left; height:75px; width:96px;}
+.IndexBox4 .List .Right li.First .Info{ float:left; width:150px; height:75px; overflow:hidden; margin-left:5px; border:0; word-break:break-all; color:#8D8D8D}
+.IndexBox4 .List .Right li.First .Info h3{ color:#035FA2}
+
+
+.IndexBox5{ height:115px; width:998px; margin-top:8px;}
+.IndexBox5 .SchoolList{ border:5px solid #FFF; line-height:20px;}
+.IndexBox5 .SchoolList a{ margin-right:15px; background:url(/Themes/Default/Images/Point2.jpg) left center no-repeat; padding-left:7px; display:block; overflow:hidden; width:100px; height:23px; line-height:23px; float:left;}
+
+.IndexBox6{ height:115px; width:998px; margin-top:8px; background:url(/Themes/Default/Images/Title_FriendLinkBG.jpg) repeat-x}
+.IndexBox6 .List{ border:5px solid #FFF; line-height:20px}
+.IndexBox6 .List a{ margin-right:10px; background:url(/Themes/Default/Images/Point2.jpg) left center no-repeat; padding-left:7px; display:block; overflow:hidden; width:120px; height:23px; line-height:23px; float:left;}
+
+
+.Foot{ margin-top:8px; border-top:1px solid #D1D1D1; height:95px; text-align:center; color:#666; background:#F6F6F6; line-height:23px; padding-top:30px;}
+.Foot a,.Foot a:hover,.Foot:visited{ color:#666}
+
+.HotData{ line-height:23px;}

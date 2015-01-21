@@ -1,0 +1,10 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{ margin:0px;font-size:63%;; color:#333333; font-family:宋体, Arial;}
+div{ font-size:1.2em}
+a:link{ color:#333333; text-decoration:none}
+a:hover{ color:#333333; text-decoration:underline}
+a:visited{ color:#333333; text-decoration:none}
+
+
+.TopNotice{}

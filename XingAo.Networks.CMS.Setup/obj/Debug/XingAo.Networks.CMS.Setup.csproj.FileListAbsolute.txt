@@ -1,0 +1,5 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Setup\bin\XingAo.Networks.CMS.Setup.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Setup\bin\XingAo.Networks.CMS.Setup.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Setup\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Setup\obj\Debug\XingAo.Networks.CMS.Setup.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Setup\obj\Debug\XingAo.Networks.CMS.Setup.pdb

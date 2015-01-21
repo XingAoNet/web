@@ -1,0 +1,15 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Networks.CMS.DbHelper.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Networks.CMS.DbHelper.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\EntityFramework.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Networks.CMS.Common.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Networks.CMS.InterFace.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Networks.CMS.Common.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Networks.CMS.InterFace.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\EntityFramework.xml
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\obj\Debug\XingAo.Networks.CMS.DbHelper.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\obj\Debug\XingAo.Networks.CMS.DbHelper.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Core.Web.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Core.Web.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.DbHelper\bin\Debug\XingAo.Core.pdb

@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XingAo.NetWorks.VerifyPermissions</name>
+    </assembly>
+    <members>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.IModels.IUser">
+            <summary>
+            用户实体类接口
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IUser.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IUser.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IUser.UserCode">
+            <summary>
+            用户编码
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IUser.Password">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IUser.Enable">
+            <summary>
+            帐号是否可用（true可以，false 禁用）
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IUser.IsDel">
+            <summary>
+            帐号是否被删除
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IUser.MenuList">
+            <summary>
+            当前用户下所拥有的权限菜单
+            </summary>
+        </member>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.Enum.Operating">
+            <summary>
+            操作权限枚举
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Add">
+            <summary>
+            添加
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Edit">
+            <summary>
+            修改
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.List">
+            <summary>
+            列表
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Move">
+            <summary>
+            批量移动
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Del">
+            <summary>
+            删除（单个或多个）
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.DelAll">
+            <summary>
+            全部删除
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Audit">
+            <summary>
+            已审核
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.UnAudit">
+            <summary>
+            未审核
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Enable">
+            <summary>
+            可用
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Disenable">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Import">
+            <summary>
+            导入
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Export">
+            <summary>
+            导出
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.ShowInfo">
+            <summary>
+            查看详细
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.BackUp">
+            <summary>
+            备份
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Reduction">
+            <summary>
+            还原
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Print">
+            <summary>
+            打印
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.Repayment">
+            <summary>
+            还款
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.StrikeBalance">
+            <summary>
+            冲单、冲帐
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.BackBottle">
+            <summary>
+            回瓶数
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.Operating.OnlyLogin">
+            <summary>
+            特殊操作权限
+            </summary>
+        </member>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.Models.MenuOperating">
+            <summary>
+            菜单-权限实体类
+            </summary>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Models.MenuOperating.#ctor(XingAo.NetWorks.VerifyPermissions.IModels.IMenu)">
+            <summary>
+            菜单-权限实体类 构造
+            </summary>
+            <param name="menu">菜单</param>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.Models.MenuOperating.Menu">
+            <summary>
+            菜单信息
+            </summary>
+        </member>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission">
+            <summary>
+            用户权限验证类
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.li">
+            <summary>
+            用户菜单与操作权限列表
+            </summary>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.SetUserOperating(XingAo.NetWorks.VerifyPermissions.IModels.IUser)">
+            <summary>
+            登记用户权限（在验证权限前必须执行一次）
+            </summary>
+            <param name="userinfo"></param>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.IsHavePermission(XingAo.NetWorks.VerifyPermissions.IModels.IMenu,XingAo.NetWorks.VerifyPermissions.Enum.Operating)">
+            <summary>
+            验证是否有此权限
+            </summary>
+            <param name="menu">菜单</param>
+            <param name="operating">操作类型枚举</param>
+            <returns></returns>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.IsHavePermission(System.String,XingAo.NetWorks.VerifyPermissions.Enum.Operating)">
+            <summary>
+            验证是否有此权限
+            </summary>
+            <param name="menu">菜单编码</param>
+            <param name="operating">操作类型枚举</param>
+            <returns></returns>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.IsHavePermission(System.Int32,XingAo.NetWorks.VerifyPermissions.Enum.Operating)">
+            <summary>
+            验证是否有此权限
+            </summary>
+            <param name="menuID">菜单ID</param>
+            <param name="operating">操作类型枚举</param>
+            <returns></returns>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.IsHavePermission(XingAo.NetWorks.VerifyPermissions.IModels.IMenu,XingAo.NetWorks.VerifyPermissions.Enum.Operating,XingAo.NetWorks.VerifyPermissions.Models.ErrorInfo)">
+            <summary>
+            验证是否有此权限
+            </summary>
+            <param name="menu">菜单</param>
+            <param name="operating">操作类型枚举</param>
+            <param name="err">回传具体错误</param>
+            <returns></returns>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.GetUserOperating">
+            <summary>
+            返回所有菜单对应的可操作权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.GetUserOperating(XingAo.NetWorks.VerifyPermissions.IModels.IMenu)">
+            <summary>
+            返回指定菜单下所拥有的权限
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.GetUserOperating(System.Int32)">
+            <summary>
+            返回指定菜单下所拥有的权限
+            </summary>
+            <param name="menuID">指定菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.UserPermission.GetUserOperating(System.String)">
+            <summary>
+            返回指定菜单下所拥有的权限
+            </summary>
+            <param name="menuCode">指定菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.IModels.IOperatingInfo">
+            <summary>
+            操作权限实体接口
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IOperatingInfo.OperatingEnum">
+            <summary>
+            具体操作
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IOperatingInfo.AllowGetDataMilliseconds">
+            <summary>
+            允许取多少毫秒内的数据（扩展属性）
+            </summary>
+        </member>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.Utility.Reflection">
+            <summary>
+            反射操作类
+            </summary>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.Reflection.GetPropertyInfo(System.String,System.String)">
+            <summary>
+            取类所有公共属性（要求可序列化的）
+            </summary>
+            <param name="NameSpace">命名空间</param>
+            <param name="ClassName">类名</param>
+            <returns></returns>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.Reflection.GetOperatingKeyValue">
+            <summary>
+            反射 操作权限枚举    的名称及序号（序号从0开始）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.Reflection.GetOperatingDescriptionValue">
+            <summary>
+            取  操作权限枚举    的描述及索引值（序号从0开始）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.Utility.IntToEnum">
+            <summary>
+            整型转枚举
+            </summary>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Utility.IntToEnum.GetOperatingEnumFromInt(System.Int32)">
+            <summary>
+            根据数字转成操作权限枚举
+            </summary>
+            <param name="number">值</param>
+            <returns>操作权限枚举</returns>
+        </member>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.Enum.ErrorType">
+            <summary>
+            错误类型枚举
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.ErrorType.ParamsErr">
+            <summary>
+            参数错误
+            </summary>
+        </member>
+        <member name="F:XingAo.NetWorks.VerifyPermissions.Enum.ErrorType.NullMenuOperatingErr">
+            <summary>
+            未设置用户权限错误（即未调用过UserPermission.SetUserOperating）
+            </summary>
+        </member>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.Models.ErrorInfo">
+            <summary>
+            错误实体类
+            </summary>
+        </member>
+        <member name="M:XingAo.NetWorks.VerifyPermissions.Models.ErrorInfo.ToString">
+            <summary>
+            返回ErrorInfo中字段信息（包括：错误信息+错误号+错误类型）
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.Models.ErrorInfo.ErrMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.Models.ErrorInfo.ErrType">
+            <summary>
+            错误类型
+            </summary>
+        </member>
+        <member name="T:XingAo.NetWorks.VerifyPermissions.IModels.IMenu">
+            <summary>
+             权限菜单接口
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IMenu.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IMenu.ID">
+            <summary>
+            菜单ID（与Code至少要有一个是唯一）
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IMenu.Code">
+            <summary>
+            菜单编号（与ID至少要有一个是唯一）
+            </summary>
+        </member>
+        <member name="P:XingAo.NetWorks.VerifyPermissions.IModels.IMenu.OperatingInfo">
+            <summary>
+            权限信息
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,10 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core\bin\Debug\XingAo.Core.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core\obj\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core\obj\Debug\XingAo.Core.pdb
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core\bin\Debug\XingAo.Core.pdb
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core\obj\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core\obj\Debug\XingAo.Core.pdb

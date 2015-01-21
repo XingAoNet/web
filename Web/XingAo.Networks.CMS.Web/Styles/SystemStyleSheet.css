@@ -1,0 +1,108 @@
+﻿ul,li{ margin:0; padding:0; list-style:none;}
+img{border:0}
+.clear{ clear:both;}
+/*///////////////////////////////////////////无限级横向导航样式开始///////////////////////////////////////////*/
+
+
+#menu,#menu ul,#menu li,#menu a{ margin:0; padding:0 }
+#menu{ width:1053px; margin:0 auto; padding:0px;}  
+#menu li{ height:46px; line-height:46px; width:117px;float: left;cursor:pointer;background:url(/Themes/Default/images/menu_fg.jpg) right no-repeat; overflow:hidden;}
+#menu a {color:#FFF;display: block;text-align:center;}
+#menu a:hover {background:url(/Themes/Default/images/menu_on.jpg) no-repeat; }
+#menu a.on {background:url(/Themes/Default/images/menu_on.jpg) top right no-repeat; }
+#menu .children {display: none;z-index:99999; width:117px;position: absolute;background-color:#3CA3DD;}/*子菜单ul*/
+#menu ul .children {top: 0;	left: 100%;}/*子子菜单ul*/
+#menu .children li { float: none;height: 30px !important;line-height:30px;margin: 0;padding: 0;	position: relative;display: inherit !important;display: inline; /* for IE 6 */height: 1%; /* for IE 6 */ background:url()}
+#menu .children a { height:30px; color:#FFF; font-weight:normal;}
+#menu .children a:hover {font-weight:normal; color:black; background:url(/Themes/Default/images/menu_on.jpg) no-repeat;}
+#menu ul a.sublink {border-right: 3px solid #4281B7;}
+/*///////////////////////////////////////////无限级横向导航样式结束///////////////////////////////////////////*/
+
+
+/*///////////////////////////////////////////左侧菜单样式开始///////////////////////////////////////////*/
+.LeftMenu{float:left;width:160px;border:#dbe0e3 solid 2px;min-height:400px;}
+.LeftMenuUl{ width:100%; margin:0; padding:0; text-align:left; }
+.LeftMenuUl .first{height:30px;line-height:30px; padding-left:25px; overflow:hidden; background:url(/Themes/Default/images/2587115.jpg)  no-repeat -5px -5px; font-weight:bold;  font-size:13px; }
+.LeftMenuLi{ height:30px; margin:2px auto; padding-left:30px; color:#ccc; font-weight:bold; text-align:left;
+             line-height:30px; background:url('/Themes/Default/images/arrRight.png') no-repeat ; }
+.LeftMenuLi a,.LeftMenuLi a:hover,.LeftMenuLi a:visited{color:#000;}
+/*///////////////////////////////////////////左侧菜单样式结束///////////////////////////////////////////*/
+
+/*///////////////////////////////////////////网站位置导航样式开始///////////////////////////////////////////*/
+.SiteMap{ display:inline; height:25px; margin:0 auto;color:#2D73AE; background:url(/Images/SitemapLine.jpg) bottom repeat-x; }
+.SiteMap img{ margin:-3px 6px 0 6px; vertical-align:middle;}
+.SiteMap a,.SiteMap a:hover,.SiteMap a:visited{ color:#000}
+/*///////////////////////////////////////////网站位置导航样式结束///////////////////////////////////////////*/
+
+/*///////////////////////////////////////////滚动图片（带左右控制按钮）样式开始///////////////////////////////////////////*/
+.productshow{
+	width:1000px;
+	height:160px;
+	padding:0;
+	margin:0;
+	position:relative;
+	text-align:center;
+	margin-top:8px;
+}
+.productshow ul,.productshow li{margin:0; padding:0;list-style:none;}
+.productshow a.abtn{
+	position:absolute;
+	top:4px;
+	display:block;
+	height:150px;
+	width:11px;
+	overflow:hidden;
+	text-indent:-20000px;
+	background:url(/images/arrow30.gif) 0px center no-repeat;
+}
+.productshow a.aleft{
+	left:7px;
+}
+.productshow a.agrayleft{
+	cursor:default;
+	background-position:-22px center;
+}
+.productshow a.aright{
+	right:7px;
+	background-position:-11px center;
+}
+.productshow a.agrayright{
+	cursor:default;
+	background-position:-33px center;
+}
+
+
+.productshow .scrollcontainer{
+	width:960px;
+	height:150px;
+	overflow:hidden;
+	position:relative;
+	margin:0 auto;
+}
+.productshow .scrollcontainer ul{
+	width:20000px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-color:#FFF;
+}
+.productshow .scrollcontainer li{
+	float:left;
+	width:160px;
+	height:150px;
+	text-align:center;
+	background-color:#E0E0E0;
+	text-align:center;
+	border:1px solid #CCC;
+	margin:0 20px 0 10px
+}
+.productshow .scrollcontainer li .txtTitle{ clear:both; display:block; width:100%; height:23px; overflow:hidden;}
+.productshow .scrollcontainer li img{ border:5px solid #FFF; margin-bottom:3px;}
+.productshow .scrollcontainer a:hover img{
+	filter:alpha(opacity=86);-moz-opacity:0.86;opacity:0.86;
+}
+/*///////////////////////////////////////////滚动图片（带左右控制按钮）样式结束///////////////////////////////////////////*/
+  
+
+/*分页*/
+#pageinfo{ font-size:13px;bottom:0px;line-height:30px;}

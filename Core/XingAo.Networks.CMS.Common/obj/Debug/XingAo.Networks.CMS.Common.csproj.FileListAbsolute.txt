@@ -1,0 +1,10 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\bin\Debug\XingAo.Networks.CMS.Common.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\bin\Debug\XingAo.Networks.CMS.Common.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\bin\Debug\OpenSmtp.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\obj\Debug\XingAo.Networks.CMS.Common.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\obj\Debug\XingAo.Networks.CMS.Common.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\bin\Debug\XingAo.Core.Web.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\bin\Debug\XingAo.Core.Web.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.Common\bin\Debug\XingAo.Core.pdb

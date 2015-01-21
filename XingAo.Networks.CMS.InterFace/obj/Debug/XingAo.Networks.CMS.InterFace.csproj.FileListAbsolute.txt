@@ -1,0 +1,7 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.InterFace\bin\Debug\XingAo.Networks.CMS.InterFace.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.InterFace\bin\Debug\XingAo.Networks.CMS.InterFace.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.InterFace\bin\Debug\EntityFramework.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.InterFace\bin\Debug\EntityFramework.xml
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.InterFace\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.InterFace\obj\Debug\XingAo.Networks.CMS.InterFace.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.InterFace\obj\Debug\XingAo.Networks.CMS.InterFace.pdb

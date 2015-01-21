@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{471479F5-FA31-47A1-9D01-176839D90561}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XingAo.Networks.CMS.Model</RootNamespace>
+    <AssemblyName>XingAo.Networks.CMS.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3thLib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Template\TemplateFileModel.cs" />
+    <Compile Include="WeiXin\Activities.cs" />
+    <Compile Include="WeiXin\Attention.cs" />
+    <Compile Include="WeiXin\BigWheel.cs" />
+    <Compile Include="WeiXin\BWPerson.cs" />
+    <Compile Include="WeiXin\BWWinPrize.cs" />
+    <Compile Include="Member\WebUsersResetPwd.cs" />
+    <Compile Include="Product\Product_OrderAddr.cs" />
+    <Compile Include="Member\WebUsersPointInfo.cs" />
+    <Compile Include="System\CustomMenu.cs" />
+    <Compile Include="Database\DataShare_Log.cs" />
+    <Compile Include="Database\DataShare_AccessToken.cs" />
+    <Compile Include="WeiXin\DefaultSettings.cs" />
+    <Compile Include="WeiXin\ImageMaterial.cs" />
+    <Compile Include="IModel.cs" />
+    <Compile Include="WeiXin\KeywordsIndex.cs" />
+    <Compile Include="WeiXin\LbsMaterial.cs" />
+    <Compile Include="System\ManagerUserGroup.cs" />
+    <Compile Include="Article\Advertising.cs" />
+    <Compile Include="Article\AdvertisingGroup.cs" />
+    <Compile Include="Article\Collect.cs" />
+    <Compile Include="Article\Collect_Pattern.cs" />
+    <Compile Include="Article\FriendLink.cs" />
+    <Compile Include="Article\FriendLinkGroup.cs" />
+    <Compile Include="System\ManagerUser.cs" />
+    <Compile Include="WeiXin\MaterialFamily.cs" />
+    <Compile Include="Member\Members.cs" />
+    <Compile Include="Member\Organization.cs" />
+    <Compile Include="Member\OrganizationElect.cs" />
+    <Compile Include="Member\Organization_Relation_Member.cs" />
+    <Compile Include="SMS\Phone_Msg.cs" />
+    <Compile Include="Product\Product_OrderBase.cs" />
+    <Compile Include="Product\Product_OrderInfo.cs" />
+    <Compile Include="Member\Registration.cs" />
+    <Compile Include="WeiXin\ScratchCard.cs" />
+    <Compile Include="WeiXin\ScratchCard_Goods.cs" />
+    <Compile Include="WeiXin\ScratchCard_PrizesLog.cs" />
+    <Compile Include="SMS\SMS_AutoSend.cs" />
+    <Compile Include="SMS\SMS_AutoSendMobs.cs" />
+    <Compile Include="SMS\SMS_Contact.cs" />
+    <Compile Include="SMS\SMS_ContactGroup.cs" />
+    <Compile Include="SMS\SMS_Templates.cs" />
+    <Compile Include="Template\SysLabels.cs" />
+    <Compile Include="System\ServiceBackModel.cs" />
+    <Compile Include="Database\DataShare_Users.cs" />
+    <Compile Include="Database\DataShare_ParameterConfig.cs" />
+    <Compile Include="Database\DataShare.cs" />
+    <Compile Include="Template\LabelParams.cs" />
+    <Compile Include="System\SystemMenu.cs" />
+    <Compile Include="Template\TemplatesBak.cs" />
+    <Compile Include="Template\Templates.cs" />
+    <Compile Include="Template\Labels.cs" />
+    <Compile Include="WeiXin\TextMaterial.cs" />
+    <Compile Include="System\WebNavigation.cs" />
+    <Compile Include="Member\WebUsers.cs" />
+    <Compile Include="WeiXin\Database_Account.cs" />
+    <Compile Include="Member\MemberGroups.cs" />
+    <Compile Include="Template\TemplatesGroup.cs" />
+    <Compile Include="WeiXin\WeiXin_Article.cs" />
+    <Compile Include="WeiXin\WeiXin_Reply.cs" />
+    <Compile Include="System\Written.cs" />
+    <Compile Include="Product\Product_Attribute.cs" />
+    <Compile Include="Product\Product_AttributeGroup.cs" />
+    <Compile Include="Product\Product_AttributeValues.cs" />
+    <Compile Include="Product\Product_Base.cs" />
+    <Compile Include="Product\Product_Class.cs" />
+    <Compile Include="Email\EmailSendModel.cs" />
+    <Compile Include="Email\EmailSendType.cs" />
+    <Compile Include="Email\EmailSettingModel.cs" />
+    <Compile Include="Email\EmailTemplateModel.cs" />
+    <Compile Include="Enums\AdShowTypeEnum.cs" />
+    <Compile Include="Enums\OrderManagerStateEnum.cs" />
+    <Compile Include="Enums\OrderStateEnum.cs" />
+    <Compile Include="Enums\ProductStateEnum.cs" />
+    <Compile Include="Enums\UserTypeEnum.cs" />
+    <Compile Include="Enums\WeiWebEnum.cs" />
+    <Compile Include="FormControl\ListFormControl.cs" />
+    <Compile Include="Database\CustomTable.cs" />
+    <Compile Include="Database\CustomTableField.cs" />
+    <Compile Include="Enums\DataValidationEnum.cs" />
+    <Compile Include="Enums\FieldTypeEnum.cs" />
+    <Compile Include="FormControl\ManagerFormControl.cs" />
+    <Compile Include="FormControl\SearchFormControl.cs" />
+    <Compile Include="Mappings\AdvertisingMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappings\CollectMapping.cs" />
+    <Compile Include="Mappings\Collect_PatternMapping.cs" />
+    <Compile Include="Mappings\CustomMenuMapping.cs" />
+    <Compile Include="Mappings\CustomTableFieldMapping.cs" />
+    <Compile Include="Mappings\CustomTableMapping.cs" />
+    <Compile Include="Mappings\LabelParamsMapping.cs" />
+    <Compile Include="Mappings\ManagerUserGroupMapping.cs" />
+    <Compile Include="Mappings\ManagerUserMapping.cs" />
+    <Compile Include="Mappings\OrganizationElectMapping.cs" />
+    <Compile Include="Mappings\Organization_Relation_MemberMapping.cs" />
+    <Compile Include="Mappings\OrganizationMapping.cs" />
+    <Compile Include="Mappings\Phone_MsgMapping.cs" />
+    <Compile Include="Mappings\SMS_TemplatesMapping.cs" />
+    <Compile Include="Mappings\SystemMenuMapping.cs" />
+    <Compile Include="Mappings\TemplatesMapping.cs" />
+    <Compile Include="Mappings\LabelsMapping.cs" />
+    <Compile Include="Mappings\WebNavigationMapping.cs" />
+    <Compile Include="Mappings\DataShareMapping.cs" />
+    <Compile Include="Mappings\DataShare_ParameterConfigMapping.cs" />
+    <Compile Include="Mappings\DataShare_UsersMapping.cs" />
+    <Compile Include="Mappings\SysLabelsMapping.cs" />
+    <Compile Include="Mappings\FriendLinkMapping.cs" />
+    <Compile Include="Mappings\FriendLinkGroupMapping.cs" />
+    <Compile Include="Mappings\AdvertisingGroupMapping.cs" />
+    <Compile Include="Mappings\MemberGroupsMapping.cs" />
+    <Compile Include="Mappings\WeiXin_AccountMapping.cs" />
+    <Compile Include="Mappings\TemplatesGroupMapping.cs" />
+    <Compile Include="Mappings\WeiXin_ReplyMapping.cs" />
+    <Compile Include="Mappings\DataShare_AccessTokenMapping.cs" />
+    <Compile Include="Mappings\DataShare_LogMapping.cs" />
+    <Compile Include="Other\DataShareUserStateModel.cs" />
+    <Compile Include="Other\HttpMessage.cs" />
+    <Compile Include="Other\ManagerUserCookiesModel.cs" />
+    <Compile Include="Other\NavConfig.cs" />
+    <Compile Include="Other\SiteConfig.cs" />
+    <Compile Include="Other\SMSConfig.cs" />
+    <Compile Include="Other\WebUserLoginModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\WebServiceUsers.cs" />
+    <Compile Include="SMS\APIResult.cs" />
+    <Compile Include="SMS\LogModel.cs" />
+    <Compile Include="SMS\MobAndNames.cs" />
+    <Compile Include="SMS\SendListModel.cs" />
+    <Compile Include="SMS\SendLog.cs" />
+    <Compile Include="SMS\Users.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\XingAo.Core.Data\XingAo.Core.Data.csproj">
+      <Project>{4CC6880C-ED52-433E-B42D-A82967756762}</Project>
+      <Name>XingAo.Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\XingAo.Core\XingAo.Core.csproj">
+      <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
+      <Name>XingAo.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

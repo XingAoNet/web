@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditForm.aspx.cs" Inherits="XingAo.Networks.CMS.Web.Manager.Product.Product.EditForm" %>

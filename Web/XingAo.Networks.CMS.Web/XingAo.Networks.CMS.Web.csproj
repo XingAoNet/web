@@ -1,0 +1,2546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E236C999-5C78-43A4-82E3-143208491E00}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XingAo.Networks.CMS.Web</RootNamespace>
+    <AssemblyName>XingAo.Networks.CMS.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3thLib\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3thLib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON">
+      <HintPath>..\..\..\..\3thLib\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataShare.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\arrow30.gif" />
+    <Content Include="Images\DefaultHeader.jpg" />
+    <Content Include="Images\fileTypeImages\icon_chm.gif" />
+    <Content Include="Images\fileTypeImages\icon_default.png" />
+    <Content Include="Images\fileTypeImages\icon_doc.gif" />
+    <Content Include="Images\fileTypeImages\icon_exe.gif" />
+    <Content Include="Images\fileTypeImages\icon_mp3.gif" />
+    <Content Include="Images\fileTypeImages\icon_mv.gif" />
+    <Content Include="Images\fileTypeImages\icon_pdf.gif" />
+    <Content Include="Images\fileTypeImages\icon_ppt.gif" />
+    <Content Include="Images\fileTypeImages\icon_psd.gif" />
+    <Content Include="Images\fileTypeImages\icon_rar.gif" />
+    <Content Include="Images\fileTypeImages\icon_txt.gif" />
+    <Content Include="Images\fileTypeImages\icon_xls.gif" />
+    <Content Include="Images\icons-18-black.png" />
+    <Content Include="Images\icons-18-white.png" />
+    <Content Include="Images\icons-36-black.png" />
+    <Content Include="Images\icons-36-white.png" />
+    <Content Include="Images\leftMenuBG.jpg" />
+    <Content Include="Images\list.png" />
+    <Content Include="Images\Loading.gif" />
+    <Content Include="Images\Menu.jpg" />
+    <Content Include="Images\MenuLine.jpg" />
+    <Content Include="Images\SitemapLine.jpg" />
+    <Content Include="Images\Token.jpg" />
+    <Content Include="Manager\Advertising\AD\1.jpg" />
+    <Content Include="Manager\Advertising\AD\Edit.aspx" />
+    <Content Include="Manager\Advertising\AD\Main.aspx" />
+    <Content Include="Manager\Advertising\AD\全屏飘浮.js" />
+    <Content Include="Manager\Advertising\AD\左侧固定位置可关闭广告模板.js" />
+    <Content Include="Manager\Advertising\Groups\Edit.aspx" />
+    <Content Include="Manager\Advertising\Groups\Main.aspx" />
+    <Content Include="Manager\Article\Comment\Edit.aspx" />
+    <Content Include="Manager\Article\Comment\Main.aspx" />
+    <Content Include="Manager\Article\Content\Main.aspx" />
+    <Content Include="Manager\Base\Cookies\Main.aspx" />
+    <Content Include="Manager\CacheManager\Main.aspx" />
+    <Content Include="Manager\CacheManager\ShowCacheValue.aspx" />
+    <Content Include="Manager\ChangePwd.aspx" />
+    <Content Include="Manager\Collect\DoAction.aspx" />
+    <Content Include="Manager\Collect\Edit.aspx" />
+    <Content Include="Manager\Collect\Main.aspx" />
+    <Content Include="Manager\CustomerService.htm" />
+    <Content Include="Manager\Custom\Edit.aspx" />
+    <Content Include="Manager\Custom\Main.aspx" />
+    <Content Include="Manager\DataShare\Edit.aspx" />
+    <Content Include="Manager\DataShare\Main.aspx" />
+    <Content Include="Manager\DataShare\ParameterConf\Edit.aspx" />
+    <Content Include="Manager\DataShare\ParameterConf\Main.aspx" />
+    <Content Include="Manager\DataShare\Users\Edit.aspx" />
+    <Content Include="Manager\DataShare\Users\Main.aspx" />
+    <Content Include="Manager\DBManager\Edit.aspx" />
+    <Content Include="Manager\DBManager\Fields\Edit.aspx" />
+    <Content Include="Manager\DBManager\Fields\Main.aspx" />
+    <Content Include="Manager\DBManager\Fields\SaveDel.ashx" />
+    <Content Include="Manager\DBManager\Main.aspx" />
+    <Content Include="Manager\DBManager\SaveDel.ashx" />
+    <Content Include="Manager\EmailManager\EmailSend\Edit.aspx" />
+    <Content Include="Manager\EmailManager\EmailSend\Main.aspx" />
+    <Content Include="Manager\EmailManager\EmailSetting\Edit.aspx" />
+    <Content Include="Manager\EmailManager\EmailTemplate\Edit.aspx" />
+    <Content Include="Manager\EmailManager\EmailTemplate\Main.aspx" />
+    <Content Include="Manager\FriendLink\FriendLink\Edit.aspx" />
+    <Content Include="Manager\FriendLink\FriendLink\Main.aspx" />
+    <Content Include="Manager\FriendLink\Group\Edit.aspx" />
+    <Content Include="Manager\FriendLink\Group\Main.aspx" />
+    <Content Include="Manager\js\dwz.database.js" />
+    <Content Include="Manager\kindeditor417\examples\auto-height.html" />
+    <Content Include="Manager\kindeditor417\examples\colorpicker.html" />
+    <Content Include="Manager\kindeditor417\examples\custom-plugin.html" />
+    <Content Include="Manager\kindeditor417\examples\custom-theme.html" />
+    <Content Include="Manager\kindeditor417\examples\default.html" />
+    <Content Include="Manager\kindeditor417\examples\dialog.html" />
+    <Content Include="Manager\kindeditor417\examples\dynamic-load.html" />
+    <Content Include="Manager\kindeditor417\examples\file-dialog.html" />
+    <Content Include="Manager\kindeditor417\examples\file-manager.html" />
+    <Content Include="Manager\kindeditor417\examples\filter-mode.html" />
+    <Content Include="Manager\kindeditor417\examples\image-dialog.html" />
+    <Content Include="Manager\kindeditor417\examples\index.css" />
+    <Content Include="Manager\kindeditor417\examples\index.html" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui.html" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\css\smoothness\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\js\jquery-ui-1.9.2.custom.js" />
+    <Content Include="Manager\kindeditor417\examples\jquery-ui\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Manager\kindeditor417\examples\jquery.html" />
+    <Content Include="Manager\kindeditor417\examples\jquery.js" />
+    <Content Include="Manager\kindeditor417\examples\multi-image-dialog.html" />
+    <Content Include="Manager\kindeditor417\examples\multi-language.html" />
+    <Content Include="Manager\kindeditor417\examples\newline.html" />
+    <Content Include="Manager\kindeditor417\examples\node.html" />
+    <Content Include="Manager\kindeditor417\examples\paste-type.html" />
+    <Content Include="Manager\kindeditor417\examples\qqstyle.html" />
+    <Content Include="Manager\kindeditor417\examples\readonly.html" />
+    <Content Include="Manager\kindeditor417\examples\simple.html" />
+    <Content Include="Manager\kindeditor417\examples\uploadbutton.html" />
+    <Content Include="Manager\kindeditor417\examples\url-type.html" />
+    <Content Include="Manager\kindeditor417\examples\word-count.html" />
+    <Content Include="Manager\kindeditor417\kindeditor-all-min.js" />
+    <Content Include="Manager\kindeditor417\kindeditor-all.js" />
+    <Content Include="Manager\kindeditor417\kindeditor-min.js" />
+    <Content Include="Manager\kindeditor417\kindeditor.js" />
+    <Content Include="Manager\kindeditor417\lang\zh_CN.js" />
+    <Content Include="Manager\kindeditor417\plugins\anchor\anchor.js" />
+    <Content Include="Manager\kindeditor417\plugins\autoheight\autoheight.js" />
+    <Content Include="Manager\kindeditor417\plugins\baidumap\baidumap.js" />
+    <Content Include="Manager\kindeditor417\plugins\baidumap\index.html" />
+    <Content Include="Manager\kindeditor417\plugins\baidumap\map.html" />
+    <Content Include="Manager\kindeditor417\plugins\clearhtml\clearhtml.js" />
+    <Content Include="Manager\kindeditor417\plugins\code\code.js" />
+    <Content Include="Manager\kindeditor417\plugins\code\prettify.css" />
+    <Content Include="Manager\kindeditor417\plugins\code\prettify.js" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\emoticons.js" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\0.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\1.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\10.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\100.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\101.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\102.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\103.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\104.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\105.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\106.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\107.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\108.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\109.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\11.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\110.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\111.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\112.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\113.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\114.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\115.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\116.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\117.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\118.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\119.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\12.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\120.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\121.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\122.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\123.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\124.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\125.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\126.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\127.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\128.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\129.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\13.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\130.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\131.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\132.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\133.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\134.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\14.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\15.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\16.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\17.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\18.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\19.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\2.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\20.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\21.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\22.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\23.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\24.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\25.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\26.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\27.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\28.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\29.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\3.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\30.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\31.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\32.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\33.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\34.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\35.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\36.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\37.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\38.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\39.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\4.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\40.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\41.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\42.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\43.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\44.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\45.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\46.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\47.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\48.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\49.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\5.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\50.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\51.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\52.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\53.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\54.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\55.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\56.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\57.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\58.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\59.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\6.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\60.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\61.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\62.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\63.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\64.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\65.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\66.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\67.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\68.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\69.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\7.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\70.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\71.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\72.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\73.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\74.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\75.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\76.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\77.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\78.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\79.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\8.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\80.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\81.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\82.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\83.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\84.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\85.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\86.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\87.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\88.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\89.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\9.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\90.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\91.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\92.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\93.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\94.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\95.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\96.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\97.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\98.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\99.gif" />
+    <Content Include="Manager\kindeditor417\plugins\emoticons\images\static.gif" />
+    <Content Include="Manager\kindeditor417\plugins\filemanager\filemanager.js" />
+    <Content Include="Manager\kindeditor417\plugins\filemanager\images\file-16.gif" />
+    <Content Include="Manager\kindeditor417\plugins\filemanager\images\file-64.gif" />
+    <Content Include="Manager\kindeditor417\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="Manager\kindeditor417\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="Manager\kindeditor417\plugins\filemanager\images\go-up.gif" />
+    <Content Include="Manager\kindeditor417\plugins\flash\flash.js" />
+    <Content Include="Manager\kindeditor417\plugins\image\image.js" />
+    <Content Include="Manager\kindeditor417\plugins\image\images\align_left.gif" />
+    <Content Include="Manager\kindeditor417\plugins\image\images\align_right.gif" />
+    <Content Include="Manager\kindeditor417\plugins\image\images\align_top.gif" />
+    <Content Include="Manager\kindeditor417\plugins\image\images\refresh.png" />
+    <Content Include="Manager\kindeditor417\plugins\insertfile\insertfile.js" />
+    <Content Include="Manager\kindeditor417\plugins\lineheight\lineheight.js" />
+    <Content Include="Manager\kindeditor417\plugins\link\link.js" />
+    <Content Include="Manager\kindeditor417\plugins\map\map.html" />
+    <Content Include="Manager\kindeditor417\plugins\map\map.js" />
+    <Content Include="Manager\kindeditor417\plugins\media\media.js" />
+    <Content Include="Manager\kindeditor417\plugins\multiimage\images\image.png" />
+    <Content Include="Manager\kindeditor417\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="Manager\kindeditor417\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="Manager\kindeditor417\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="Manager\kindeditor417\plugins\multiimage\multiimage.js" />
+    <Content Include="Manager\kindeditor417\plugins\pagebreak\pagebreak.js" />
+    <Content Include="Manager\kindeditor417\plugins\plainpaste\plainpaste.js" />
+    <Content Include="Manager\kindeditor417\plugins\preview\preview.js" />
+    <Content Include="Manager\kindeditor417\plugins\quickformat\quickformat.js" />
+    <Content Include="Manager\kindeditor417\plugins\table\table.js" />
+    <Content Include="Manager\kindeditor417\plugins\template\html\1.html" />
+    <Content Include="Manager\kindeditor417\plugins\template\html\2.html" />
+    <Content Include="Manager\kindeditor417\plugins\template\html\3.html" />
+    <Content Include="Manager\kindeditor417\plugins\template\template.js" />
+    <Content Include="Manager\kindeditor417\plugins\wordpaste\wordpaste.js" />
+    <Content Include="Manager\kindeditor417\themes\common\anchor.gif" />
+    <Content Include="Manager\kindeditor417\themes\common\blank.gif" />
+    <Content Include="Manager\kindeditor417\themes\common\flash.gif" />
+    <Content Include="Manager\kindeditor417\themes\common\loading.gif" />
+    <Content Include="Manager\kindeditor417\themes\common\media.gif" />
+    <Content Include="Manager\kindeditor417\themes\common\rm.gif" />
+    <Content Include="Manager\kindeditor417\themes\default\background.png" />
+    <Content Include="Manager\kindeditor417\themes\default\default.css" />
+    <Content Include="Manager\kindeditor417\themes\default\default.png" />
+    <Content Include="Manager\kindeditor417\themes\qq\editor.gif" />
+    <Content Include="Manager\kindeditor417\themes\qq\qq.css" />
+    <Content Include="Manager\kindeditor417\themes\simple\simple.css" />
+    <Content Include="Manager\dwz.frag.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Manager\favicon.ico" />
+    <Content Include="Manager\js\dwz.accordion.js" />
+    <Content Include="Manager\js\dwz.ajax.js" />
+    <Content Include="Manager\js\dwz.alertMsg.js" />
+    <Content Include="Manager\js\dwz.barDrag.js" />
+    <Content Include="Manager\js\dwz.checkbox.js" />
+    <Content Include="Manager\js\dwz.combox.js" />
+    <Content Include="Manager\js\dwz.contextmenu.js" />
+    <Content Include="Manager\js\dwz.core.js" />
+    <Content Include="Manager\js\dwz.cssTable.js" />
+    <Content Include="Manager\js\dwz.datepicker.js" />
+    <Content Include="Manager\js\dwz.dialog.js" />
+    <Content Include="Manager\js\dwz.dialogDrag.js" />
+    <Content Include="Manager\js\dwz.drag.js" />
+    <Content Include="Manager\js\dwz.effects.js" />
+    <Content Include="Manager\js\dwz.history.js" />
+    <Content Include="Manager\js\dwz.navTab.js" />
+    <Content Include="Manager\js\dwz.pagination.js" />
+    <Content Include="Manager\js\dwz.panel.js" />
+    <Content Include="Manager\js\dwz.print.js" />
+    <Content Include="Manager\js\dwz.regional.zh.js" />
+    <Content Include="Manager\js\dwz.resize.js" />
+    <Content Include="Manager\js\dwz.scrollCenter.js" />
+    <Content Include="Manager\js\dwz.sortDrag.js" />
+    <Content Include="Manager\js\dwz.stable.js" />
+    <Content Include="Manager\js\dwz.switchEnv.js" />
+    <Content Include="Manager\js\dwz.tab.js" />
+    <Content Include="Manager\js\dwz.taskBar.js" />
+    <Content Include="Manager\js\dwz.theme.js" />
+    <Content Include="Manager\js\dwz.tree.js" />
+    <Content Include="Manager\js\dwz.ui.js" />
+    <Content Include="Manager\js\dwz.util.date.js" />
+    <Content Include="Manager\js\dwz.util.number.js" />
+    <Content Include="Manager\js\dwz.validate.method.js" />
+    <Content Include="Manager\js\jquery-1.7.2.js" />
+    <Content Include="Manager\js\jquery-1.7.2.min.js" />
+    <Content Include="Manager\js\jquery.bgiframe.js" />
+    <Content Include="Manager\js\jquery.cookie.js" />
+    <Content Include="Manager\js\jquery.easing.1.3.js" />
+    <Content Include="Manager\js\jquery.validate.js" />
+    <Content Include="Manager\js\jquery.validate.min.js" />
+    <Content Include="Manager\js\speedup.js" />
+    <Content Include="Manager\LableDesign\Edit.aspx" />
+    <Content Include="Manager\LableDesign\Main.aspx" />
+    <Content Include="Manager\LableDesign\SysLable\Edit.aspx" />
+    <Content Include="Manager\LableDesign\SysLable\Main.aspx" />
+    <Content Include="Manager\Login.aspx" />
+    <Content Include="Manager\login_dialog.aspx" />
+    <Content Include="Manager\Main.aspx" />
+    <Content Include="Manager\Members\Groups\Edit.aspx" />
+    <Content Include="Manager\Members\Groups\LookForMemberGroup.aspx" />
+    <Content Include="Manager\Members\Groups\Main.aspx" />
+    <Content Include="Manager\Members\LookForMember.aspx" />
+    <Content Include="Manager\Navigation\Edit.aspx" />
+    <Content Include="Manager\Navigation\Main.aspx" />
+    <Content Include="Manager\Navigation\SimpleNavigation.aspx" />
+    <Content Include="Manager\Organizations\Edit.aspx" />
+    <Content Include="Manager\Organizations\Elects\Edit.aspx" />
+    <Content Include="Manager\Organizations\Elects\Main.aspx" />
+    <Content Include="Manager\Organizations\Main.aspx" />
+    <Content Include="Manager\Organizations\OrgMembers\Main.aspx" />
+    <Content Include="Manager\ProductOrder\Main.aspx" />
+    <Content Include="Manager\ProductOrder\OrderInfo\ChangeOrderState.aspx" />
+    <Content Include="Manager\ProductOrder\OrderInfo\Edit.aspx" />
+    <Content Include="Manager\Product\PaymentMode\explain.txt" />
+    <Content Include="Manager\Product\ProductAttribute\AttributeGroup\Edit.aspx" />
+    <Content Include="Manager\Product\ProductAttribute\AttributeGroup\Main.aspx" />
+    <Content Include="Manager\Product\ProductAttribute\AttributeSet\Edit.aspx" />
+    <Content Include="Manager\Product\ProductAttribute\AttributeSet\Main.aspx" />
+    <Content Include="Manager\Product\ProductClass\Edit.aspx" />
+    <Content Include="Manager\Product\ProductClass\Main.aspx" />
+    <Content Include="Manager\Product\Product\Edit.aspx" />
+    <Content Include="Manager\Product\Product\EditForm.aspx" />
+    <Content Include="Manager\Product\Product\Main.aspx" />
+    <Content Include="Manager\Script\htmlformat.js" />
+    <Content Include="Manager\Script\jsformat.js" />
+    <Content Include="Manager\Script\TextInsert.js" />
+    <Content Include="Manager\ShowPic.aspx" />
+    <Content Include="Manager\SMS\Config\SMSConfig.aspx" />
+    <Content Include="Manager\SMS\SMSSend\ImprtPhone.aspx" />
+    <Content Include="Manager\SMS\SMSSend\Main.aspx" />
+    <Content Include="Manager\SMS\SMSTemplate\MainListPage.aspx" />
+    <Content Include="Manager\SMS\SMSSend\Send.aspx" />
+    <Content Include="Manager\SMS\SMSTemplate\Edit.aspx" />
+    <Content Include="Manager\SMS\SMSTemplate\Main.aspx" />
+    <Content Include="Manager\SysConfigs\ManagerUser\Edit.aspx" />
+    <Content Include="Manager\SysConfigs\ManagerUser\Groups\Edit.aspx" />
+    <Content Include="Manager\SysConfigs\ManagerUser\Groups\Main.aspx" />
+    <Content Include="Manager\SysConfigs\ManagerUser\Groups\SimpleMain.aspx" />
+    <Content Include="Manager\SysConfigs\ManagerUser\Main.aspx" />
+    <Content Include="Manager\SysConfigs\Menu\Edit.aspx" />
+    <Content Include="Manager\SysConfigs\Menu\Main.aspx" />
+    <Content Include="Manager\SysConfigs\SiteSetting\Edit.aspx" />
+    <Content Include="Manager\Templates\CSSStyle\Edit.aspx" />
+    <Content Include="Manager\Templates\CSSStyle\Main.aspx" />
+    <Content Include="Manager\Templates\Edit.aspx" />
+    <Content Include="Manager\Templates\Groups\Edit.aspx" />
+    <Content Include="Manager\Templates\Groups\LookForGroup.aspx" />
+    <Content Include="Manager\Templates\Groups\Main.aspx" />
+    <Content Include="Manager\Templates\Import.aspx" />
+    <Content Include="Manager\Templates\Main.aspx" />
+    <Content Include="Manager\Templates\SaveDel.ashx" />
+    <Content Include="Manager\Templates\TemplateBakList.aspx" />
+    <Content Include="Manager\Templates\Export.aspx" />
+    <Content Include="Manager\themes\css\core.css" />
+    <Content Include="Manager\themes\css\ieHack.css" />
+    <Content Include="Manager\themes\css\login.css" />
+    <Content Include="Manager\themes\css\print.css" />
+    <Content Include="Manager\themes\default\images\accordion\accordion.png" />
+    <Content Include="Manager\themes\default\images\account_info_bg.png" />
+    <Content Include="Manager\themes\default\images\alert\alertpanel.png" />
+    <Content Include="Manager\themes\default\images\alert\alertpanel_icon.png" />
+    <Content Include="Manager\themes\default\images\button\button_s.png" />
+    <Content Include="Manager\themes\default\images\button\imgX.gif" />
+    <Content Include="Manager\themes\default\images\button\toleft.gif" />
+    <Content Include="Manager\themes\default\images\button\toleftone.gif" />
+    <Content Include="Manager\themes\default\images\button\toright.gif" />
+    <Content Include="Manager\themes\default\images\button\torightone.gif" />
+    <Content Include="Manager\themes\default\images\dialog\dialogpanel.png" />
+    <Content Include="Manager\themes\default\images\dialog\dialogpanel_icon.png" />
+    <Content Include="Manager\themes\default\images\form\input_bg.png" />
+    <Content Include="Manager\themes\default\images\form\input_bt.png" />
+    <Content Include="Manager\themes\default\images\grid\grid.png" />
+    <Content Include="Manager\themes\default\images\grid\resizeCol.png" />
+    <Content Include="Manager\themes\default\images\grid\tableth.png" />
+    <Content Include="Manager\themes\default\images\header_bg.png" />
+    <Content Include="Manager\themes\default\images\icon.png" />
+    <Content Include="Manager\themes\default\images\layout\taskbar.png" />
+    <Content Include="Manager\themes\default\images\layout\taskbar_control.png" />
+    <Content Include="Manager\themes\default\images\layout\taskbar_icon.png" />
+    <Content Include="Manager\themes\default\images\layout\toggleSidebar.png" />
+    <Content Include="Manager\themes\default\images\listLine.png" />
+    <Content Include="Manager\themes\default\images\login_banner1.jpg" />
+    <Content Include="Manager\themes\default\images\login_banner2.jpg" />
+    <Content Include="Manager\themes\default\images\login_banner3.jpg" />
+    <Content Include="Manager\themes\default\images\login_bg.png" />
+    <Content Include="Manager\themes\default\images\login_content_bg.png" />
+    <Content Include="Manager\themes\default\images\login_header_bg.png" />
+    <Content Include="Manager\themes\default\images\login_list.png" />
+    <Content Include="Manager\themes\default\images\login_logo.jpg" />
+    <Content Include="Manager\themes\default\images\login_sub.png" />
+    <Content Include="Manager\themes\default\images\login_title.jpg" />
+    <Content Include="Manager\themes\default\images\logo.png" />
+    <Content Include="Manager\themes\default\images\menu\menu.png" />
+    <Content Include="Manager\themes\default\images\order_down.gif" />
+    <Content Include="Manager\themes\default\images\order_up.gif" />
+    <Content Include="Manager\themes\default\images\pageHeader_bg.png" />
+    <Content Include="Manager\themes\default\images\panel\panel.png" />
+    <Content Include="Manager\themes\default\images\panel\panel_icon.png" />
+    <Content Include="Manager\themes\default\images\progressBar\progressBar_l.gif" />
+    <Content Include="Manager\themes\default\images\progressBar\progressBar_m.gif" />
+    <Content Include="Manager\themes\default\images\progressBar\progressBar_s.gif" />
+    <Content Include="Manager\themes\default\images\search-bg.gif" />
+    <Content Include="Manager\themes\default\images\search-bt.gif" />
+    <Content Include="Manager\themes\default\images\shadow\shadow_c_c.png" />
+    <Content Include="Manager\themes\default\images\shadow\shadow_c_l.png" />
+    <Content Include="Manager\themes\default\images\shadow\shadow_c_r.png" />
+    <Content Include="Manager\themes\default\images\shadow\shadow_f_c.png" />
+    <Content Include="Manager\themes\default\images\shadow\shadow_f_l.png" />
+    <Content Include="Manager\themes\default\images\shadow\shadow_f_r.png" />
+    <Content Include="Manager\themes\default\images\shadow\shadow_h_c.png" />
+    <Content Include="Manager\themes\default\images\shadow\shadow_h_l.png" />
+    <Content Include="Manager\themes\default\images\shadow\shadow_h_r.png" />
+    <Content Include="Manager\themes\default\images\tabs\tabscontrol.png" />
+    <Content Include="Manager\themes\default\images\tabs\tabspage.png" />
+    <Content Include="Manager\themes\default\images\tabs\tabspage_icon.png" />
+    <Content Include="Manager\themes\default\images\tabs\tabspanel.png" />
+    <Content Include="Manager\themes\default\images\tree\check.png" />
+    <Content Include="Manager\themes\default\images\tree\folder.png" />
+    <Content Include="Manager\themes\default\images\tree\tree.png" />
+    <Content Include="Manager\themes\default\images\waitpic.gif" />
+    <Content Include="Manager\themes\default\style.css" />
+    <Content Include="Manager\uploadify\Change Log.txt" />
+    <Content Include="Manager\uploadify\css\uploadify.css" />
+    <Content Include="Manager\uploadify\img\add.jpg" />
+    <Content Include="Manager\uploadify\img\cancel.jpg" />
+    <Content Include="Manager\uploadify\img\delete.jpg" />
+    <Content Include="Manager\uploadify\img\upload.jpg" />
+    <Content Include="Manager\uploadify\img\uploadify-cancel.png" />
+    <Content Include="Manager\uploadify\scripts\jquery.uploadify.js" />
+    <Content Include="Manager\uploadify\scripts\jquery.uploadify.min.js" />
+    <Content Include="Manager\uploadify\scripts\uploadify.swf" />
+    <Content Include="Manager\Navigation\GetNavigationEName.ashx" />
+    <Content Include="Manager\Navigation\Move.ashx" />
+    <Content Include="Manager\Templates\DoImport.ashx" />
+    <Content Include="Manager\DBManager\GetFields.ashx" />
+    <Content Include="Manager\DataShare\SaveDel.ashx" />
+    <Content Include="Manager\LableDesign\SaveDel.ashx" />
+    <Content Include="Manager\DataShare\ParameterConf\SaveDel.ashx" />
+    <Content Include="Manager\LableDesign\Rendering.ashx" />
+    <Content Include="Manager\SysConfigs\Menu\SaveDel.ashx" />
+    <Content Include="Manager\login_dialog.ashx" />
+    <Content Include="Manager\ChangePwd.ashx" />
+    <Content Include="Manager\FriendLink\Group\SaveDel.ashx" />
+    <Content Include="Manager\FriendLink\FriendLink\SaveDel.ashx" />
+    <Content Include="Manager\Advertising\Groups\SaveDel.ashx" />
+    <Content Include="Manager\logout.ashx" />
+    <Content Include="Manager\Advertising\AD\SaveDel.ashx" />
+    <Content Include="Manager\Collect\SaveDel.ashx" />
+    <Content Include="Manager\DBManager\GetTableFields.ashx" />
+    <Content Include="Manager\SMS\Main.aspx" />
+    <Content Include="Manager\WebUsers\Edit.aspx" />
+    <Content Include="Manager\WebUsers\Levels\Edit.aspx" />
+    <Content Include="Manager\WebUsers\Levels\Main.aspx" />
+    <Content Include="Manager\WebUsers\Main.aspx" />
+    <Content Include="Manager\WebUsers\Points\Edit.aspx" />
+    <Content Include="Manager\WebUsers\Points\Main.aspx" />
+    <Content Include="Manager\WebUsers\ViewUserInfo.aspx" />
+    <Content Include="Manager\Wechat\Activities\BigWheel\Edit.aspx" />
+    <Content Include="Manager\Wechat\Activities\BigWheel\Main.aspx" />
+    <Content Include="Manager\Wechat\Activities\BigWheel\ShowPrize.aspx" />
+    <Content Include="Manager\Wechat\Activities\Registration\Edit.aspx" />
+    <Content Include="Manager\Wechat\Activities\Registration\Main.aspx" />
+    <Content Include="Manager\Wechat\Activities\Registration\ShowRegist.aspx" />
+    <Content Include="Manager\Wechat\Activities\ScratchCard\Edit.aspx" />
+    <Content Include="Manager\Wechat\Activities\ScratchCard\GoodsEdit.aspx" />
+    <Content Include="Manager\Wechat\Activities\ScratchCard\GoodsList.aspx" />
+    <Content Include="Manager\Wechat\Activities\ScratchCard\Main.aspx" />
+    <Content Include="Manager\Wechat\Activities\ScratchCard\ShowPrize.aspx" />
+    <Content Include="Manager\Wechat\Attention\ImageEdit.aspx" />
+    <Content Include="Manager\Wechat\Attention\TextEdit.aspx" />
+    <Content Include="Manager\Wechat\AutoReply\Edit.aspx" />
+    <Content Include="Manager\Wechat\AutoReply\Main.aspx" />
+    <Content Include="Manager\Wechat\CustomMenu\Edit.aspx" />
+    <Content Include="Manager\Wechat\CustomMenu\Main.aspx" />
+    <Content Include="Manager\Wechat\CustomMenu\SaveDel.ashx" />
+    <Content Include="Manager\Wechat\DefaultSettings\Edit.aspx" />
+    <Content Include="Manager\Wechat\ImageMaterial\Edit.aspx" />
+    <Content Include="Manager\Wechat\ImageMaterial\Main.aspx" />
+    <Content Include="Manager\Wechat\LBSMaterial\Edit.aspx" />
+    <Content Include="Manager\Wechat\LBSMaterial\Main.aspx" />
+    <Content Include="Manager\Wechat\MaterialFamily\Edit.aspx" />
+    <Content Include="Manager\Wechat\MaterialFamily\Main.aspx" />
+    <Content Include="Manager\Wechat\MenuConfig\ConfigEdit.aspx" />
+    <Content Include="Manager\Wechat\MenuConfig\SaveDel.ashx" />
+    <Content Include="Manager\Wechat\Scripts\jquery.imgareaselect.pack.js" />
+    <Content Include="Manager\Wechat\Scripts\jquery.zclip.js" />
+    <Content Include="Manager\Wechat\Scripts\jsAddress.js" />
+    <Content Include="Order\AddShoppingCart.aspx" />
+    <Content Include="Order\BuyRemove.aspx" />
+    <Content Include="Order\GetBank.aspx" />
+    <Content Include="Order\Pay.aspx" />
+    <Content Include="Order\PayCallBack.aspx" />
+    <Content Include="Order\PayResult.aspx" />
+    <Content Include="Order\ShoppingBuy.aspx" />
+    <Content Include="Scripts\Address\city.min.js" />
+    <Content Include="Scripts\Address\demo.html" />
+    <Content Include="Scripts\Address\jquery.cityselect.js" />
+    <Content Include="Shared\RSS.aspx" />
+    <Content Include="Scripts\cloud-zoom.1.0.2.min.js" />
+    <Content Include="Scripts\Mobile\menu.js" />
+    <Content Include="Scripts\Mobile\OriginalPic.js" />
+    <Content Include="Scripts\Mobile\Turntable.js" />
+    <Content Include="Scripts\Mobile\WebSite.js" />
+    <Content Include="Scripts\Mobile\wScratchPad.js" />
+    <Content Include="Scripts\Mobile\wxhelp.js" />
+    <Content Include="Scripts\Mobile\wxshare.js" />
+    <Content Include="Manager\Wechat\Scripts\swipeslide\swipeslide.css" />
+    <Content Include="Manager\Wechat\Scripts\swipeslide\swipeslide.js" />
+    <Content Include="Manager\Wechat\Scripts\swipeslide\zepto.min.js" />
+    <Content Include="Manager\Wechat\Scripts\UrlCopy.js" />
+    <Content Include="Manager\Wechat\Sources\ActiveList.aspx" />
+    <Content Include="Manager\Wechat\Sources\ActivitiesListPage.aspx" />
+    <Content Include="Manager\Wechat\Sources\BigWheelListPage.aspx" />
+    <Content Include="Manager\Wechat\Sources\ImageOnlyListPage.aspx" />
+    <Content Include="Manager\Wechat\Sources\ImageTextListPage.aspx" />
+    <Content Include="Manager\Wechat\Sources\main.aspx" />
+    <Content Include="Manager\Wechat\Sources\mainInfo.aspx" />
+    <Content Include="Manager\Wechat\Sources\mainList.aspx" />
+    <Content Include="Manager\Wechat\Sources\MaterialFamilyPage.aspx" />
+    <Content Include="Manager\Wechat\Sources\ScratchCardListPage.aspx" />
+    <Content Include="Manager\Wechat\Sources\TextListPage.aspx" />
+    <Content Include="Manager\Wechat\Styles\imgareaselect-default.css" />
+    <Content Include="Manager\Wechat\Styles\Site.css" />
+    <Content Include="Manager\Wechat\Systems\Interface.aspx" />
+    <Content Include="Manager\Wechat\TextMaterial\Edit.aspx" />
+    <Content Include="Manager\Wechat\TextMaterial\Main.aspx" />
+    <Content Include="Manager\Wechat\WeiXin\SaveDel.ashx" />
+    <Content Include="Manager\Members\Groups\SaveDel.ashx" />
+    <Content Include="Manager\SysConfigs\ManagerUser\Groups\SaveDel.ashx" />
+    <Content Include="Manager\Organizations\SaveDel.ashx" />
+    <Content Include="Manager\Organizations\Elects\SaveDel.ashx" />
+    <Content Include="Manager\Organizations\OrgMembers\SaveDel.ashx" />
+    <Content Include="Manager\SMS\SaveDel.ashx" />
+    <Content Include="Manager\Templates\Groups\SaveDel.ashx" />
+    <Content Include="Manager\Wechat\SaveDel.ashx" />
+    <Content Include="Manager\Wechat\AutoReply\SaveDel.ashx" />
+    <Content Include="Mobile\AppList.aspx" />
+    <Content Include="Mobile\Attention.aspx" />
+    <Content Include="Mobile\BigWheels\BigWheel.aspx" />
+    <Content Include="Mobile\BigWheels\BigWheelList.aspx" />
+    <Content Include="Mobile\Custom.aspx" />
+    <Content Include="Mobile\Map.aspx" />
+    <Content Include="Mobile\MapLine.aspx" />
+    <Content Include="Mobile\MsgList.aspx" />
+    <Content Include="Mobile\MsgShow.aspx" />
+    <Content Include="Mobile\Persons\PersonCheck.aspx" />
+    <Content Include="Mobile\Registration\AdminCheck.aspx" />
+    <Content Include="Mobile\Registration\EnrollList.aspx" />
+    <Content Include="Mobile\Registration\RegistrationHead.aspx" />
+    <Content Include="Mobile\Registration\RegistrationList.aspx" />
+    <Content Include="Mobile\ScratchCard\Card.aspx" />
+    <Content Include="Mobile\ScratchCard\default.aspx" />
+    <Content Include="Mobile\Settings.aspx" />
+    <Content Include="Mobile\ShowTextList.aspx" />
+    <Content Include="Mobile\ShowTxt.aspx" />
+    <Content Include="Mobile\Website\Default.aspx" />
+    <Content Include="Mobile\Website\Info_Img.aspx" />
+    <Content Include="Mobile\Website\Info_ImgList.aspx" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.mobile-1.1.0.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.2.js" />
+    <Content Include="Scripts\jquery.mobile.min.css" />
+    <Content Include="Shared\QQ.aspx" />
+    <Content Include="Shared\WebMap.aspx" />
+    <Content Include="Styles\Article.css" />
+    <Content Include="Styles\css.css" />
+    <Content Include="Styles\jquery.mobile-1.3.2.css" />
+    <Content Include="Styles\jquery.mobile.min.css" />
+    <Content Include="Styles\UserCenter.css" />
+    <Content Include="Styles\WebSite\comm.css" />
+    <Content Include="Templates\CartList.htm" />
+    <Content Include="Templates\index.html" />
+    <Content Include="Templates\LabelFormatTemplates\ShoppingCartList.htm" />
+    <Content Include="Templates\LabelFormatTemplates\ShowProductInfo.htm" />
+    <Content Include="Templates\LabelFormatTemplates\UserLogined.htm" />
+    <Content Include="Templates\LabelFormatTemplates\UserUnLogin.htm" />
+    <Content Include="Templates\LabelFormatTemplates\TopUserLogined.htm" />
+    <Content Include="Templates\LabelFormatTemplates\TopUserUnLogin.htm" />
+    <Content Include="Templates\OtherTemplates\FindPwdMail.htm" />
+    <Content Include="Themes\Default\Css\Style.css" />
+    <Content Include="Themes\Default\Images\AD\Ad1.jpg" />
+    <Content Include="Themes\Default\Images\AD\Ad2.jpg" />
+    <Content Include="Themes\Default\Images\AD\Ad3.jpg" />
+    <Content Include="Themes\Default\Images\AD\AD4.jpg" />
+    <Content Include="Themes\Default\Images\avatar.gif" />
+    <Content Include="Themes\Default\Images\BlueLine.jpg" />
+    <Content Include="Themes\Default\Images\Btn_Login.jpg" />
+    <Content Include="Themes\Default\Images\Btn_Reg.jpg" />
+    <Content Include="Themes\Default\Images\Btn_Search.jpg" />
+    <Content Include="Themes\Default\Images\HitAD.jpg" />
+    <Content Include="Themes\Default\Images\HitICO.jpg" />
+    <Content Include="Themes\Default\Images\ICO.jpg" />
+    <Content Include="Themes\Default\Images\LeftICO.gif" />
+    <Content Include="Themes\Default\Images\Logo.jpg" />
+    <Content Include="Themes\Default\Images\MenuItemBG.jpg" />
+    <Content Include="Themes\Default\Images\MenuItemLeft.jpg" />
+    <Content Include="Themes\Default\Images\MenuItemRight.jpg" />
+    <Content Include="Themes\Default\Images\Point.jpg" />
+    <Content Include="Themes\Default\Images\Point2.jpg" />
+    <Content Include="Themes\Default\Images\product1111111111111111.jpg" />
+    <Content Include="Themes\Default\Images\project_header_bg.jpg" />
+    <Content Include="Themes\Default\Images\recommendation.jpg" />
+    <Content Include="Themes\Default\Images\Title_FriendLink.jpg" />
+    <Content Include="Themes\Default\Images\Title_FriendLinkBG.jpg" />
+    <Content Include="Themes\Default\Images\Title_Resource.jpg" />
+    <Content Include="Themes\Default\Images\Title_School.jpg" />
+    <Content Include="Themes\Default\Images\Title_Shop.jpg" />
+    <Content Include="Themes\Default\Images\Title_Shop2.jpg" />
+    <Content Include="Themes\Default\Images\Title_Shop3.jpg" />
+    <Content Include="Themes\Default\Images\TopMenuICO.gif" />
+    <Content Include="Themes\Default\Images\TopNoticeBG.jpg" />
+    <Content Include="Themes\Default\Images\TopSearchClassBG.jpg" />
+    <Content Include="Themes\Default\Images\TopSearchClassBG2.jpg" />
+    <Content Include="Themes\Default\Images\TypeClassICO.jpg" />
+    <Content Include="Themes\Default\Images\UserCenter\usercenter_menu_first_label_ico.jpg" />
+    <Content Include="Themes\Default\Images\UserCenter\usercenter_menu_header.jpg" />
+    <Content Include="Themes\Default\Js\jquery.jcarousellite.min.js" />
+    <Content Include="Themes\Default\Js\jquery.KinSlideshow-1.2.1.min.js" />
+    <Content Include="Themes\Default\Js\noticeRoll.js" />
+    <Content Include="Themes\Default\Js\OrderCart.js" />
+    <Content Include="Themes\Default\Js\ProductInfoPics.js" />
+    <Content Include="Themes\Default\Js\swfjs.js" />
+    <Content Include="UserCenter\ChangeState.aspx" />
+    <Content Include="UserCenter\Default.aspx" />
+    <Content Include="UserCenter\EditPwd.aspx" />
+    <Content Include="UserCenter\FindPwd.aspx" />
+    <Content Include="UserCenter\Login.aspx" />
+    <Content Include="UserCenter\LoginPage.aspx" />
+    <Content Include="UserCenter\Logout.aspx" />
+    <Content Include="UserCenter\Reg.aspx" />
+    <Content Include="UserCenter\UserInfo.aspx" />
+    <Content Include="UserCenter\ResetPassword.aspx" />
+    <Content Include="UserCenter\UserOrderInfo.aspx" />
+    <Content Include="UserCenter\UserPoint.aspx" />
+    <Content Include="WxToken.aspx" />
+    <Content Include="Manager\SysConfigs\SiteSetting\SaveDel.ashx" />
+    <Content Include="Manager\Wechat\Main.aspx" />
+    <Content Include="Manager\Wechat\WeiXin\Accounts.aspx" />
+    <Content Include="Manager\Wechat\WeiXin\AccountsGet.aspx" />
+    <Content Include="Manager\Wechat\WXMenu.aspx" />
+    <Content Include="Scripts\DateTime.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\WebTopMenu.js" />
+    <Content Include="Scripts\WebTopMenu.min.js" />
+    <Content Include="Scripts\Xslider.js" />
+    <Content Include="Shared\Verification.aspx" />
+    <Content Include="Styles\SystemStyleSheet.css" />
+    <Content Include="Template.aspx" />
+    <Content Include="Themes\Default\Css\lrtk.css" />
+    <Content Include="Themes\Default\Js\jquery.js" />
+    <Content Include="Themes\Default\Js\jquery.KinSlideshow-1.1.js" />
+    <Content Include="Themes\Default\Js\slide.js" />
+    <Content Include="upload\image\20131104\20131104130754_5000.jpg" />
+    <Content Include="upload\image\20131104\20131104130829_7187.jpg" />
+    <Content Include="upload\image\20131104\20131104164743_4843.jpg" />
+    <Content Include="upload\image\20131104\20131104164802_8125.jpg" />
+    <Content Include="upload\image\20131104\20131104170232_3593.jpg" />
+    <Content Include="upload\image\20131105\20131105083548_2812.jpg" />
+    <Content Include="upload\image\20131105\20131105083644_7187.jpg" />
+    <Content Include="upload\image\20131105\20131105094435_2343.jpg" />
+    <Content Include="upload\image\20131105\20131105101208_7031.jpg" />
+    <Content Include="API\TokenApi.ashx" />
+    <None Include="App_Data\2013年9月12日 203957.bak" />
+    <Content Include="Manager\kindeditor417\DotNet\file_manager_json.ashx" />
+    <Content Include="Manager\kindeditor417\DotNet\upload_json.ashx" />
+    <Content Include="Manager\Navigation\SaveDel.ashx" />
+    <Content Include="Config\EditFormControlSet.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="upload\image\20131105\Files.Config" />
+    <Content Include="upload\image\20131104\Files.Config" />
+    <Content Include="Manager\SMS\SMSTemplate\SaveDel.ashx" />
+    <Content Include="Manager\SMS\Config\SaveDel.ashx" />
+    <Content Include="Manager\SMS\SMSSend\SaveDel.ashx" />
+    <Content Include="Manager\LableDesign\SysLable\SaveDel.ashx" />
+    <Content Include="Manager\Product\ProductAttribute\AttributeGroup\SaveDel.ashx" />
+    <Content Include="Manager\Product\ProductAttribute\AttributeSet\SaveDel.ashx" />
+    <Content Include="Manager\Product\Product\SaveDel.ashx" />
+    <Content Include="Manager\Product\ProductClass\Move.ashx" />
+    <Content Include="Manager\Product\ProductClass\SaveDel.ashx" />
+    <Content Include="Manager\Common\DelPic.ashx" />
+    <Content Include="Templates\LabelFormatTemplates\说明.config" />
+    <Content Include="Manager\ProductOrder\SaveDel.ashx" />
+    <Content Include="Manager\ProductOrder\OrderInfo\SaveDel.ashx" />
+    <Content Include="Manager\WebUsers\SaveDel.ashx" />
+    <Content Include="Manager\Custom\DataBindDataProviders.ashx" />
+    <Content Include="Manager\Custom\SaveDel.ashx" />
+    <Content Include="Manager\EmailManager\EmailSetting\SaveDel.ashx" />
+    <Content Include="Manager\EmailManager\EmailTemplate\SaveDel.ashx" />
+    <Content Include="Manager\EmailManager\EmailSend\SaveDel.ashx" />
+    <None Include="App_Data\ShengBen_System_backup_2014_06_03_001117_5097298.bak" />
+    <Content Include="Manager\WebUsers\Points\SaveDel.ashx" />
+    <Content Include="Manager\WebUsers\Levels\SaveDel.ashx" />
+    <None Include="App_Data\ShengBen_System_backup_2014_06_10_001117_1095273.bak" />
+    <Content Include="Manager\Templates\CSSStyle\SaveDel.ashx" />
+    <Content Include="Config\Setting\EmailSetting.config" />
+    <Content Include="Config\Setting\SiteSetting.config" />
+    <Content Include="Config\Setting\SMSSetting.config" />
+    <Content Include="Manager\Article\Comment\SaveDel.ashx" />
+    <None Include="upload\file\会员申请表下.doc" />
+    <Content Include="WrittenPost.ashx" />
+    <Content Include="UserCenter\UcMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\TokenApi.ashx.cs">
+      <DependentUpon>TokenApi.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\MobileTemplatePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataShare.aspx.cs">
+      <DependentUpon>DataShare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataShare.aspx.designer.cs">
+      <DependentUpon>DataShare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Advertising\AD\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Advertising\AD\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Advertising\AD\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Advertising\AD\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Advertising\AD\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Advertising\Groups\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Advertising\Groups\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Advertising\Groups\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Advertising\Groups\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Advertising\Groups\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Article\Comment\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Article\Comment\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Article\Comment\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Article\Comment\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Article\Comment\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Article\Content\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Article\Content\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Base\Cookies\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Base\Cookies\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\CacheManager\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\CacheManager\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\CacheManager\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\CacheManager\ShowCacheValue.aspx.cs">
+      <DependentUpon>ShowCacheValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\CacheManager\ShowCacheValue.aspx.designer.cs">
+      <DependentUpon>ShowCacheValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ChangePwd.ashx.cs">
+      <DependentUpon>ChangePwd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ChangePwd.aspx.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ChangePwd.aspx.designer.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Collect\DoAction.aspx.cs">
+      <DependentUpon>DoAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Collect\DoAction.aspx.designer.cs">
+      <DependentUpon>DoAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Collect\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Collect\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Collect\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Collect\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Collect\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Common\BaseEditPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Common\BaseListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Common\BaseMemberPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Common\DelPic.ashx.cs">
+      <DependentUpon>DelPic.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Common\SessionHelper.cs" />
+    <Compile Include="Manager\Custom\DataBindDataProviders.ashx.cs">
+      <DependentUpon>DataBindDataProviders.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Custom\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Custom\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Custom\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Custom\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Custom\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DataShare\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DataShare\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\ParameterConf\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DataShare\ParameterConf\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\ParameterConf\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DataShare\ParameterConf\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\ParameterConf\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\Users\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DataShare\Users\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\Users\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DataShare\Users\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\Users\MakeKey.ashx.cs">
+      <DependentUpon>MakeKey.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataShare\Users\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DBManager\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DBManager\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DBManager\Fields\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DBManager\Fields\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DBManager\Fields\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DBManager\Fields\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DBManager\Fields\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manager\DBManager\GetTableFields.ashx.cs">
+      <DependentUpon>GetTableFields.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DBManager\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\DBManager\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DBManager\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailSend\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailSend\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailSend\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailSend\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailSend\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailSetting\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailSetting\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailSetting\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailTemplate\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailTemplate\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailTemplate\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailTemplate\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\EmailManager\EmailTemplate\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FriendLink\FriendLink\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\FriendLink\FriendLink\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FriendLink\FriendLink\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\FriendLink\FriendLink\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FriendLink\FriendLink\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FriendLink\Group\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\FriendLink\Group\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FriendLink\Group\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\FriendLink\Group\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FriendLink\Group\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LableDesign\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\LableDesign\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DBManager\GetFields.ashx.cs">
+      <DependentUpon>GetFields.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LableDesign\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\LableDesign\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LableDesign\Rendering.ashx.cs">
+      <DependentUpon>Rendering.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LableDesign\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LableDesign\SysLable\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\LableDesign\SysLable\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LableDesign\SysLable\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\LableDesign\SysLable\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LableDesign\SysLable\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\login_dialog.ashx.cs">
+      <DependentUpon>login_dialog.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\login_dialog.aspx.cs">
+      <DependentUpon>login_dialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\login_dialog.aspx.designer.cs">
+      <DependentUpon>login_dialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\logout.ashx.cs">
+      <DependentUpon>logout.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Members\Groups\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Members\Groups\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Members\Groups\LookForMemberGroup.aspx.cs">
+      <DependentUpon>LookForMemberGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Members\Groups\LookForMemberGroup.aspx.designer.cs">
+      <DependentUpon>LookForMemberGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Members\Groups\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Members\Groups\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Members\Groups\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Members\LookForMember.aspx.cs">
+      <DependentUpon>LookForMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Members\LookForMember.aspx.designer.cs">
+      <DependentUpon>LookForMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Navigation\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Navigation\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Navigation\GetNavigationEName.ashx.cs">
+      <DependentUpon>GetNavigationEName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Navigation\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Navigation\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Navigation\Move.ashx.cs">
+      <DependentUpon>Move.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Navigation\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Navigation\SimpleNavigation.aspx.cs">
+      <DependentUpon>SimpleNavigation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Navigation\SimpleNavigation.aspx.designer.cs">
+      <DependentUpon>SimpleNavigation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Organizations\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Organizations\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Organizations\Elects\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Organizations\Elects\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Organizations\Elects\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Organizations\Elects\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Organizations\Elects\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Organizations\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Organizations\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Organizations\OrgMembers\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Organizations\OrgMembers\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Organizations\OrgMembers\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Organizations\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ProductOrder\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ProductOrder\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ProductOrder\OrderInfo\ChangeOrderState.aspx.cs">
+      <DependentUpon>ChangeOrderState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ProductOrder\OrderInfo\ChangeOrderState.aspx.designer.cs">
+      <DependentUpon>ChangeOrderState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ProductOrder\OrderInfo\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ProductOrder\OrderInfo\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ProductOrder\OrderInfo\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ProductOrder\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeGroup\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeGroup\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeGroup\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeGroup\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeGroup\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeSet\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeSet\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeSet\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeSet\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductAttribute\AttributeSet\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductClass\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Product\ProductClass\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductClass\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Product\ProductClass\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductClass\Move.ashx.cs">
+      <DependentUpon>Move.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\ProductClass\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\Product\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Product\Product\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\Product\EditForm.aspx.cs">
+      <DependentUpon>EditForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Product\Product\EditForm.aspx.designer.cs">
+      <DependentUpon>EditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\Product\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Product\Product\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Product\Product\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ShowPic.aspx.cs">
+      <DependentUpon>ShowPic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ShowPic.aspx.designer.cs">
+      <DependentUpon>ShowPic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\Config\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\Config\SMSConfig.aspx.cs">
+      <DependentUpon>SMSConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SMS\Config\SMSConfig.aspx.designer.cs">
+      <DependentUpon>SMSConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSSend\ImprtPhone.aspx.cs">
+      <DependentUpon>ImprtPhone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSSend\ImprtPhone.aspx.designer.cs">
+      <DependentUpon>ImprtPhone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSSend\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSSend\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSTemplate\MainListPage.aspx.cs">
+      <DependentUpon>MainListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSTemplate\MainListPage.aspx.designer.cs">
+      <DependentUpon>MainListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSSend\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSSend\Send.aspx.cs">
+      <DependentUpon>Send.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSSend\Send.aspx.designer.cs">
+      <DependentUpon>Send.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSTemplate\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSTemplate\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSTemplate\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSTemplate\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\SMSTemplate\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Groups\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Groups\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Groups\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Groups\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Groups\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Groups\SimpleMain.aspx.cs">
+      <DependentUpon>SimpleMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Groups\SimpleMain.aspx.designer.cs">
+      <DependentUpon>SimpleMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\ManagerUser\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\Menu\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\Menu\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\Menu\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\Menu\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\Menu\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\SiteSetting\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\SiteSetting\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysConfigs\SiteSetting\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\CSSStyle\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\CSSStyle\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\CSSStyle\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\CSSStyle\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\CSSStyle\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\DoImport.ashx.cs">
+      <DependentUpon>DoImport.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\Groups\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\Groups\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\Groups\LookForGroup.aspx.cs">
+      <DependentUpon>LookForGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\Groups\LookForGroup.aspx.designer.cs">
+      <DependentUpon>LookForGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\Groups\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\Groups\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\Groups\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\TemplateBakList.aspx.cs">
+      <DependentUpon>TemplateBakList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\TemplateBakList.aspx.designer.cs">
+      <DependentUpon>TemplateBakList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Templates\Export.aspx.cs">
+      <DependentUpon>Export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Templates\Export.aspx.designer.cs">
+      <DependentUpon>Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Levels\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Levels\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Levels\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Levels\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Levels\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Points\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Points\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Points\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Points\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\Points\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WebUsers\ViewUserInfo.aspx.cs">
+      <DependentUpon>ViewUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\WebUsers\ViewUserInfo.aspx.designer.cs">
+      <DependentUpon>ViewUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\BigWheel\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\BigWheel\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\BigWheel\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\BigWheel\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\BigWheel\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\BigWheel\ShowPrize.aspx.cs">
+      <DependentUpon>ShowPrize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\BigWheel\ShowPrize.aspx.designer.cs">
+      <DependentUpon>ShowPrize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\Registration\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\Registration\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\Registration\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\Registration\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\Registration\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\Registration\ShowRegist.aspx.cs">
+      <DependentUpon>ShowRegist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\Registration\ShowRegist.aspx.designer.cs">
+      <DependentUpon>ShowRegist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\GoodsEdit.aspx.cs">
+      <DependentUpon>GoodsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\GoodsEdit.aspx.designer.cs">
+      <DependentUpon>GoodsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\GoodsList.aspx.cs">
+      <DependentUpon>GoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\GoodsList.aspx.designer.cs">
+      <DependentUpon>GoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\ShowPrize.aspx.cs">
+      <DependentUpon>ShowPrize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Activities\ScratchCard\ShowPrize.aspx.designer.cs">
+      <DependentUpon>ShowPrize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Attention\ImageEdit.aspx.cs">
+      <DependentUpon>ImageEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Attention\ImageEdit.aspx.designer.cs">
+      <DependentUpon>ImageEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Attention\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Attention\TextEdit.aspx.cs">
+      <DependentUpon>TextEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Attention\TextEdit.aspx.designer.cs">
+      <DependentUpon>TextEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\AutoReply\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\AutoReply\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\AutoReply\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\AutoReply\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\AutoReply\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\CustomMenu\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\CustomMenu\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\CustomMenu\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\CustomMenu\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\CustomMenu\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\DefaultSettings\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\DefaultSettings\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\DefaultSettings\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\ImageMaterial\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\ImageMaterial\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\ImageMaterial\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\ImageMaterial\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\ImageMaterial\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\LBSMaterial\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\LBSMaterial\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\LBSMaterial\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\LBSMaterial\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\LBSMaterial\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SMS\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SMS\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\MaterialFamily\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\MaterialFamily\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\MaterialFamily\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\MaterialFamily\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\MaterialFamily\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\MenuConfig\ConfigEdit.aspx.cs">
+      <DependentUpon>ConfigEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\MenuConfig\ConfigEdit.aspx.designer.cs">
+      <DependentUpon>ConfigEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\MenuConfig\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ActiveList.aspx.cs">
+      <DependentUpon>ActiveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ActiveList.aspx.designer.cs">
+      <DependentUpon>ActiveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ActivitiesListPage.aspx.cs">
+      <DependentUpon>ActivitiesListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ActivitiesListPage.aspx.designer.cs">
+      <DependentUpon>ActivitiesListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\BigWheelListPage.aspx.cs">
+      <DependentUpon>BigWheelListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\BigWheelListPage.aspx.designer.cs">
+      <DependentUpon>BigWheelListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ImageOnlyListPage.aspx.cs">
+      <DependentUpon>ImageOnlyListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ImageOnlyListPage.aspx.designer.cs">
+      <DependentUpon>ImageOnlyListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ImageTextListPage.aspx.cs">
+      <DependentUpon>ImageTextListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ImageTextListPage.aspx.designer.cs">
+      <DependentUpon>ImageTextListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\mainInfo.aspx.cs">
+      <DependentUpon>mainInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\mainInfo.aspx.designer.cs">
+      <DependentUpon>mainInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\mainList.aspx.cs">
+      <DependentUpon>mainList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\mainList.aspx.designer.cs">
+      <DependentUpon>mainList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\MaterialFamilyPage.aspx.cs">
+      <DependentUpon>MaterialFamilyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\MaterialFamilyPage.aspx.designer.cs">
+      <DependentUpon>MaterialFamilyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ScratchCardListPage.aspx.cs">
+      <DependentUpon>ScratchCardListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\ScratchCardListPage.aspx.designer.cs">
+      <DependentUpon>ScratchCardListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\TextListPage.aspx.cs">
+      <DependentUpon>TextListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Sources\TextListPage.aspx.designer.cs">
+      <DependentUpon>TextListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\Systems\Interface.aspx.cs">
+      <DependentUpon>Interface.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\Systems\Interface.aspx.designer.cs">
+      <DependentUpon>Interface.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\TextMaterial\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\TextMaterial\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\TextMaterial\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\TextMaterial\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\TextMaterial\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\WeiXin\Accounts.aspx.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\WeiXin\Accounts.aspx.designer.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\WeiXin\SaveDel.ashx.cs">
+      <DependentUpon>SaveDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\WeiXin\AccountsGet.aspx.cs">
+      <DependentUpon>AccountsGet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\WeiXin\AccountsGet.aspx.designer.cs">
+      <DependentUpon>AccountsGet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Wechat\WXMenu.aspx.cs">
+      <DependentUpon>WXMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Wechat\WXMenu.aspx.designer.cs">
+      <DependentUpon>WXMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\AppList.aspx.cs">
+      <DependentUpon>AppList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\AppList.aspx.designer.cs">
+      <DependentUpon>AppList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Attention.aspx.cs">
+      <DependentUpon>Attention.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Attention.aspx.designer.cs">
+      <DependentUpon>Attention.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\BigWheels\BigWheel.aspx.cs">
+      <DependentUpon>BigWheel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\BigWheels\BigWheel.aspx.designer.cs">
+      <DependentUpon>BigWheel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\BigWheels\BigWheelList.aspx.cs">
+      <DependentUpon>BigWheelList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\BigWheels\BigWheelList.aspx.designer.cs">
+      <DependentUpon>BigWheelList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\BigWheels\PostBigWheel.ashx.cs">
+      <DependentUpon>PostBigWheel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Custom.aspx.cs">
+      <DependentUpon>Custom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Custom.aspx.designer.cs">
+      <DependentUpon>Custom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\MapLine.aspx.cs">
+      <DependentUpon>MapLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\MapLine.aspx.designer.cs">
+      <DependentUpon>MapLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\MsgList.aspx.cs">
+      <DependentUpon>MsgList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\MsgList.aspx.designer.cs">
+      <DependentUpon>MsgList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\MsgShow.aspx.cs">
+      <DependentUpon>MsgShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\MsgShow.aspx.designer.cs">
+      <DependentUpon>MsgShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Persons\CheckPerson.ashx.cs">
+      <DependentUpon>CheckPerson.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Persons\PersonCheck.aspx.cs">
+      <DependentUpon>PersonCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Persons\PersonCheck.aspx.designer.cs">
+      <DependentUpon>PersonCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Registration\AdminCheck.aspx.cs">
+      <DependentUpon>AdminCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Registration\AdminCheck.aspx.designer.cs">
+      <DependentUpon>AdminCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Registration\CheckSubmit.ashx.cs">
+      <DependentUpon>CheckSubmit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Registration\EnrollList.aspx.cs">
+      <DependentUpon>EnrollList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Registration\EnrollList.aspx.designer.cs">
+      <DependentUpon>EnrollList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Registration\RegistrationHead.aspx.cs">
+      <DependentUpon>RegistrationHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Registration\RegistrationHead.aspx.designer.cs">
+      <DependentUpon>RegistrationHead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Registration\RegistrationList.aspx.cs">
+      <DependentUpon>RegistrationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Registration\RegistrationList.aspx.designer.cs">
+      <DependentUpon>RegistrationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\ScratchCard\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\ScratchCard\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\ScratchCard\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\ScratchCard\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Share\Mobiles.Master.cs">
+      <DependentUpon>Mobiles.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Share\Mobiles.Master.designer.cs">
+      <DependentUpon>Mobiles.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\ShowTextList.aspx.cs">
+      <DependentUpon>ShowTextList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\ShowTextList.aspx.designer.cs">
+      <DependentUpon>ShowTextList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\ShowTxt.aspx.cs">
+      <DependentUpon>ShowTxt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\ShowTxt.aspx.designer.cs">
+      <DependentUpon>ShowTxt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Website\CheckPraise.ashx.cs">
+      <DependentUpon>CheckPraise.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Website\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Website\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Website\Info_Img.aspx.cs">
+      <DependentUpon>Info_Img.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Website\Info_Img.aspx.designer.cs">
+      <DependentUpon>Info_Img.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Website\Info_ImgList.aspx.cs">
+      <DependentUpon>Info_ImgList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Website\Info_ImgList.aspx.designer.cs">
+      <DependentUpon>Info_ImgList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\AddShoppingCart.aspx.cs">
+      <DependentUpon>AddShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\AddShoppingCart.aspx.designer.cs">
+      <DependentUpon>AddShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\BuyRemove.aspx.cs">
+      <DependentUpon>BuyRemove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\BuyRemove.aspx.designer.cs">
+      <DependentUpon>BuyRemove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\GetBank.aspx.cs">
+      <DependentUpon>GetBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\GetBank.aspx.designer.cs">
+      <DependentUpon>GetBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Pay.aspx.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\Pay.aspx.designer.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\PayCallBack.aspx.cs">
+      <DependentUpon>PayCallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\PayCallBack.aspx.designer.cs">
+      <DependentUpon>PayCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\PayResult.aspx.cs">
+      <DependentUpon>PayResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\PayResult.aspx.designer.cs">
+      <DependentUpon>PayResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\ShoppingBuy.aspx.cs">
+      <DependentUpon>ShoppingBuy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\ShoppingBuy.aspx.designer.cs">
+      <DependentUpon>ShoppingBuy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\RSS.aspx.cs">
+      <DependentUpon>RSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\RSS.aspx.designer.cs">
+      <DependentUpon>RSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\QQ.aspx.cs">
+      <DependentUpon>QQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\QQ.aspx.designer.cs">
+      <DependentUpon>QQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Verification.aspx.cs">
+      <DependentUpon>Verification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\Verification.aspx.designer.cs">
+      <DependentUpon>Verification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\WebMap.aspx.cs">
+      <DependentUpon>WebMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\WebMap.aspx.designer.cs">
+      <DependentUpon>WebMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template.aspx.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template.aspx.designer.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\ChangeState.aspx.cs">
+      <DependentUpon>ChangeState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\ChangeState.aspx.designer.cs">
+      <DependentUpon>ChangeState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\EditPwd.aspx.cs">
+      <DependentUpon>EditPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\EditPwd.aspx.designer.cs">
+      <DependentUpon>EditPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\FindPwd.aspx.cs">
+      <DependentUpon>FindPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\FindPwd.aspx.designer.cs">
+      <DependentUpon>FindPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\Reg.aspx.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\Reg.aspx.designer.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\UcMaster.Master.cs">
+      <DependentUpon>UcMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\UcMaster.Master.designer.cs">
+      <DependentUpon>UcMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\UserOrderInfo.aspx.cs">
+      <DependentUpon>UserOrderInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\UserOrderInfo.aspx.designer.cs">
+      <DependentUpon>UserOrderInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\UserPoint.aspx.cs">
+      <DependentUpon>UserPoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\UserPoint.aspx.designer.cs">
+      <DependentUpon>UserPoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WrittenPost.ashx.cs">
+      <DependentUpon>WrittenPost.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WxToken.aspx.cs">
+      <DependentUpon>WxToken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxToken.aspx.designer.cs">
+      <DependentUpon>WxToken.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\Data\" />
+    <Folder Include="Config\INI\" />
+    <Folder Include="Manager\Article\Navigation\" />
+    <Folder Include="Manager\kindeditor417\attached\" />
+    <Folder Include="Manager\SysConfigs\Users\" />
+    <Folder Include="upload\AdJS\" />
+    <Folder Include="upload\flash\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\AppSetting.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\Connection.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Manager\SysConfigs\ManagerUser\SaveDel.ashx" />
+    <None Include="Manager\themes\default\images\panel\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Branch\s生本教育网\Trunk\XingAo.Networks.VerifyPermissions\XingAo.Networks.VerifyPermissions.csproj">
+      <Project>{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}</Project>
+      <Name>XingAo.Networks.VerifyPermissions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\XingAo.Core.Data\XingAo.Core.Data.csproj">
+      <Project>{4CC6880C-ED52-433E-B42D-A82967756762}</Project>
+      <Name>XingAo.Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\XingAo.Core\XingAo.Core.csproj">
+      <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
+      <Name>XingAo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WeChat\XingAo.Networks.WeChat\XingAo.Networks.WeChat.csproj">
+      <Project>{BA5F4142-17E8-49F0-850C-5BF3C8660AC2}</Project>
+      <Name>XingAo.Networks.WeChat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XingAo.Networks.CMS.HttpModule\XingAo.Networks.CMS.HttpModule.csproj">
+      <Project>{504AF9BC-44AD-41CF-8861-63E92B654A30}</Project>
+      <Name>XingAo.Networks.CMS.HttpModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XingAo.Networks.CMS.Model\XingAo.Networks.CMS.Model.csproj">
+      <Project>{471479F5-FA31-47A1-9D01-176839D90561}</Project>
+      <Name>XingAo.Networks.CMS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Template\XingAo.Networks.CMS.Template.Engine\XingAo.Networks.CMS.Template.Engine.csproj">
+      <Project>{7D7159A7-A842-44C8-B12E-527DCB72044C}</Project>
+      <Name>XingAo.Networks.CMS.Template.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Template\XingAo.Networks.CMS.Template.Label\XingAo.Networks.CMS.Template.Label.csproj">
+      <Project>{64335083-64F5-4B9E-A42F-91CB4810F818}</Project>
+      <Name>XingAo.Networks.CMS.Template.Label</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>20001</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

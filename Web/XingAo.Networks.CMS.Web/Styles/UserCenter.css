@@ -1,0 +1,35 @@
+﻿.usercenter{margin: auto;width: 1000px;}
+.usercenter .container{border: 1px solid #CDCDCD;background: none repeat scroll 0 0 #FFFFFF;margin: auto;overflow: hidden; width: 1000px;}
+
+/*会员注册、登录、找回等样式*/
+.usercenter .container .header{background: none repeat scroll 0 0 #F2F2F2;border-bottom: 1px solid #C2D5E3;border-top: 1px solid #FFFFFF; height: 31px;line-height: 31px;overflow: hidden;padding: 0 10px;white-space: nowrap;}
+.usercenter .container .header .reg{float: right;}
+.usercenter .container .header .logintext{font-size: 14px !important;}
+
+.usercenter .container .content{display:block; overflow:auto; padding:50px 100px; position:relative;}
+.usercenter .container .content span{display:block; overflow:auto; padding:10px 100px; position:relative;border-bottom: 1px dotted #CDCDCD;}
+.usercenter .container .content span label{float:left; width:120px; padding:0 5px; line-height:21px;}
+.usercenter .container .content span .submit{background-color: #0066CC;background-position: 0 -48px;border-color: #235994;color: #FFFFFF !important;font-weight: 700;cursor: pointer;height: 23px;margin-right: 3px;overflow: hidden;padding: 0;vertical-align: middle;box-shadow: 0 1px 0 #E5E5E5;}
+
+/*用户中心左右列表形式的样式*/
+/*左边菜单样式*/
+.usercenter .menu{ float:left; width:180px; overflow:hidden; margin-top:20px;}
+.usercenter .menu .header{background:url('/Themes/Default/Images/UserCenter/usercenter_menu_header.jpg') repeat-x; height:18px; font-size:16px; color:#fff;padding:8px; font-weight:bold;}
+.usercenter .menu ul.first{border: 1px solid #CDCDCD;background: none repeat scroll 0 0 #F2F2F2;}
+.usercenter .menu ul.first li{}
+.usercenter .menu ul.first li label{padding:10px 20px; font-weight:bold;display:block; background:url('/Themes/Default/Images/UserCenter/usercenter_menu_first_label_ico.jpg') no-repeat 150px 15px;}
+.usercenter .menu ul.first li a:hover{border-left-color:#2870AB; border-left-width:10px;display:block;font-weight:bold;}
+.usercenter .menu ul.second{ background-color:#fff;}
+.usercenter .menu ul.second li{font-weight:normal;padding:10px 30px;display:block;}
+
+/*右边内容样式*/
+.usercenter .right{ float:right;width: 80%; margin-top:20px;}
+.usercenter .right .header{width:100px;height:22px;background-color:#538dbd;float:left; text-align:center;color:#fff;font-size:16px;padding-top: 7px;}
+.usercenter .right table.list{border-top:1px solid #538dbd; border-right:1px solid #e6e6e6;}
+.usercenter .right table.list th{background:url('/Themes/Default/Images/project_header_bg.jpg') repeat-x; height:32px;}
+/*单行表格*/
+.usercenter .right table.list td.single{border-bottom:1px solid #e6e6e6; background-color:#f9f9f9; padding:0 0 0 5px;}
+/*双行表格*/
+.usercenter .right table.list td.both{padding-left:5px; padding-top:10px;border-right:1px solid #e6e6e6;}
+.usercenter .right table.list td{padding:10px 5px;border-bottom:1px solid #e6e6e6; border-left:1px solid #e6e6e6;}
+.usercenter .right .page{width:450px;}

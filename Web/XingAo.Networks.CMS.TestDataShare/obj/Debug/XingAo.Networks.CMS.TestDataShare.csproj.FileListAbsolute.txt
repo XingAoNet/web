@@ -1,0 +1,13 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\XingAo.Networks.CMS.TestDataShare.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\XingAo.Networks.CMS.TestDataShare.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\XingAo.Networks.CMS.Model.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\EntityFramework.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\XingAo.Networks.CMS.Model.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\EntityFramework.xml
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\obj\Debug\XingAo.Networks.CMS.TestDataShare.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\obj\Debug\XingAo.Networks.CMS.TestDataShare.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\XingAo.Core.Data.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\XingAo.Core.Data.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.CMS.TestDataShare\bin\XingAo.Core.pdb

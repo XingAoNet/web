@@ -1,0 +1,14 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.WeChat\bin\Debug\XingAo.Networks.WeChat.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.WeChat\bin\Debug\XingAo.Networks.WeChat.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.WeChat\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.WeChat\obj\Debug\XingAo.Networks.WeChat.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.WeChat\obj\Debug\XingAo.Networks.WeChat.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.WeChat\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Networks.WeChat\bin\Debug\XingAo.Core.pdb
+E:\Projects\CMS\Net 3.5\Trunk\WeChat\XingAo.Networks.WeChat\bin\Debug\XingAo.Networks.WeChat.dll
+E:\Projects\CMS\Net 3.5\Trunk\WeChat\XingAo.Networks.WeChat\bin\Debug\XingAo.Networks.WeChat.pdb
+E:\Projects\CMS\Net 3.5\Trunk\WeChat\XingAo.Networks.WeChat\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\WeChat\XingAo.Networks.WeChat\bin\Debug\XingAo.Core.pdb
+E:\Projects\CMS\Net 3.5\Trunk\WeChat\XingAo.Networks.WeChat\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\WeChat\XingAo.Networks.WeChat\obj\Debug\XingAo.Networks.WeChat.dll
+E:\Projects\CMS\Net 3.5\Trunk\WeChat\XingAo.Networks.WeChat\obj\Debug\XingAo.Networks.WeChat.pdb

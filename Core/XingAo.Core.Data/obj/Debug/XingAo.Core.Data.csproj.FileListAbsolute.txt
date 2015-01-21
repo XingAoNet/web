@@ -1,0 +1,16 @@
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core.Data\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core.Data\bin\Debug\XingAo.Core.Data.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core.Data\bin\Debug\XingAo.Core.Data.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core.Data\bin\Debug\EntityFramework.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core.Data\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core.Data\bin\Debug\XingAo.Core.pdb
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core.Data\bin\Debug\EntityFramework.xml
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core.Data\obj\Debug\XingAo.Core.Data.dll
+E:\Projects\CMS\Net 3.5\Trunk\XingAo.Core.Data\obj\Debug\XingAo.Core.Data.pdb
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core.Data\bin\Debug\XingAo.Core.Data.dll
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core.Data\bin\Debug\XingAo.Core.Data.pdb
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core.Data\bin\Debug\XingAo.Core.dll
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core.Data\bin\Debug\XingAo.Core.pdb
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core.Data\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core.Data\obj\Debug\XingAo.Core.Data.dll
+E:\Projects\CMS\Net 3.5\Trunk\Core\XingAo.Core.Data\obj\Debug\XingAo.Core.Data.pdb
