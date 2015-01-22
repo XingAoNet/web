@@ -1,0 +1,78 @@
+
+.picshow {
+	border: #d9e0ea 1px solid; 
+	MARGIN: 0px auto; WIDTH: 790px; hEIGhT: 550px; PADDING-TOP: 20px;
+}
+
+#picarea {
+	MARGIN: 0px auto; WIDTH: 790px; background: #fff; HEIGHT: 520px;
+}
+#bigpicarea {
+	POSITION: relative; MARGIN: 0px auto; WIDTH: 774px; HEIGHT: 420px; OVERFLOW: hidden;
+}
+.image {
+	TEXT-ALIGN: center
+}
+.image IMG {
+	border-BOTTOM: #ececec 1px solid; border-LEFT: #ececec 1px solid; MARGIN: 0px auto; border-TOP: #ececec 1px solid; border-RIGHT: #ececec 1px solid
+}
+#bigpicarea .word {
+	TEXT-ALIGN: center; HEIGHT: 50px; COLOR: #333
+}
+#bigpicarea .word H3 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 48px; HEIGHT: 48px; COLOR: #333; FONT-SIZE: 14px
+}
+#bigpicarea .ui-els-hide {
+	DISPLAY: none
+}
+#thumbs {
+	LIST-STYLE-TYPE: none; MARGIN: 0px auto; WIDTH: 790px; HEIGHT: 110px; text-align:center;
+}
+* HTML #thumbs {
+	HEIGHT: 100%
+}
+#thumbs LI {
+	MARGIN: 0px 7px; WIDTH: 100px; DISPLAY: inline; FLOAT: left; HEIGHT: 80px
+}
+#thumbs UL {
+	MARGIN-TOP: 3px
+}
+#thumbs LI.last_img {
+	MARGIN-RIGHT: 4px
+}
+#thumbs LI.first {
+	MARGIN: 25px 10px 0px 15px; WIDTH: 9px; HEIGHT: 16px; CURSOR: pointer
+}
+#thumbs LI.last {
+	MARGIN: 25px 10px 0px 15px; WIDTH: 9px; HEIGHT: 16px; CURSOR: pointer
+}
+#thumbs LI A {
+	border-BOTTOM: #fff 2px solid; border-LEFT: #fff 2px solid; WIDTH: 100px; DISPLAY: block; FONT-SIZE: 0px; border-TOP: #fff 2px solid; border-RIGHT: #fff 2px solid
+}
+#thumbs LI A:hover {
+	border-BOTTOM: #000 2px solid; border-LEFT: #000 2px solid; border-TOP: #000 2px solid; border-RIGHT: #000 2px solid
+}
+#thumbs LI A.current {
+	border-BOTTOM: #f8ae0f 2px solid; border-LEFT: #f8ae0f 2px solid; border-TOP: #f8ae0f 2px solid; border-RIGHT: #f8ae0f 2px solid
+}
+#thumbs LI.first IMG {
+	
+}
+#thumbs LI.last IMG {
+	
+}
+.bigbtnPrev {
+	Z-INDEX: 100; POSITION: absolute; WIDTH: 35px; HEIGHT: 51px; TOP: 186px; CURSOR: pointer; LEFT: 30px
+}
+.bigbtnNext {
+	Z-INDEX: 100; POSITION: absolute; WIDTH: 35px; HEIGHT: 51px; TOP: 186px; CURSOR: pointer; RIGHT: 30px
+}
+#big_play_prev {
+	background-IMAGE: url(/Themes/Default/images/leftbig.png); WIDTH: 35px; DISPLAY: block; HEIGHT: 51px; _background: none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='../images/leftbig.png')
+}
+#big_play_next {
+	background-IMAGE: url(/Themes/Default/images/rightbig.png); WIDTH: 35px; DISPLAY: block; HEIGHT: 51px; _background: none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='../images/rightbig.png')
+}
+#smallpicarea {
+	MARGIN: 0px auto; WIDTH: 790px; border-TOP: #ececec 1px solid; PADDING-TOP: 20px;
+}

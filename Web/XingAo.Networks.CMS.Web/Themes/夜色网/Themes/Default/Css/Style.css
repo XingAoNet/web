@@ -1,0 +1,136 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{background:url(/Themes/Default/images/bodybg.jpg)}
+body,td,th{ margin:0px; font-size:12px; color:#FFF; font-family:Verdana, Arial;}
+.floatLeft{ float:left}
+a:link{ color:#FFF; text-decoration:none}
+a:hover{ color:#CCC; text-decoration: underline;}
+a:visited{ color:#FFF; text-decoration:none}
+img{ border:0;}
+.Clear{ clear:both;}
+
+.Box{ width:1002px; margin:auto; height:auto; overflow:hidden;}
+.BG2{ background:url(/Themes/Default/Images/BG2.jpg); max-width:1920px; margin:auto;}
+
+.Head{ background:url(/Themes/Default/Images/Banner.jpg) center 40px no-repeat; height:287px; overflow:hidden;}
+.HeadBar{ height:40px; background:#2A1442}
+.HeadBar div div{ float:left; width:50%; height:40px; line-height:40px;}
+.HeadBar div div.Reg{ text-align:right}
+.Logo div{ float:left; width:50%; height:142px;}
+.SearchType,.SearchKey{width:435px; overflow:hidden; margin:auto;}
+.SearchType li,.SearchKey li{ float:left; margin:0; padding:0; list-style:none;}
+.SearchType{ margin-top:25px;}
+.SearchType li{ width:60px; height:32px; line-height:32px; color:#999999; cursor:pointer; text-align:center; background:url(/Themes/Default/Images/TabBG1.jpg); margin-right:10px;}
+.SearchType li.On{ background-position:-60px 0; color:#FFF; font-weight:bold;}
+.SearchKey li{ height:37px;}
+.SearchKey li,.SearchKey li #SearchKey{ width:333px; height:37px;}
+.SearchKey .Submit{ width:80px;}
+
+.MenuBar{ height:91px; background:url(/Themes/Default/Images/MenuBG.jpg); overflow:hidden; max-width:1920px; margin:auto;}
+.MenuBar ul{ margin:0; padding:0; clear:both; width:1002px; height:48px; overflow:hidden;}
+.MenuBar li{ list-style:none; margin:0; padding:0; height:48px; width:auto;}
+.SmallMenu{ height:43px; line-height:43px; color:#D8AEE0; font-weight:bold;}
+.SmallMenu a,.SmallMenu a:visited{ color:#D8AEE0;}
+
+
+.Order{ float:left; background:url(/Themes/Default/Images/LeftBG.jpg); width:255px; height:325px; overflow:hidden;}
+.Order ul{ width:220px; margin:60px auto 0px auto; padding:0;}
+.Order li{ overflow:hidden; height:60px; line-height:60px; width:180px; float:left; margin:0; padding:0; list-style:none }
+.Order li select{ width:180px; height:34px;}
+.Order li.txt{ clear:left; width:38px; float:left}
+.Order .Submit{ clear:both; height:60px; line-height:60px; text-align:center; padding-top:20px;}
+
+
+.PlayBox{ width:733px; height:325px; margin:0 0 0 14px; float:left; position:relative; overflow:hidden;}
+#divSmallBox{overflow:hidden;*display:inline;*zoom:1;width:10px;height:10px;margin:0 5px;border-radius:10px;background:#ffffff;}
+#playBox{ width:733px; height:325px; position:relative; overflow:hidden;}
+#playBox .oUlplay { width:99999px; position:absolute; left:0; top:0; margin:0; padding:0;}
+#playBox .oUlplay li{ float:left;margin:0; padding:0; list-style:none;}
+#playBox .pre{ cursor:pointer; width:45px; height:45px; background:url(/Themes/Default/Images/l.png) no-repeat; position:absolute; top:150px; left:10px; z-index:10;}
+#playBox .next{ cursor:pointer; width:45px; height:45px; background:url(/Themes/Default/Images/r.png) no-repeat; position:absolute; top:150px; right:10px; z-index:10;}
+#playBox .smalltitle {width:733px; height:10px; position:absolute; bottom:15px; z-index:10}
+#playBox .smalltitle ul{ width:120px; margin:0 auto;}
+#playBox .smalltitle ul li{ width:10px; height:10px; margin:0 5px; border-radius:10px; background:#ffffff; float:left; overflow:hidden;*display:inline;*zoom:1; cursor:pointer;}
+#playBox .smalltitle .thistitle{ background:#69aaec;}
+
+
+
+
+.PicList{ margin-top:15px;}
+.PicList .left,.PicList .right{ height:882px; float:left; overflow:hidden}
+.PicList .left{ width:761px;}
+.PicList .ListTitle{ width:756px; height:55px; overflow:hidden; margin:0; padding:0;}
+.PicList .ListTitle li{ width:116px; height:40px; margin:0 10px 0 0; padding:0; list-style:none; background:url(/Themes/Default/Images/TabTitleBG.jpg); text-align:center; line-height:40px; color:#DCADE3; font-weight:bold; cursor:pointer; float:left;}
+.PicList .ListTitle li.On{ background-position:-116px; color:#FFF}
+.PicList .ListPic{ width:761px; height:835px; overflow:hidden; margin:-13px 0 0 0; padding:0;}
+.PicList .ListPic li{ width:238px; height:258px; border:1px solid #76246C; overflow:hidden; float:left; text-align:center; list-style:none; margin:14px 12px 0 0; background:url(/Themes/Default/Images/PicListBG.jpg) no-repeat;}
+.PicList .ListPic li img{ margin:4px auto 8px auto; width:230px; height:174px;}
+.PicList .ListPic li img.order{ width:81px; height:26px; float:right; margin:8px 10px 0 0;}
+.PicList .ListPic li h1{ margin:0; padding:0; text-align:center; font-size:14px; height:22px;}
+.PicList .ListPic li div{ height:26px; line-height:26px;}
+.PicList .ListPic li span{ height:26px; line-height:26px; padding-top:7px;display:block; width:140px; float:left; color:#AA8AB9}
+
+
+.PicList .right{ width:240px;}
+.PicList .right .News{ height:291px; overflow:hidden; margin:10px 0;}
+.PicList .right .News h3,.PicList .right .Job h3{ display:block; margin:0; padding:0; padding-left:20px; width:220px; height:43px; line-height:43px; background:url(/Themes/Default/Images/JobNewsTitleBG.jpg);}
+.PicList .right .News ul{ background:url(/Themes/Default/Images/NewsBG.jpg); height:248px; margin:0; padding:0;}
+.PicList .right li{ height:38px; line-height:38px; width:200px; padding:0 20px; overflow:hidden; background:url(/Themes/Default/Images/NewsLine.jpg) bottom center no-repeat;}
+.PicList .right .Job ul{ background:url(/Themes/Default/Images/JobBG.jpg); height:167px; margin:0; padding:0;}
+.PicList .right .Ad{ margin-top:10px;}
+
+
+
+.SmallBanner{ margin-bottom:15px;}
+
+
+.IndexList2{ background:url(/Themes/Default/Images/BoxBG.jpg) top center no-repeat;}
+.IndexList2 .Left,.IndexList2 .Right{ height:509px; float:left; overflow:hidden;}
+.IndexList2 .Left{ width:719px;}
+.IndexList2 .Left .TabTitle{ margin:0; padding:0; height:55px; overflow:hidden;}
+.IndexList2 .Left .TabTitle li{ float:left; width:88px; height:54px; line-height:54px; border-bottom:1px solid #48276E; list-style:none; text-align:center; cursor:pointer;margin:0; padding:0;}
+.IndexList2 .Left .TabTitle li.On{ border-color:#FF44A3}
+.IndexList2 .Left .TabTitle li.More{width:58px; float:right; border:0; cursor:text; margin-right:10px;}
+.IndexList2 .Left .TabInfo{ width:704px; height:450px; margin:auto; overflow:hidden;margin:15px 0 0 0; padding:0;}
+.IndexList2 .Left .TabInfo li{margin:0 0 18px 0; padding:0; height:126px; overflow:hidden; list-style:none; clear:both;}
+.TabInfo .Img{ width:225px; height:126px; overflow:hidden; float:left;}
+.TabInfo .Img img{width:200px; height:126px; }
+.TabInfo .Txt{ width:462px; float:left;}
+.TabInfo h2{ font-size:14px; margin:3px 0; padding:8px 0;}
+.TabInfo .Info{ line-height:23px; color:#EB93EA; height:46px; overflow:hidden;}
+.TabInfo .time{ background:url(/Themes/Default/Images/ICO.jpg) 340px center no-repeat; width:440px; text-align:right; color:#873790; font-weight:bold; margin-top:20px;}
+
+
+.IndexList2 .Right{ width:283px;}
+.IndexList2 .Right .RightTitle{ margin:0; padding:0;}
+.RightTitle li{ float:left; width:88px; height:54px; line-height:54px; border-bottom:1px solid #FF44A3; list-style:none; text-align:center; margin:0; padding:0;}
+.RightTitle li.More{ float:right;width:58px; border:0;}
+.Right .Pic6{ clear:both; width:272px; margin:auto; padding:0; overflow:hidden; height:444px; padding-top:10px;}
+.Right .Pic6 li{ float:left; width:120px; height:120px; margin:11px 8px; list-style:none; padding:0;}
+
+
+
+.Line{ border-top:2px solid #FC45A1; max-width:1920px; background:#19042F; height:200px; overflow:hidden; margin:auto;}
+.About,.Service{ float:left; height:176px; margin-top:19px;}
+.About .Title,.Service .Title{ height:30px; border-bottom:1px solid #301E44; padding-left:5px;}
+.About{ width:392px; margin-left:19px;}
+.Service{width:530px; margin-left:43px;}
+.About .Txt{ padding-top:20px; line-height:25px; color:#DFDDE0}
+.Service .list{ width:525px; margin:0; padding:10px 0 0 0;}
+.Service .list li{ width:148px; height:36px; line-height:36px; border-bottom:1px solid #301E44; padding:0 0 0 16px; margin:0 10px 0 0; list-style:none; float:left; background:url(/Themes/Default/Images/ICO2.jpg) 5px center no-repeat;}
+
+
+
+
+.Foot{ background:#0E011B; max-width:1920px; height:37px; line-height:39px; margin:auto;}
+.Foot ul{ height:37px; overflow:hidden; margin:auto; padding:0; width:1002px;}
+.Foot li{ float:left; width:49%; list-style:none;}
+.Foot li.Des{ text-align:right;}
+.Foot .Box div{ height:50px;}
+
+
+
+
+
+
+

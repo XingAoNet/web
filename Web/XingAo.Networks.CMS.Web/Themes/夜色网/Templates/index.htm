@@ -1,0 +1,594 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>夜色网</title>
+    <!--{$XingAo_网站关键字与描述$}
+    <link rel="stylesheet" type="text/css" href="/Styles/SystemStyleSheet.css"/>-->
+    <link rel="stylesheet" type="text/css" href="/Themes/Default/Css/Style.css"/>
+    <script type="text/javascript" src="/Scripts/jquery-1.4.1.min.js"></script>
+    <!--<script type="text/javascript" src="/Scripts/WebTopMenu.min.js"></script>
+	<script type="text/javascript" src="/Scripts/SetIndexAndFav.js"></script>-->
+</head>
+<body>
+<div class="Head">
+  <div class="HeadBar">
+  	<div class="Box">
+      <div class="Welcom">您好，欢迎访问夜色网！</div>
+      <div class="Reg"><a href="#">登录</a> | <a href="#">注册</a></div>
+    </div>
+  </div>
+  <div class="Box Clear Logo">
+  	<div><img src="/Themes/Default/Images/Logo.jpg" width="429" height="142" alt="" /></div>
+    <div>
+    <form action="#">
+    	<ul class="SearchType">
+        	<li>夜吧</li>
+            <li>酒吧</li>
+            <li>KTV</li>
+        </ul>
+        <script type="text/javascript">
+			$(".SearchType li").click(
+			function()
+			{
+				$(this).addClass("On").siblings().removeClass("On");
+				$("#SearchType").val($(this).text());
+			});
+			$(".SearchType li:first").click();
+        </script>
+        <ul class="SearchKey">
+        	<li>
+        	  <input type="hidden" name="SearchType" id="SearchType" />
+        	  <input type="text" name="SearchKey" id="SearchKey" />
+        	</li>
+            <li class="Submit">
+              <input type="image" name="imageField" id="imageField" src="/Themes/Default/Images/Btn_Search.jpg" />
+            </li>
+        </ul>
+    </form>    
+    </div>
+  </div>
+  <div class="MenuBar">
+  	<div class="Box">
+  	<div class="Menu">
+    	<a href="#"><img src="/Themes/Default/Images/m1.jpg" width="84" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m2.jpg" width="80" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m3.jpg" width="97" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m4.jpg" width="80" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m5.jpg" width="94" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m6.jpg" width="112" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m7.jpg" width="110" height="48" alt="" /></a><img src="/Themes/Default/Images/tel.jpg" width="345" height="48" alt="" />
+    </div> 
+    <ul class="SmallMenu">
+   	  <li>&nbsp;</li>
+      <li>没有子菜单的请保持为&amp;nbsp;<a href="#">夜店</a> | 夜总会 | KTV ......1</li>
+      <li>没有子菜单的请保持为&amp;nbsp;夜店 | 夜总会 | KTV ......3</li>
+      <li>夜店 | 夜总会 | KTV ......4</li>
+      <li>夜店 | 夜总会 | KTV ......5</li>
+      <li>夜店 | 夜总会 | KTV ......6</li>
+      <li>夜店 | 夜总会 | KTV ......7</li>
+    </ul>
+    <script type="text/javascript">
+	$(".SmallMenu li").hide();
+	$(".Menu a").mouseover(
+	function()
+	{
+		$(".SmallMenu li").eq($(this).index()).show().siblings().hide();
+	});
+	$(".MenuBar").mouseleave(
+	function()
+	{
+		$(".SmallMenu li").hide();
+	});
+	</script>
+    </div>  
+  </div>
+</div>
+
+
+<div class="Box">
+	<div class="Order">
+    <form id="form1" name="form1" method="post" action="#">
+    	<ul>
+        	<li class="txt">夜吧</li>
+            <li>
+                <select name="select" id="select">
+                <option value="">请选择预订日期</option>
+                </select>
+              
+            </li>
+        	<li class="txt">日期</li>
+            <li>
+                <select name="select" id="select">
+                <option value="">请选择预订日期</option>
+                </select>
+              
+            </li>
+        	<li class="txt">人数</li>
+            <li>
+                <select name="select" id="select">
+                <option value="">请选择预订日期</option>
+                </select>
+              
+            </li>
+        </ul>
+        <div class="Submit">
+          <input type="image" name="imageField2" id="imageField2" src="/Themes/Default/Images/Btn_Submit.jpg" />
+        </div>
+    </form>
+    </div>
+  <div class="PlayBox">
+      <div id="playBox">
+        <div class="pre"></div>
+        <div class="next"></div>
+        <div class="smalltitle">
+          <ul>
+            <li class="thistitle"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <ul class="oUlplay">
+           <li><a href="#" target="_blank"><img src="/Themes/Default/Images/AD1.jpg" /></a></li>
+           <li><a href="#" target="_blank"><img src="/Themes/Default/Images/AD2.jpg" /></a></li>
+           <li><a href="#" target="_blank"><img src="/Themes/Default/Images/AD3.jpg" /></a></li>
+           <li><a href="#" target="_blank"><img src="/Themes/Default/Images/AD4.jpg" /></a></li>
+           <li><a href="#" target="_blank"><img src="/Themes/Default/Images/AD5.jpg" /></a></li>
+           <li><a href="#" target="_blank"><img src="/Themes/Default/Images/AD6.jpg" /></a></li>
+        </ul>
+    </div>
+      <script type="text/javascript">
+	  function getStyle(obj,name)
+	  {
+		  if(obj.currentStyle)
+		  {
+			  return obj.currentStyle[name]
+		  }
+		  else
+		  {
+			  return getComputedStyle(obj,false)[name]
+		  }
+	  }
+	  
+	  function getByClass(oParent,nClass)
+	  {
+		  var eLe = oParent.getElementsByTagName('*');
+		  var aRrent  = [];
+		  for(var i=0; i<eLe.length; i++)
+		  {
+			  if(eLe[i].className == nClass)
+			  {
+				  aRrent.push(eLe[i]);
+			  }
+		  }
+		  return aRrent;
+	  }
+	  
+	  function startMove(obj,att,add)
+	  {
+		  clearInterval(obj.timer)
+		  obj.timer = setInterval(function(){
+			 var cutt = 0 ;
+			 if(att=='opacity')
+			 {
+				 cutt = Math.round(parseFloat(getStyle(obj,att)));
+			 }
+			 else
+			 {
+				 cutt = Math.round(parseInt(getStyle(obj,att)));
+			 }
+			 var speed = (add-cutt)/4;
+			 speed = speed>0?Math.ceil(speed):Math.floor(speed);
+			 if(cutt==add)
+			 {
+				 clearInterval(obj.timer)
+			 }
+			 else
+			 {
+				 if(att=='opacity')
+				 {
+					 obj.style.opacity = (cutt+speed)/100;
+					 obj.style.filter = 'alpha(opacity:'+(cutt+speed)+')';
+				 }
+				 else
+				 {
+					 obj.style[att] = cutt+speed+'px';
+				 }
+			 }
+			 
+		  },30)
+	  }
+	  
+		window.onload = function()
+		{
+			var oDiv = document.getElementById('playBox');
+			var oPre = getByClass(oDiv,'pre')[0];
+			var oNext = getByClass(oDiv,'next')[0];
+			var oUlBig = getByClass(oDiv,'oUlplay')[0];
+			var aBigLi = oUlBig.getElementsByTagName('li');
+			var oDivSmall = getByClass(oDiv,'smalltitle')[0]
+			var aLiSmall = oDivSmall.getElementsByTagName('li');
+			
+			function tab()
+			{
+			   for(var i=0; i<aLiSmall.length; i++)
+			   {
+				  aLiSmall[i].className = '';
+			   }
+			   aLiSmall[now].className = 'thistitle'
+			   startMove(oUlBig,'left',-(now*aBigLi[0].offsetWidth))
+			}
+			var now = 0;
+			for(var i=0; i<aLiSmall.length; i++)
+			{
+				aLiSmall[i].index = i;
+				aLiSmall[i].onclick = function()
+				{
+					now = this.index;
+					tab();
+				}
+		   }
+			oPre.onclick = function()
+			{
+				now--
+				if(now ==-1)
+				{
+					now = aBigLi.length;
+				}
+				 tab();
+			}
+			 oNext.onclick = function()
+			{
+				 now++
+				if(now ==aBigLi.length)
+				{
+					now = 0;
+				}
+				tab();
+			}
+			var timer = setInterval(oNext.onclick,3000) //滚动间隔时间设置
+			oDiv.onmouseover = function()
+			{
+				clearInterval(timer)
+			}
+			 oDiv.onmouseout = function()
+			{
+				timer = setInterval(oNext.onclick,3000) //滚动间隔时间设置
+			}
+		}
+	  </script>
+
+  </div>
+</div>
+
+
+
+<div class="Box PicList">
+  <div class="left">
+    	<ul class="ListTitle">
+          <li>KTV</li>
+          <li>夜店</li>
+          <li>夜总会</li>
+          <li>娱乐会所</li>
+          <li>酒吧</li>
+          <li>夜餐厅</li>
+        </ul>
+    <ul class="ListPic">
+          <li>
+          <img src="/Themes/Default/Images/temp1111111111111111.jpg" width="230" height="174" alt="" />
+          <h1>KTVKTV0000</h1>
+          <div><span>1234人预订</span><a href="#"><img src="/Themes/Default/Images/Btn_Order.jpg" width="81" height="26" alt="" class="order" /></a></div>
+          </li>
+          <li><img src="/Themes/Default/Images/temp1111111111111111.jpg" width="230" height="174" alt="" />
+          <h1>KTVKTV0000</h1>
+          <div><span>1234人预订</span><a href="#"><img src="/Themes/Default/Images/Btn_Order.jpg" width="81" height="26" alt="" class="order" /></a></div></li>
+          <li><img src="/Themes/Default/Images/temp1111111111111111.jpg" width="230" height="174" alt="" />
+          <h1>KTVKTV0000</h1>
+          <div><span>1234人预订</span><a href="#"><img src="/Themes/Default/Images/Btn_Order.jpg" width="81" height="26" alt="" class="order" /></a></div></li>
+          <li><img src="/Themes/Default/Images/temp1111111111111111.jpg" width="230" height="174" alt="" />
+          <h1>KTVKTV0000</h1>
+          <div><span>1234人预订</span><a href="#"><img src="/Themes/Default/Images/Btn_Order.jpg" width="81" height="26" alt="" class="order" /></a></div></li>
+          <li>酒吧</li>
+          <li>夜餐厅</li>
+          <li>KTV</li>
+          <li>夜店</li>
+          <li>夜总会</li>
+        </ul>
+    <ul class="ListPic">
+          <li><img src="/Themes/Default/Images/temp1111111111111111.jpg" width="230" height="174" alt="" />
+          <h1>KTVKTV1111</h1>
+          <div><span>1234人预订</span><a href="#"><img src="/Themes/Default/Images/Btn_Order.jpg" width="81" height="26" alt="" class="order" /></a></div></li>
+          <li>夜店</li>
+          <li>夜总会</li>
+          <li>娱乐会所</li>
+          <li>酒吧</li>
+          <li>夜餐厅</li>
+          <li>KTV</li>
+          <li>夜店</li>
+          <li>夜总会</li>
+    </ul>
+    <ul class="ListPic">
+          <li><img src="/Themes/Default/Images/temp1111111111111111.jpg" width="230" height="174" alt="" />
+          <h1>KTVKTV2222</h1>
+          <div><span>1234人预订</span><a href="#"><img src="/Themes/Default/Images/Btn_Order.jpg" width="81" height="26" alt="" class="order" /></a></div></li>
+          <li>夜店</li>
+          <li>夜总会</li>
+          <li>娱乐会所</li>
+          <li>酒吧</li>
+          <li>夜餐厅</li>
+          <li>KTV</li>
+          <li>夜店</li>
+          <li>夜总会</li>
+    </ul>
+    <ul class="ListPic">
+          <li>KTV3333</li>
+          <li>夜店</li>
+          <li>夜总会</li>
+          <li>娱乐会所</li>
+          <li>酒吧</li>
+          <li>夜餐厅</li>
+          <li>KTV</li>
+          <li>夜店</li>
+          <li>夜总会</li>
+    </ul>
+    <ul class="ListPic">
+      <li>KTV</li>
+      <li>夜店</li>
+      <li>夜总会</li>
+      <li>娱乐会所</li>
+      <li>酒吧</li>
+      <li>夜餐厅</li>
+      <li>KTV</li>
+      <li>夜店</li>
+      <li>夜总会</li>
+    </ul>    
+    <ul class="ListPic">
+      <li>KTV</li>
+      <li>夜店</li>
+      <li>夜总会</li>
+      <li>娱乐会所</li>
+      <li>酒吧</li>
+      <li>夜餐厅</li>
+      <li>KTV</li>
+      <li>夜店</li>
+      <li>夜总会</li>
+    </ul>
+     <script type="text/javascript">
+		$(".ListTitle li").click(
+		function()
+		{
+			var index=$(this).index();
+			$(".ListPic").eq(index).fadeIn().siblings(".ListPic").fadeOut();
+			$(this).addClass("On").siblings().removeClass("On");
+		});
+		$(".ListTitle li:first").click();
+	 </script>
+  </div>
+  <div class="right">
+    	<div class="Date">
+        <img src="/Themes/Default/Images/Date.jpg" width="240" height="243" alt="" />
+      </div>
+    <div class="News">
+        <h3>111</h3>
+        <ul>
+        <li><a href="#">111</a></li>
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+      </ul>
+        </div>
+        <div class="Job">
+        <h3>111</h3>
+        <ul>
+        <li><a href="http://sc.chinaz.com/">111</a></li>
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+        </ul>
+        </div>
+        <div class="Ad">
+        <img src="/Themes/Default/Images/SmallAD.jpg" width="240" height="89" alt="" />
+        </div>
+  </div>
+</div>
+
+
+<div class="Box SmallBanner"><img src="/Themes/Default/Images/SmallBanner.jpg" width="1002" height="80" alt="" /></div>
+
+
+<div class="BG2">
+	<div class="Box IndexList2">
+    	<div class="Left">
+       	  <ul class="TabTitle">
+            	<li>夜总会</li>
+                <li>酒吧</li>
+                <li>KTV</li>
+                <li>其它</li>
+                <li class="More"><a href="#">更多&gt;</a></li>
+            </ul>
+            <ul class="TabInfo">
+            	<li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推荐111222221</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+            </ul>
+            <ul class="TabInfo">
+            	<li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推3333333荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+            </ul>
+            <ul class="TabInfo">
+            	<li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推4444荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+            </ul>
+            <ul class="TabInfo">
+            	<li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时5555活动推荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="Img"><img src="/Themes/Default/Images/temp222222222222222.jpg" width="200" height="126" alt="" /></div>
+                  <div class="Txt">
+                  <h2>2015上海跨年倒计时活动推荐1111</h2>
+                  <div class="Info">
+新年代表着全新的开始，跨年因此成为了每年最重要的事！倘若你还在上海丰富多彩的跨年活动中无法抉择。。。 2015年外滩元旦跨年倒计时活动 时间：12月31日 ... </div>
+                  <div class="time">2015-01-18</div>
+                  </div>
+                </li>
+            </ul>
+            <script type="text/javascript">
+				$(".TabTitle li").click(
+				function()
+				{
+					var index=$(this).index();
+					if(index<4)
+					{
+						$(".TabInfo").fadeOut();
+						$(".TabInfo").eq(index).fadeIn();
+						$(this).addClass("On").siblings().removeClass("On");
+					}
+				});
+				$(".TabTitle li:first").click();
+			</script>
+        </div>
+        <div class="Right">
+       	  <ul class="RightTitle">
+            <li>夜女郎</li>
+            <li class="More"><a href="#">更多&gt;</a></li>
+            </ul>
+            <ul class="Pic6">
+            	<li><img src="/Themes/Default/Images/temp3333333333333.jpg" width="120" height="120" alt="" /></li>
+                <li><img src="/Themes/Default/Images/temp3333333333333.jpg" width="120" height="120" alt="" /></li>
+                <li><img src="/Themes/Default/Images/temp3333333333333.jpg" width="120" height="120" alt="" /></li>
+                <li><img src="/Themes/Default/Images/temp3333333333333.jpg" width="120" height="120" alt="" /></li>
+                <li><img src="/Themes/Default/Images/temp3333333333333.jpg" width="120" height="120" alt="" /></li>
+                <li><img src="/Themes/Default/Images/temp3333333333333.jpg" width="120" height="120" alt="" /></li>
+            </ul>
+        </div>
+  </div>
+</div>
+
+
+<div class="Line">
+  <div class="Box">
+    <div class="About">
+      	<div class="Title">
+        <img src="/Themes/Default/Images/About.jpg" width="147" height="17" alt="" />
+        </div>
+        <div class="Txt">
+        上海夜色网《为您提供全上海夜总会订位服务》您只需一个电话，将为您搞定一切，送酒水 绿茶，饮料，水果，小吃等等，一切不是问题，满足您的一切需求！（我们的宗旨：服务至上，满意第一）<br />
+订位电话：021-61996886 18301799520 </div>
+      </div>
+      <div class="Service">
+      	<div class="Title">
+        <img src="/Themes/Default/Images/Service.jpg" width="174" height="17" alt="" />
+        </div>
+        <ul class="list">
+        	<li>11</li>
+        	<li>11</li>
+            <li>11</li>
+        	<li>11</li>
+            <li>11</li>
+        	<li>11</li>
+            <li>11</li>
+        	<li>11</li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<div class="Foot">
+	<div class="Box">
+    	<ul>
+        <li>Copyright &copy; 2014 夜色网 版权所有 All rights reserved.沪ICP备05007930 </li>
+        <li class="Des">技术支持：台州市星奥科技网络有限公司 </li>
+        </ul>
+        <div>&nbsp;</div>
+    </div>
+</div>
+</body>
+</html>
