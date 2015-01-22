@@ -1,0 +1,56 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{background:url(/Themes/Default/images/bodybg.jpg) no-repeat fixed center top transparent;}
+body,td,th{ margin:0px; font-size:12px; color:#716F7A; font-family:Verdana, Arial;}
+.floatLeft{ float:left}
+a:link{ color:#716F7A; text-decoration:none}
+a:hover{ color:#000; text-decoration:none}
+a:visited{ color:#716F7A; text-decoration:none}
+
+
+.Box{ width:978px; margin:auto; height:auto; overflow:hidden;}
+.BigBox{ width:1270px; margin:auto; height:auto; overflow:hidden;}
+.HeadBox{ width:1005px; margin:auto; height:auto; overflow:hidden;}
+
+
+.Head{ background:url(/Themes/Default/Images/HeadBG.jpg); height:114px;}
+.Head .Logo{ width:750px; height:73px;}
+.Head .Tel{ width:75px; height:73px;}
+.Head .MenuBox{ width:1005px; height:41px; overflow:hidden;}
+.Head .MenuBox div{ float:left; height:41px; overflow:hidden}
+.Head .MenuBox .Left{ background:url(/Themes/Default/Images/MenuLeft.jpg); width:18px;}
+.Head .MenuBox .Mid{ background:url(/Themes/Default/Images/MenuBG.jpg); width:970px;}
+.Head .MenuBox .Right{ background:url(/Themes/Default/Images/MenuRight.jpg); width:16px;}
+
+
+.Banner{ background:url(/Themes/Default/Images/Banner.jpg) no-repeat; height:365px; overflow:hidden}
+.Banner .SubMenu{ width:975px; height:65px; overflow:hidden; margin:300px auto 0 auto;}
+.Banner .SubMenu li{ width:195px; float:left; height:65px; overflow:hidden;}
+.Banner .SubMenu li a{ display:block; width:195px; height:65px; overflow:hidden;}
+
+
+.IndexBG{ background:url(/Themes/Default/Images/Index4CellBG.jpg) top left repeat-x;}
+.Index4Cell{ background:#FFF;}
+.IndexPic,.IndexNews,.IndexAbout,.IndexContact{ float:left; border-top:15px solid #FFF; height:135px; overflow:hidden;}
+.Index4Cell .Title{ height:26px;}
+.IndexPic{ width:182px;}
+.IndexNews{ width:343px; border-left:15px solid #FFF; border-right:1px solid #E7E7E7}
+.IndexAbout{ width:231px; border-left:20px solid #FFF; border-right:1px solid #E7E7E7}
+.IndexContact{ width:146px;border-left:20px solid #FFF;}
+.Index4Cell .NewsList span{ font-size:10px; color:#AEAAC1; display:block; width:79px; height:22px; line-height:22px; overflow:hidden; float:left}
+.Index4Cell .NewsList a{ display:block; width:246px; height:22px; line-height:22px; overflow:hidden; float:left;}
+.Index4Cell .NewsList a:hover{ color:#000; text-decoration:none}
+.IndexAbout .InfoTxt{ line-height:23px; width:90%;}
+.IndexAbout .InfoTxt img{ margin:0px 8px 8px 0; float:left;}
+
+
+.IndexProduct{ height:217px;}
+.IndexProduct .Title{ width:414px; height:32px; float:left}
+.IndexProduct .Mid{ width:492px; height:32px; background:url(/Themes/Default/Images/Title_ProductBG.jpg) repeat-x; float:left}
+.IndexProduct .More{ width:70px; height:32px;float:left; text-align:right}
+
+
+.Foot{ background:url(/Themes/Default/Images/FootLine.jpg) top repeat-x; height:105px;}
+.Foot .ToTop{ text-align:right;}
+.Foot .Txt{ line-height:25px;}
+.Foot .Txt img{ margin:0 8px 8px 0; float:left;}
