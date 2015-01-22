@@ -1,0 +1,4 @@
+F:\XingAoNet\web\UserCenter\XingAo.Software.UserCenter\bin\Debug\XingAo.Software.UserCenter.dll
+F:\XingAoNet\web\UserCenter\XingAo.Software.UserCenter\bin\Debug\XingAo.Software.UserCenter.pdb
+F:\XingAoNet\web\UserCenter\XingAo.Software.UserCenter\obj\Debug\XingAo.Software.UserCenter.dll
+F:\XingAoNet\web\UserCenter\XingAo.Software.UserCenter\obj\Debug\XingAo.Software.UserCenter.pdb
