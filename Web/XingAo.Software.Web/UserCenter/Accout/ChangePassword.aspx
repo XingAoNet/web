@@ -8,8 +8,28 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
+    <div class="container">
+        <div class="header">
+        	<h3>修改密码</h3>
+		</div>
+     	<div class="content">
+			<span>
+        		<label>*旧密码：</label>
+                <input type="password" id="old_pwd" name="old_pwd" />
+            </span>
+        	<span>
+        		<label>新密码：</label>
+                <input type="password" id="new_pwd" name="new_pwd" />
+        	</span>
+        	<span>
+                <label>确认新密码：</label>
+                <input type="password" id="new_pwd2" name="new_pwd2" />
+        	</span>
+            <span>
+            	<label>&nbsp;</label>
+                <input type="submit" id="submit" name="submit" value="提交" />
+            </span>
+        </div>
     </div>
     </form>
 </body>

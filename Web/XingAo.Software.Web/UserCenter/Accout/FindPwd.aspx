@@ -8,8 +8,25 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
+    <div class="container">
+        <div class="header">
+            <h3>密码找回</h3>
+        </div>
+        <div class="content">
+            <span>
+                <label>* 注册邮箱：</label>
+                <input type="text" id="reg_email" name="reg_email" />
+            </span>
+            <span>
+                <label>* 验证码：</label>
+                <input type="text" id="image_code" name="image_code" />
+                <img id="ImageCode" onclick="this.src='/ImageCode?r='+new Date()" style="cursor:pointer;" alt="看不清？点击刷新" title="看不清？点击刷新" src="/ImageCode" />
+            </span>
+            <span>
+                <label>&nbsp;</label>
+                <input type="submit" id="find_pwd" name="find_pwd" value="找回密码" />
+            </span>
+        </div>
     </div>
     </form>
 </body>

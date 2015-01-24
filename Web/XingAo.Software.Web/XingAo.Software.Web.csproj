@@ -57,10 +57,12 @@
     <Content Include="Template\Default\Label\Global\Header.htm" />
     <Content Include="Template\Default\Label\Global\Top.htm" />
     <Content Include="Template\Default\模板设计说明.txt" />
+    <Content Include="UserCenter\Accout\Avatar.aspx" />
     <Content Include="UserCenter\Accout\ChangePassword.aspx" />
     <Content Include="UserCenter\Accout\FindPwd.aspx" />
     <Content Include="UserCenter\Accout\Login.aspx" />
     <Content Include="UserCenter\Accout\Register.aspx" />
+    <Content Include="UserCenter\Accout\UserInfo.aspx" />
     <Content Include="UserCenter\Capital\Gateway\Redirect.aspx" />
     <Content Include="UserCenter\Capital\Gateway\Return.aspx" />
     <Content Include="UserCenter\Capital\Recharge.aspx" />
@@ -72,6 +74,8 @@
     <Content Include="UserCenter\Message\Inbox.aspx" />
     <Content Include="UserCenter\Message\Outbox.aspx" />
     <Content Include="UserCenter\Message\Sender.aspx" />
+    <Content Include="UserCenter\Navigation\Horizontal.aspx" />
+    <Content Include="UserCenter\Navigation\Vertical.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,6 +96,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserCenter\Accout\Avatar.aspx.cs">
+      <DependentUpon>Avatar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\Accout\Avatar.aspx.designer.cs">
+      <DependentUpon>Avatar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserCenter\Accout\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -119,6 +130,13 @@
     </Compile>
     <Compile Include="UserCenter\Accout\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\Accout\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\Accout\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserCenter\Capital\Gateway\Redirect.aspx.cs">
       <DependentUpon>Redirect.aspx</DependentUpon>
@@ -189,6 +207,20 @@
     </Compile>
     <Compile Include="UserCenter\Message\Sender.aspx.designer.cs">
       <DependentUpon>Sender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\Navigation\Horizontal.aspx.cs">
+      <DependentUpon>Horizontal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\Navigation\Horizontal.aspx.designer.cs">
+      <DependentUpon>Horizontal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\Navigation\Vertical.aspx.cs">
+      <DependentUpon>Vertical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\Navigation\Vertical.aspx.designer.cs">
+      <DependentUpon>Vertical.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
