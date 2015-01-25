@@ -40,10 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="IPassportService.cs" />
+    <Compile Include="Front\ILogin.cs" />
+    <Compile Include="Front\IMobileBind.cs" />
+    <Compile Include="Front\IPassportService.cs" />
+    <Compile Include="Front\IPassword.cs" />
+    <Compile Include="Front\IRegister.cs" />
+    <Compile Include="Admin\IMobileBindAdmin.cs" />
+    <Compile Include="Admin\IOperationLogService.cs" />
+    <Compile Include="ITokenService.cs" />
+    <Compile Include="Admin\IUserAdmin.cs" />
+    <Compile Include="OperationLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result.cs" />
+    <Compile Include="TokenResult.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
