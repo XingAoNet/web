@@ -72,7 +72,6 @@
     <Compile Include="String\StringOption.cs" />
     <Compile Include="String\StringPlus.cs" />
     <Compile Include="String\VerifyCode.cs" />
-    <Compile Include="VerifyCode.cs" />
     <Compile Include="Web\CookiesHelp.cs" />
     <Compile Include="Web\DataCache.cs" />
     <Compile Include="Web\MessageBox.cs" />

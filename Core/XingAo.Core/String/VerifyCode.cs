@@ -227,7 +227,7 @@ namespace XingAo.Core
             {
                 codeLen = Length;
             }
-            string[] arr = CodeSerial.Split(',');
+            string[] arr = codeSerial.Split(',');
             string code = "";
             int randValue = -1;
             Random rand = new Random(unchecked((int)DateTime.Now.Ticks));
