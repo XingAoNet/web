@@ -3,15 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.CMS.Model", "XingAo.Networks.CMS.Model\XingAo.Networks.CMS.Model.csproj", "{471479F5-FA31-47A1-9D01-176839D90561}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.CMS.Common", "XingAo.Networks.CMS.Common\XingAo.Networks.CMS.Common.csproj", "{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.CMS.InterFace", "XingAo.Networks.CMS.InterFace\XingAo.Networks.CMS.InterFace.csproj", "{DDA34246-034D-48FC-A2B0-93869B073C1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.CMS.DbHelper", "XingAo.Networks.CMS.DbHelper\XingAo.Networks.CMS.DbHelper.csproj", "{C3B73692-FC7B-4F91-B6E8-90E4974BE764}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.CMS.Setup", "XingAo.Networks.CMS.Setup\XingAo.Networks.CMS.Setup.csproj", "{CDADA58A-AADC-44CB-872D-0436E3C26ECD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.CMS.TestDataShare", "XingAo.Networks.CMS.TestDataShare\XingAo.Networks.CMS.TestDataShare.csproj", "{54A7F26C-3D6F-43EE-B4E7-AC438B2AA6FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D2119EC9-D82B-4BBF-8402-7F4C7993A259}"
 EndProject
@@ -60,66 +54,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.VerifyPermissions", "Permission\XingAo.Networks.VerifyPermissions\XingAo.Networks.VerifyPermissions.csproj", "{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 16
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = XingAo.Networks.CMS.Web\\XingAo.Networks.CMS.Web.csproj
-		SccProjectName1 = XingAo.Networks.CMS.Web
-		SccLocalPath1 = XingAo.Networks.CMS.Web
-		SccProjectUniqueName2 = XingAo.Networks.CMS.Template.Label\\XingAo.Networks.CMS.Template.Label.csproj
-		SccProjectTopLevelParentUniqueName2 = Xing-Ao.CMS.sln
-		SccProjectName2 = XingAo.Networks.CMS.Template.Label
-		SccLocalPath2 = XingAo.Networks.CMS.Template.Label
-		SccProjectUniqueName3 = XingAo.Networks.CMS.Template.Engine\\XingAo.Networks.CMS.Template.Engine.csproj
-		SccProjectTopLevelParentUniqueName3 = Xing-Ao.CMS.sln
-		SccProjectName3 = XingAo.Networks.CMS.Template.Engine
-		SccLocalPath3 = XingAo.Networks.CMS.Template.Engine
-		SccProjectUniqueName4 = XingAo.Networks.CMS.Model\\XingAo.Networks.CMS.Model.csproj
-		SccProjectName4 = XingAo.Networks.CMS.Model
-		SccLocalPath4 = XingAo.Networks.CMS.Model
-		SccProjectUniqueName5 = XingAo.Networks.CMS.Common\\XingAo.Networks.CMS.Common.csproj
-		SccProjectTopLevelParentUniqueName5 = Xing-Ao.CMS.sln
-		SccProjectName5 = XingAo.Networks.CMS.Common
-		SccLocalPath5 = XingAo.Networks.CMS.Common
-		SccProjectUniqueName6 = XingAo.Networks.CMS.InterFace\\XingAo.Networks.CMS.InterFace.csproj
-		SccProjectName6 = XingAo.Networks.CMS.InterFace
-		SccLocalPath6 = XingAo.Networks.CMS.InterFace
-		SccProjectUniqueName7 = XingAo.Networks.CMS.DbHelper\\XingAo.Networks.CMS.DbHelper.csproj
-		SccProjectTopLevelParentUniqueName7 = Xing-Ao.CMS.sln
-		SccProjectName7 = XingAo.Networks.CMS.DbHelper
-		SccLocalPath7 = XingAo.Networks.CMS.DbHelper
-		SccProjectUniqueName8 = XingAo.Networks.CMS.HttpModule\\XingAo.Networks.CMS.HttpModule.csproj
-		SccProjectTopLevelParentUniqueName8 = Xing-Ao.CMS.sln
-		SccProjectName8 = XingAo.Networks.CMS.HttpModule
-		SccLocalPath8 = XingAo.Networks.CMS.HttpModule
-		SccProjectUniqueName9 = XingAo.Networks.CMS.Setup\\XingAo.Networks.CMS.Setup.csproj
-		SccProjectName9 = XingAo.Networks.CMS.Setup
-		SccLocalPath9 = XingAo.Networks.CMS.Setup
-		SccProjectUniqueName10 = XingAo.Networks.WeChat\\XingAo.Networks.WeChat.csproj
-		SccProjectTopLevelParentUniqueName10 = Xing-Ao.CMS.sln
-		SccProjectName10 = XingAo.Networks.WeChat
-		SccLocalPath10 = XingAo.Networks.WeChat
-		SccProjectUniqueName11 = XingAo.Networks.CMS.TestDataShare\\XingAo.Networks.CMS.TestDataShare.csproj
-		SccProjectName11 = XingAo.Networks.CMS.TestDataShare
-		SccLocalPath11 = XingAo.Networks.CMS.TestDataShare
-		SccProjectUniqueName12 = ..\\..\\..\\Branch\\s生本教育网\\Trunk\\XingAo.Networks.VerifyPermissions\\XingAo.Networks.VerifyPermissions.csproj
-		SccProjectTopLevelParentUniqueName12 = Xing-Ao.CMS.sln
-		SccProjectName12 = ../../../Branch/s生本教育网/Trunk/XingAo.Networks.VerifyPermissions
-		SccLocalPath12 = ..\\..\\..\\Branch\\s生本教育网\\Trunk\\XingAo.Networks.VerifyPermissions
-		SccProjectUniqueName13 = XingAo.Core\\XingAo.Core.csproj
-		SccProjectTopLevelParentUniqueName13 = Xing-Ao.CMS.sln
-		SccProjectName13 = XingAo.Core
-		SccLocalPath13 = XingAo.Core
-		SccProjectUniqueName14 = XingAo.Core.Web\\XingAo.Core.Web.csproj
-		SccProjectTopLevelParentUniqueName14 = Xing-Ao.CMS.sln
-		SccProjectName14 = XingAo.Core.Web
-		SccLocalPath14 = XingAo.Core.Web
-		SccProjectUniqueName15 = XingAo.Core.Data\\XingAo.Core.Data.csproj
-		SccProjectTopLevelParentUniqueName15 = Xing-Ao.CMS.sln
-		SccProjectName15 = XingAo.Core.Data
-		SccLocalPath15 = XingAo.Core.Data
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -129,26 +63,14 @@ Global
 		{471479F5-FA31-47A1-9D01-176839D90561}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{471479F5-FA31-47A1-9D01-176839D90561}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{471479F5-FA31-47A1-9D01-176839D90561}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DDA34246-034D-48FC-A2B0-93869B073C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DDA34246-034D-48FC-A2B0-93869B073C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA34246-034D-48FC-A2B0-93869B073C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA34246-034D-48FC-A2B0-93869B073C1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3B73692-FC7B-4F91-B6E8-90E4974BE764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3B73692-FC7B-4F91-B6E8-90E4974BE764}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3B73692-FC7B-4F91-B6E8-90E4974BE764}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3B73692-FC7B-4F91-B6E8-90E4974BE764}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CDADA58A-AADC-44CB-872D-0436E3C26ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CDADA58A-AADC-44CB-872D-0436E3C26ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDADA58A-AADC-44CB-872D-0436E3C26ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDADA58A-AADC-44CB-872D-0436E3C26ECD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54A7F26C-3D6F-43EE-B4E7-AC438B2AA6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54A7F26C-3D6F-43EE-B4E7-AC438B2AA6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54A7F26C-3D6F-43EE-B4E7-AC438B2AA6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54A7F26C-3D6F-43EE-B4E7-AC438B2AA6FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -220,14 +142,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DDA34246-034D-48FC-A2B0-93869B073C1E} = {FDF9F9E3-2919-4C34-8ED0-AFBF7AA471E6}
 		{471479F5-FA31-47A1-9D01-176839D90561} = {FDF9F9E3-2919-4C34-8ED0-AFBF7AA471E6}
-		{C3B73692-FC7B-4F91-B6E8-90E4974BE764} = {D2119EC9-D82B-4BBF-8402-7F4C7993A259}
-		{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A} = {D2119EC9-D82B-4BBF-8402-7F4C7993A259}
 		{4A59DB87-F77A-41B1-9EF3-ED99F06504B1} = {D2119EC9-D82B-4BBF-8402-7F4C7993A259}
 		{4CC6880C-ED52-433E-B42D-A82967756762} = {D2119EC9-D82B-4BBF-8402-7F4C7993A259}
 		{72E686BF-D234-4A2A-B4FD-48D858ED915E} = {D2119EC9-D82B-4BBF-8402-7F4C7993A259}
-		{504AF9BC-44AD-41CF-8861-63E92B654A30} = {6F7FBEF5-A344-46AC-808A-02EEEDA3DE95}
-		{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209} = {6F7FBEF5-A344-46AC-808A-02EEEDA3DE95}
-		{54A7F26C-3D6F-43EE-B4E7-AC438B2AA6FC} = {D332EFAC-9C2C-4FE0-9971-4A20CB9F76A5}
 		{CDADA58A-AADC-44CB-872D-0436E3C26ECD} = {D332EFAC-9C2C-4FE0-9971-4A20CB9F76A5}
 		{179660C0-A36F-49AD-84D7-700F49FDE094} = {D332EFAC-9C2C-4FE0-9971-4A20CB9F76A5}
 		{B98E6D7D-286A-485A-8229-F990DDF665F3} = {D332EFAC-9C2C-4FE0-9971-4A20CB9F76A5}
@@ -235,6 +152,8 @@ Global
 		{E236C999-5C78-43A4-82E3-143208491E00} = {D332EFAC-9C2C-4FE0-9971-4A20CB9F76A5}
 		{7D7159A7-A842-44C8-B12E-527DCB72044C} = {C80810FB-7D24-47EF-97FB-C71F05355615}
 		{64335083-64F5-4B9E-A42F-91CB4810F818} = {C80810FB-7D24-47EF-97FB-C71F05355615}
+		{504AF9BC-44AD-41CF-8861-63E92B654A30} = {6F7FBEF5-A344-46AC-808A-02EEEDA3DE95}
+		{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209} = {6F7FBEF5-A344-46AC-808A-02EEEDA3DE95}
 		{BA5F4142-17E8-49F0-850C-5BF3C8660AC2} = {933CBBD9-A5BB-45AB-8A02-5C33324482AB}
 		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
 		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
