@@ -2,9 +2,53 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>首页 -- 安全中心</title>
 </head>
 
 <body>
+	<div id="container">
+        <div id="header">
+        	<div id="header_bar">
+                <div class="Welcom">您好，欢迎访问夜色网！</div>
+                <div class="Reg"><a href="#">登录</a> | <a href="#">注册</a></div>
+            </div>
+        	<div>
+            	<h1 id="logo"></h1>
+                <span id="search">
+                    <form action="#">
+                        <script type="text/javascript">
+                            $(".SearchType li").click(
+                            function()
+                            {
+                                $(this).addClass("On").siblings().removeClass("On");
+                                $("#SearchType").val($(this).text());
+                            });
+                            $(".SearchType li:first").click();
+                        </script>
+                        <ul class="SearchType">
+                            <li>夜吧</li>
+                            <li>酒吧</li>
+                            <li>KTV</li>
+                        </ul>
+                        <ul class="SearchKey">
+                            <li>
+                              <input type="hidden" name="SearchType" id="SearchType" />
+                              <input type="text" name="SearchKey" id="SearchKey" />
+                            </li>
+                            <li class="Submit">
+                              <input type="image" name="imageField" id="imageField" src="/Themes/Default/Images/Btn_Search.jpg" />
+                            </li>
+                        </ul>
+                    </form>    
+				</span>
+            </div>
+        </div>
+        <div id="content">
+        
+        </div>
+        <div id="footer">
+        
+        </div>
+    </div>
 </body>
 </html>
