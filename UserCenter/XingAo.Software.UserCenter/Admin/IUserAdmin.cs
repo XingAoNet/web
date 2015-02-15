@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using XingAo.Core;
 
 namespace XingAo.Software.UserCenter
 {
@@ -39,16 +40,16 @@ namespace XingAo.Software.UserCenter
         Result ChangeUserType(string userId, int userType, string adminId, string adminName, string remark, Hashtable options);
 
 
-        /// <summary>
-        /// 重置用户登陆密码
-        /// </summary>
-        /// <param name="userId"></param>
-        /// <param name="password"></param>
-        /// <param name="adminId"></param>
-        /// <param name="adminName"></param>
-        /// <param name="remark"></param>
-        /// <param name="options"></param>
-        /// <returns></returns>
-        Result ResetUserPassword(string userId, string password, string adminId, string adminName, string remark, Hashtable options);
+        ///// <summary>
+        ///// 重置用户登陆密码
+        ///// </summary>
+        ///// <param name="userId"></param>
+        ///// <param name="password"></param>
+        ///// <param name="adminId"></param>
+        ///// <param name="adminName"></param>
+        ///// <param name="remark"></param>
+        ///// <param name="options"></param>
+        ///// <returns></returns>
+        //Result ResetUserPassword(string userId, string password, string adminId, string adminName, string remark, Hashtable options);
     }
 }

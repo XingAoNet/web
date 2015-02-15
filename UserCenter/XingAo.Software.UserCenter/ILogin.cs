@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using XingAo.Core;
 
 namespace XingAo.Software.UserCenter
 {
-    public interface IOperationLogService
+    public interface ILogin
     {
         /// <summary>
-        /// 分页查询操作日志
+        /// 登陆post请求
         /// </summary>
-        /// <param name="pageSize"></param>
-        /// <param name="pageIndex"></param>
+        /// <param name="identity"></param>
+        /// <param name="password"></param>
+        /// <param name="token"></param>
         /// <param name="options"></param>
         /// <returns></returns>
-        PagedOperationLog GetOperationLog(int pageSize, int pageIndex, Hashtable options);
+        Result Login(string identity, string password, Hashtable options);
     }
 }

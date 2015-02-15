@@ -69,6 +69,7 @@
     <Compile Include="Numeric\RMB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionOpt.cs" />
+    <Compile Include="Result.cs" />
     <Compile Include="String\StringOption.cs" />
     <Compile Include="String\StringPlus.cs" />
     <Compile Include="String\VerifyCode.cs" />

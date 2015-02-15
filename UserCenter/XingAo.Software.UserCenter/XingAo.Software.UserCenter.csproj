@@ -40,12 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Front\ILogin.cs" />
-    <Compile Include="Front\IMobileBind.cs" />
-    <Compile Include="Front\IPassportService.cs" />
-    <Compile Include="Front\IPassword.cs" />
-    <Compile Include="Front\IRegister.cs" />
-    <Compile Include="Admin\IMobileBindAdmin.cs" />
+    <Compile Include="ILogin.cs" />
+    <Compile Include="IMobileBind.cs" />
+    <Compile Include="IPassportService.cs" />
+    <Compile Include="IPassword.cs" />
+    <Compile Include="IPasswordAdmin.cs">
+      <DependentUpon>IPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRegister.cs" />
+    <Compile Include="IMobileBindAdmin.cs">
+      <DependentUpon>IMobileBind.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\IOperationLogService.cs" />
     <Compile Include="ITokenService.cs" />
     <Compile Include="Admin\IUserAdmin.cs" />
@@ -63,6 +68,12 @@
     <Compile Include="Result.cs" />
     <Compile Include="TokenResult.cs" />
     <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\XingAo.Core\XingAo.Core.csproj">
+      <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
+      <Name>XingAo.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

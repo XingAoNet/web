@@ -62,5 +62,15 @@ namespace XingAo.Software.UserCenter
         /// 最后登录ip
         /// </summary>
         public string LastLoginIP { get; set; }
+
+        /// <summary>
+        /// 积分
+        /// </summary>
+        public int Score { get; set; }
+
+        /// <summary>
+        /// 是否已认证
+        /// </summary>
+        public bool Authenticated { get; set; }
     }
 }
