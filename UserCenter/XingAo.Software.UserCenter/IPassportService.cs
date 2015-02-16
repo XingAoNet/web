@@ -28,6 +28,6 @@ namespace XingAo.Software.UserCenter
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        User GetUser(string userId);
+        IUser GetUser(string userId);
     }
 }

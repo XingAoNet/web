@@ -14,7 +14,7 @@ namespace XingAo.Software.UserCenter
         /// </summary>
         /// <param name="userIdentity"></param>
         /// <returns></returns>
-        User GetUser(string userIdentity);
+        IUser GetUser(string userIdentity);
 
         /// <summary>
         /// 锁定、解锁用户
