@@ -10,13 +10,12 @@ namespace XingAo.Software.UserCenter
     public interface ILogin
     {
         /// <summary>
-        /// 登陆post请求
+        /// 登录
         /// </summary>
-        /// <param name="identity"></param>
-        /// <param name="password"></param>
-        /// <param name="token"></param>
-        /// <param name="options"></param>
-        /// <returns></returns>
-        Result Login(string identity, string password, Hashtable options);
+        /// <param name="identity">用户名</param>
+        /// <param name="password">密码</param>
+        /// <param name="clientIP">ip</param>
+        /// <returns>0表示登录成功</returns>
+        Result Login(string identity, string password, string clientIP);
     }
 }

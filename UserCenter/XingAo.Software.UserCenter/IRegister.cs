@@ -12,33 +12,32 @@ namespace XingAo.Software.UserCenter
         /// <summary>
         /// 判断用户是否存在
         /// </summary>
-        /// <param name="identity"></param>
-        /// <returns></returns>
+        /// <param name="identity">用户名</param>
+        /// <returns>0表示不存在</returns>
         Result IsUserExist(string identity);
 
         /// <summary>
         /// 发送注册短信
         /// </summary>
-        /// <param name="mobile"></param>
-        /// <param name="clientIP"></param>
-        /// <param name="options"></param>
-        /// <returns></returns>
-        Result SendRegisterMobile(string mobile, string clientIP, Hashtable options);
+        /// <param name="mobile">手机号</param>
+        /// <param name="clientIP">客户端ip</param>
+        /// <returns>0表示成功</returns>
+        Result SendRegisterMobile(string mobile, string clientIP);
 
         /// <summary>
         /// 验证注册短信
         /// </summary>
-        /// <param name="token"></param>
-        /// <param name="validateCode"></param>
-        /// <param name="options"></param>
-        /// <returns></returns>
-        Result ValidateRegisterMobile(string validateCode, Hashtable options);
+        /// <param name="validateCode">验证码</param>
+        /// <returns>0表示成功</returns>
+        Result ValidateRegisterMobile(string validateCode);
 
         /// <summary>
         /// 注册
         /// </summary>
-        /// <param name="user"></param>
-        /// <returns></returns>
-        Result Register(int registerType, string identity, string password, string clientIP, Hashtable options);
+        /// <param name="userType">用户类型</param>
+        /// <param name="password">密码</param>
+        /// <param name="clientIP">客户端ip</param>
+        /// <returns>0表示成功</returns>
+        Result Register(int userType, string password, string clientIP);
     }
 }
