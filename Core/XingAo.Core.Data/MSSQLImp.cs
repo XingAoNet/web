@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace XingAo.Core.Data
 {
     /// <summary>
-    /// 
+    /// 扩展Entity，增加SQL查询方式
     /// </summary>
     public class MSSQLImp
     {

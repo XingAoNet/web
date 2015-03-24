@@ -23,6 +23,9 @@ namespace XingAo.Core.Data
                 LoadMapping();
         }
 
+        /// <summary>
+        /// 读取系统中所有的映射信息
+        /// </summary>
         private void LoadMapping()
         {
             DirectoryCatalog catalog;
@@ -45,6 +48,7 @@ namespace XingAo.Core.Data
             if (m_Mappings != null)
             {
                 //这里是关键     
+                //将映射信息逐个加载到映射缓存中
                 foreach (var mapping in m_Mappings)
                 {
                     mapping.RegistTo(modelBuilder.Configurations);

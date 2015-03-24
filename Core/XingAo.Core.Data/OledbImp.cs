@@ -4,6 +4,9 @@ using System.Data.OleDb;
 
 namespace XingAo.Core.Data
 {
+    /// <summary>
+    /// 扩展Entity，增加Oledb的查询方式，以适用Access
+    /// </summary>
     public class OledbImp
     {
         public static DataTable GetTable(string dbPath, string TableName)
