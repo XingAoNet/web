@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+    用户中心首页
     </div>
     </form>
 </body>

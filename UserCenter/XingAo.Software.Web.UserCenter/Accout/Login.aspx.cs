@@ -14,7 +14,8 @@ namespace XingAo.Software.Web.UserCenter.Accout
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            AccoutRegister.RegisterService service = new AccoutRegister.RegisterService();
+            Response.Write(service.HelloWorld());
         }
     }
 }

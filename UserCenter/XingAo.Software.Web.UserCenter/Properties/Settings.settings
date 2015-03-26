@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="XingAo.Software.Web.UserCenter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="XingAo_Software_Web_UserCenter_AccoutLogin_LoginService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:20002/Accout/LoginService.asmx</Value>
+    </Setting>
+    <Setting Name="XingAo_Software_Web_UserCenter_AccoutRegister_RegisterService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:20002/Accout/RegisterService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
