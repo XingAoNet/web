@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.CMS.HttpMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.VerifyPermissions", "Permission\XingAo.Networks.VerifyPermissions\XingAo.Networks.VerifyPermissions.csproj", "{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.Web.UserCenter", "UserCenter\XingAo.Software.Web.UserCenter\XingAo.Software.Web.UserCenter.csproj", "{448BBD2C-23C4-4960-AE25-8E98B8E2435A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -159,5 +165,6 @@ Global
 		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
 		{64FBA8D1-982A-4177-99B4-00F75E5A5B87} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
 		{1FD753F5-4530-4DAE-BDCE-0D7C0FDA83FC} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
+		{448BBD2C-23C4-4960-AE25-8E98B8E2435A} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
 	EndGlobalSection
 EndGlobal
