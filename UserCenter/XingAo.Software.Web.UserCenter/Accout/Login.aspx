@@ -14,8 +14,8 @@
         <div class="header">
             <span class="reg">
             	<!--连接地址需要根据路由设置修改-->
-                <a href="/UserCenter/UserReg">没有帐号？</a>
-                <a href="/UserCenter/UserReg">注册</a>
+                <a href="/Accout/Register.aspx">没有帐号？</a>
+                <a href="/Accout/Register.aspx">注册</a>
             </span>
             <h3>登录</h3>
         </div>
@@ -23,12 +23,12 @@
             <span>
             	<label>用户名：</label>
                 <input type="text" id="user_name" name="user_name" />
-                <a href="/UserCenter/UserReg" style="color:Blue;">注册</a>
+                <a href="/Accout/Register.aspx" style="color:Blue;">注册</a>
             </span>
             <span>
             	<label>密码：</label>
                 <input type="password" id="password" name="password" />
-                <a href="/UserCenter/FindPwd" style="color:Blue;">找回密码</a>
+                <a href="/Accout/FindPwd.aspx" style="color:Blue;">找回密码</a>
             </span>
             <span>
             	<label>验证码：</label>

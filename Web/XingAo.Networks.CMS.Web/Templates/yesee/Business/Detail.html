@@ -1,10 +1,142 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+ * 文件名 : list.html
+ * 创建者 : 陈成杰
+ * 创建时间： 2015-02-13
+ * 文件描述： 商品列表页面
+ * 修改记录
+ * R1:
+ *  修改作者 ： 
+ *  修改日期 ：
+ *  修改内容 ：
+ *      
+ * R2:
+ *  修改作者 ：
+ *  修改日期 ：
+ *  修改内容 ：
+ * 
+-->
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+    <title>夜色网</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/Themes/Default/Css/Style.css"/>
+    <script type="text/javascript" src="/Scripts/jquery-1.4.1.min.js"></script>
+    <!--{$XingAo_页面标题}<title>页面描述 - 功能名称 - 网站名称</title>
+    {$XingAo_网站关键字与描述$}
+    {$XingAo_Javascript}
+    {$XingAo_Css}-->
 </head>
 
 <body>
+<!--头部信息-->
+<div class="Head">
+  <div class="HeadBar">
+  	<div class="Box">
+      <div class="Welcom">您好，欢迎访问夜色网！</div>
+      <div class="Reg"><a href="/UserCenter/Accout/Login.html">登录</a> | <a href="/UserCenter/Accout/Register.html">注册</a></div>
+    </div>
+  </div>
+  <div class="Box Clear Logo">
+  	<div><a href="#"><img src="/Themes/Default/Images/Logo.jpg" width="429" height="142" alt="欢迎访问夜色网" /></a></div>
+    <div>
+    <form action="#">
+    	<ul class="SearchType">
+        	<li>夜吧</li>
+            <li>酒吧</li>
+            <li>KTV</li>
+        </ul>
+        <script type="text/javascript">
+			$(".SearchType li").click(
+			function()
+			{
+				$(this).addClass("On").siblings().removeClass("On");
+				$("#SearchType").val($(this).text());
+			});
+			$(".SearchType li:first").click();
+        </script>
+        <ul class="SearchKey">
+        	<li>
+        	  <input type="hidden" name="SearchType" id="SearchType" />
+        	  <input type="text" name="SearchKey" id="SearchKey" />
+        	</li>
+            <li class="Submit">
+              <input type="image" name="imageField" id="imageField" src="/Themes/Default/Images/Btn_Search.jpg" />
+            </li>
+        </ul>
+    </form>    
+    </div>
+  </div>
+  <div class="MenuBar">
+  	<div class="Box">
+  	<div class="Menu">
+    	<a href="../Default.html"><img src="/Themes/Default/Images/m1.jpg" width="84" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m2.jpg" width="80" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m3.jpg" width="97" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m4.jpg" width="80" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m5.jpg" width="94" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m6.jpg" width="112" height="48" alt="" /></a><a href="#"><img src="/Themes/Default/Images/m7.jpg" width="110" height="48" alt="" /></a><img src="/Themes/Default/Images/tel.jpg" width="345" height="48" alt="" />
+    </div> 
+    <ul class="SmallMenu">
+   	  <li>&nbsp;</li>
+      <li>没有子菜单的请保持为&amp;nbsp;<a href="#">夜店</a> | 夜总会 | KTV ......1</li>
+      <li>没有子菜单的请保持为&amp;nbsp;夜店 | 夜总会 | KTV ......3</li>
+      <li>夜店 | 夜总会 | KTV ......4</li>
+      <li>夜店 | 夜总会 | KTV ......5</li>
+      <li>夜店 | 夜总会 | KTV ......6</li>
+      <li>夜店 | 夜总会 | KTV ......7</li>
+    </ul>
+    <script type="text/javascript">
+	$(".SmallMenu li").hide();
+	$(".Menu a").mouseover(
+	function()
+	{
+		$(".SmallMenu li").eq($(this).index()).show().siblings().hide();
+	});
+	$(".MenuBar").mouseleave(
+	function()
+	{
+		$(".SmallMenu li").hide();
+	});
+	</script>
+    </div>  
+  </div>
+</div>
+
+
+<!--附加信息-->
+<div class="Line">
+  <div class="Box">
+    <div class="About">
+      	<div class="Title">
+        <img src="/Themes/Default/Images/About.jpg" width="147" height="17" alt="" />
+        </div>
+        <div class="Txt">
+        夜色网《为您提供全夜总会酒吧订位服务》您只需一个电话，将为您搞定一切，送酒水 绿茶，饮料，水果，小吃等等，一切不是问题，满足您的一切需求！（我们的宗旨：服务至上，满意第一）<br />
+订位电话：021-60441234 13296081234 </div>
+      </div>
+      <div class="Service">
+      	<div class="Title">
+        <img src="/Themes/Default/Images/Service.jpg" width="174" height="17" alt="" />
+        </div>
+        <ul class="list">
+        	<li>11</li>
+
+        	<li>11</li>
+            <li>11</li>
+        	<li>11</li>
+            <li>11</li>
+        	<li>11</li>
+            <li>11</li>
+        	<li>11</li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<div class="Foot">
+	<div class="Box">
+    	<ul>
+        <li>&copy; 2014-2015 <a href="../www.yesee.cc">夜色网</a> 版权所有 All rights reserved.沪ICP备05007930 </li>
+        <li class="Des">技术支持：台州星奥网络科技有限公司 </li>
+        </ul>
+        <div>&nbsp;</div>
+    </div>
+</div>
 </body>
 </html>

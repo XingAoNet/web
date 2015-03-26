@@ -1,29 +1,28 @@
 @charset "utf-8";
 /* CSS Document */
-.left_list{float:left; width:690px;}
+.left{float:left; width:760px;}
 
-.left_list .class_list{height:30px; line-height:30px; height:280px; border:#CCC 1px solid;}
-.left_list .class_list h1{color:#06F; padding-left:10px;}
+.left .class_list{height:30px; line-height:30px; height:220px; border:#CCC 1px solid; width:755px;}
+.left .class_list h1{color:#06F; padding-left:10px;}
 
-.left_list .class_item{clear:both; margin:0 2px;}
-.left_list .class_item dl{display:block; width:100%;}
-.left_list .class_item dl dt{float:left; display: inline; width:90px; text-align:right; margin:0;}
-.left_list .class_item dl dd{float:left;display: inline; margin:0;}
-.left_list .class_item dl dd ul{width:550px; margin:0 20px; padding:0;}
-.left_list .class_item dl dd ul li{float:left; display:inline; margin:0 10px 0 0; width:85px; overflow:hidden;}
-.left_list .class_item dl dd ul li a{}
-.left_list .class_item dl dd ul li a.select{color:#06F;}
-
-
-.left_list .business_nav{padding:10px 20px; border:#CCC 1px solid; margin-top:2px;}
-.left_list .business_nav a.select{color:#06F;}
-.left_list .business_list{padding:10px 20px; border:#CCC 1px solid; margin-top:2px;}
-.left_list .business_list .item{}
-.left_list .business_list .item .pic{}
-.left_list .business_list .item .title{}
-.left_list .business_list .item .content{}
-.left_list .business_list .item .state{}
-.left_list .business_list{}
+.left .class_item{clear:both; margin:0 2px;}
+.left .class_item dl{display:block; width:100%;}
+.left .class_item dl dt{float:left; display: inline; width:90px; text-align:right; margin:0;}
+.left .class_item dl dd{float:left;display: inline; margin:0;}
+.left .class_item dl dd ul{width:620px; margin:0 20px; padding:0;}
+.left .class_item dl dd ul li{float:left; display:inline; margin:0 10px 0 0; width:85px; overflow:hidden;}
+.left .class_item dl dd ul li a{}
+.left .class_item dl dd ul li a.select{color:#06F;}
 
 
-.right_list{float:right;width:300px;}
+.left .business_nav{padding:10px 20px; border:#CCC 1px solid; margin-top:2px; width:715px;}
+.left .business_nav a.select{color:#06F;}
+.left .business_list{padding:10px 0px; margin-top:2px; float:left; width:100%; width:755px;}
+.left .business_list .item_list{ float:left; margin:2px 0;border:#CCC 1px solid;}
+.left .business_list .item_list .pic{border:#999 solid 1px; width:205px; height:155px; background-color:#eee; text-align:center; margin: 0px 12px 0px 0px; float:left;}
+.left .business_list .item_list .pic img{max-width:200px; vertical-align:middle;max-height:150px;}
+.left .business_list .item_list .info{float:left;}
+.left .business_list .item_list .info .title{font-size:20px; font-weight:bold;}
+.left .business_list .item_list .info .content{}
+.left .business_list .item_list .info .state{clear:none;}
+.left .business_list{}
