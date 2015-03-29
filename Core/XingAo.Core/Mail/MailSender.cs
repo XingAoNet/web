@@ -94,7 +94,7 @@ namespace XingAo.Core
                 smtpClient.Send(message);
                 return true;
             }
-            catch(Exception ex) { return false; }
+            catch { return false; }
 
         }
         /// <summary>

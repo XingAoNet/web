@@ -84,7 +84,7 @@ namespace XingAo.Core.Mail
                 client.Send(InitMailMessage(mailSendAddress, mailMessage, mailReceiveAddress));
                 return true;
             }
-            catch (SmtpException ex)
+            catch
             {
                 return false;
             }

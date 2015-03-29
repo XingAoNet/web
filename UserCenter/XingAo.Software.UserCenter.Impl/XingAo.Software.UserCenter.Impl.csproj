@@ -43,6 +43,24 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\XingAo.Core.Data\XingAo.Core.Data.csproj">
+      <Project>{4CC6880C-ED52-433E-B42D-A82967756762}</Project>
+      <Name>XingAo.Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\XingAo.Core\XingAo.Core.csproj">
+      <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
+      <Name>XingAo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XingAo.Software.UserCenter.Model\XingAo.Software.UserCenter.Model.csproj">
+      <Project>{64FBA8D1-982A-4177-99B4-00F75E5A5B87}</Project>
+      <Name>XingAo.Software.UserCenter.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XingAo.Software.UserCenter\XingAo.Software.UserCenter.csproj">
+      <Project>{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}</Project>
+      <Name>XingAo.Software.UserCenter</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

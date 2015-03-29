@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using XingAo.Software.UserCenter.Model;
 
 namespace XingAo.Software.UserCenter
 {
@@ -28,6 +29,6 @@ namespace XingAo.Software.UserCenter
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        IUser GetUser(string userId);
+        User GetUser(string userId);
     }
 }

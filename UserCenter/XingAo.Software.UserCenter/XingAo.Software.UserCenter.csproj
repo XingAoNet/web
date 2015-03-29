@@ -40,40 +40,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILogin.cs" />
+    <Compile Include="Account\IFindPasswordService.cs" />
+    <Compile Include="Account\IOperationLogService.cs" />
     <Compile Include="IMobileBind.cs" />
     <Compile Include="IPassportService.cs" />
-    <Compile Include="IPassword.cs" />
-    <Compile Include="IPasswordAdmin.cs">
-      <DependentUpon>IPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IRegister.cs" />
     <Compile Include="IMobileBindAdmin.cs">
       <DependentUpon>IMobileBind.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\IOperationLogService.cs" />
     <Compile Include="ITokenService.cs" />
     <Compile Include="Admin\IUserAdmin.cs" />
-    <Compile Include="Account\IGroup.cs" />
     <Compile Include="Account\ILoginService.cs" />
     <Compile Include="Account\IPointService.cs" />
-    <Compile Include="Account\IPointRecord.cs" />
     <Compile Include="Account\IRegisterService.cs" />
-    <Compile Include="Audit\ILevel.cs" />
-    <Compile Include="Audit\IMenu.cs" />
-    <Compile Include="Audit\IRole.cs" />
-    <Compile Include="Account\IUser.cs" />
-    <Compile Include="OperationLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Result.cs" />
     <Compile Include="TokenResult.cs" />
-    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\XingAo.Core\XingAo.Core.csproj">
       <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
       <Name>XingAo.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\XingAo.Software.UserCenter.Model\XingAo.Software.UserCenter.Model.csproj">
+      <Project>{64FBA8D1-982A-4177-99B4-00F75E5A5B87}</Project>
+      <Name>XingAo.Software.UserCenter.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Audit\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

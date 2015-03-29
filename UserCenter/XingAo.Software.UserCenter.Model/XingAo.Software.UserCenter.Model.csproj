@@ -31,7 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\3thLib\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,8 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="OperationLog.cs" />
+    <Compile Include="PointRecord.cs" />
+    <Compile Include="ResetPassword.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\XingAo.Core.Data\XingAo.Core.Data.csproj">
+      <Project>{4CC6880C-ED52-433E-B42D-A82967756762}</Project>
+      <Name>XingAo.Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\XingAo.Core\XingAo.Core.csproj">
+      <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
+      <Name>XingAo.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
