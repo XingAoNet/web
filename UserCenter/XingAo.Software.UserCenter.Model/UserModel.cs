@@ -10,7 +10,7 @@ namespace XingAo.Software.UserCenter.Model
     /// 用户注册信息
     /// </summary>
     [Table("XA_UserCenter_User")]
-    public partial class User
+    public partial class UserModel
     {
         /// <summary>
         /// 用户编号，用于用户唯一表示
@@ -90,7 +90,7 @@ namespace XingAo.Software.UserCenter.Model
         /// <summary>
         /// 用户组
         /// </summary>
-        public virtual Group Group { get; set; }
+        public virtual GroupModel Group { get; set; }
         /// <summary>
         /// 用户角色编号（外键）
         /// </summary>
@@ -99,23 +99,23 @@ namespace XingAo.Software.UserCenter.Model
         /// <summary>
         /// 用户角色
         /// </summary>
-        public virtual Role Role { get; set; }
+        public virtual RoleModel Role { get; set; }
     }
 
-    public partial class Group
+    public partial class GroupModel
     {
         /// <summary>
         /// 用户注册信息列表
         /// </summary>
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<UserModel> Users { get; set; }
     }
 
-    public partial class Role
+    public partial class RoleModel
     {
         /// <summary>
         /// 用户注册信息列表
         /// </summary>
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<UserModel> Users { get; set; }
     }
 }
 
@@ -125,7 +125,7 @@ namespace XingAo.Software.UserCenter.Model//所有映射
     /// 实体映射表
     /// </summary>
     [Export("XA_UserCenter_User")]
-    public partial class UserListMapping : MappingBase<User>
+    public partial class UserListMapping : MappingBase<UserModel>
     {
         /// <summary>
         /// 实体映射表名及表间关系

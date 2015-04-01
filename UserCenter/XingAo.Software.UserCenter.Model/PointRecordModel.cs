@@ -13,7 +13,7 @@ namespace XingAo.Software.UserCenter.Model
     /// 用户积分流水记录
     /// </summary>
     [Table("XingAo_UserCenter_PointRecord")]
-    public partial class PointRecord
+    public partial class PointRecordModel
     {
         /// <summary>
         /// 主键ID
@@ -84,22 +84,22 @@ namespace XingAo.Software.UserCenter.Model
         /// <summary>
         /// 用户信息
         /// </summary>
-        public virtual User User { get; set; }
+        public virtual UserModel User { get; set; }
     }
 
-    public partial class User
+    public partial class UserModel
     {
         /// <summary>
         /// 用户积分流水记录列表
         /// </summary>
-        public virtual ICollection<PointRecord> PointRecordList { get; set; }
+        public virtual ICollection<PointRecordModel> PointRecordList { get; set; }
     }
 }
 
 namespace XingAo.Software.UserCenter.Model.Mappings
 {
     [Export("XingAo_UserCenter_PointRecord")]
-    public partial class PointRecordMapping : MappingBase<Model.PointRecord>
+    public partial class PointRecordMapping : MappingBase<Model.PointRecordModel>
     {
         public PointRecordMapping()
         {

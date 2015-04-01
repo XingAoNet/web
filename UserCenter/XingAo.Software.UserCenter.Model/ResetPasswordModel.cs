@@ -13,7 +13,7 @@ namespace XingAo.Software.UserCenter.Model
     /// 用户密码重置申请表(只保留30分钟的数据)
     /// </summary>
     [Table("XingAo_UserCenter_ResetPwd")]
-    public partial class ResetPassword
+    public partial class ResetPasswordModel
     {
         /// <summary>
         /// 重置编号
@@ -54,22 +54,22 @@ namespace XingAo.Software.UserCenter.Model
         /// <summary>
         /// 用户信息
         /// </summary>
-        public virtual User User { get; set; }
+        public virtual UserModel User { get; set; }
     }
 
-    public partial class User
+    public partial class UserModel
     {
         /// <summary>
         /// <para>用户密码重置申请表(只保留30分钟的数据)；</para>
         /// <para>当用户点击多次重置密码时，获取最后一条数据</para>
         /// </summary>
-        public virtual ICollection<ResetPassword> ResetPassword { get; set; }
+        public virtual ICollection<ResetPasswordModel> ResetPassword { get; set; }
     }
 }
 namespace XingAo.Software.UserCenter.Model.Mappings
 {
     [Export("XingAo_UserCenter_ResetPwd")]
-    public partial class ResetPasswordMapping : MappingBase<ResetPassword>
+    public partial class ResetPasswordMapping : MappingBase<ResetPasswordModel>
     {
         public ResetPasswordMapping()
         {

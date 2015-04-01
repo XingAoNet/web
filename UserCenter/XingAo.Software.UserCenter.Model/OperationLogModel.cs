@@ -13,7 +13,7 @@ namespace XingAo.Software.UserCenter.Model
     /// 用户操作日志
     /// </summary>
     [Table("XingAo_UserCenter_OperationLog")]
-    public partial class OperationLog
+    public partial class OperationLogModel
     {
         /// <summary>
         /// 操作编号
@@ -54,23 +54,23 @@ namespace XingAo.Software.UserCenter.Model
         /// <summary>
         /// 用户信息
         /// </summary>
-        public virtual User User { get; set; }
+        public virtual UserModel User { get; set; }
     }
     /// <summary>
     /// 用户信息
     /// </summary>
-    public partial class User
+    public partial class UserModel
     {
         /// <summary>
         /// 用户操作日志
         /// </summary>
-        public virtual ICollection<OperationLog> OperationLogList { get; set; }
+        public virtual ICollection<OperationLogModel> OperationLogList { get; set; }
     }
 }
 namespace XingAo.Software.UserCenter.Model.Mappings
 {
     [Export("XingAo_UserCenter_OperationLog")]
-    public partial class OperationLogMapping : MappingBase<OperationLog>
+    public partial class OperationLogMapping : MappingBase<OperationLogModel>
     {
         public OperationLogMapping()
         {

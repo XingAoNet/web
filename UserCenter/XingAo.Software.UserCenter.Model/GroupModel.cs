@@ -7,7 +7,7 @@ namespace XingAo.Software.UserCenter.Model
     /// 用户组信息
     /// </summary>
     [Table("XingAo_UserCenter_Group")]
-    public partial class Group
+    public partial class GroupModel
     {
         /// <summary>
         /// 用户组编号

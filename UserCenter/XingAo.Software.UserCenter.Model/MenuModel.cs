@@ -10,7 +10,7 @@ namespace XingAo.Software.UserCenter.Model
     /// 用户菜单
     /// </summary>
     [Table("XingAo_UserCenter_Menu")]
-    public partial class Menu
+    public partial class MenuModel
     {
         /// <summary>
         /// 菜单编号
@@ -44,15 +44,15 @@ namespace XingAo.Software.UserCenter.Model
         /// <summary>
         /// 主表相关信息（用户注册信息表）
         /// </summary>
-        public virtual User Users { get; set; }
+        public virtual UserModel Users { get; set; }
     }
 
-    public partial class User
+    public partial class UserModel
     {
         /// <summary>
         /// 用户菜单列表
         /// </summary>
-        public virtual ICollection<Menu> MenuList { get; set; }
+        public virtual ICollection<MenuModel> MenuList { get; set; }
     }
 }
 
@@ -62,7 +62,7 @@ namespace XingAo.Software.UserCenter.Model.Mappings
     /// 实体映射表
     /// </summary>
     [Export("XingAo_UserCenter_Menu")]
-    public partial class MenuMapping : MappingBase<Menu>
+    public partial class MenuMapping : MappingBase<MenuModel>
     {
         /// <summary>
         /// 实体映射表名及表间关系

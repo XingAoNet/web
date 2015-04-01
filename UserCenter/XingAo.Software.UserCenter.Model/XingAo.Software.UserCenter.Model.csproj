@@ -45,13 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group.cs" />
-    <Compile Include="Menu.cs" />
-    <Compile Include="OperationLog.cs" />
-    <Compile Include="PointRecord.cs" />
-    <Compile Include="ResetPassword.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="GroupModel.cs" />
+    <Compile Include="MenuModel.cs" />
+    <Compile Include="OperationLogModel.cs" />
+    <Compile Include="PointRecordModel.cs" />
+    <Compile Include="ResetPasswordModel.cs" />
+    <Compile Include="RoleModel.cs" />
+    <Compile Include="UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
