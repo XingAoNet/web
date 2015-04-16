@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" http-equiv="Content-Type" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title>@ViewBag.Title</title>
+    @Html.Partial("_Stylesheet")
+    @Html.Partial("_ScriptJQuery")
+    @Html.Partial("_ScriptKindeditor")
+    @Html.Partial("_ScriptDWZ")
+    @Html.Partial("_ScriptChart")
+</head>
+<body>
+	<div id="layout">
+		<div id="header">
+			<div class="headerNav">
+                <div id="navMenu">
+				    <ul>
+                        @Html.Partial("Headerbar")
+				    </ul>
+			    </div>
+				<ul class="nav">	
+                    <li >@Html.Partial("AdminInfo")</li>
+					<li><a href="changepwd.aspx" target="dialog" max=false mask=true maxable=false minable=false resizable=false drawable=true width="370" height="190">修改密码</a></li>
+					<li><a href="logout.ashx">退出</a></li>
+				</ul>
+			</div>
+			<!-- navMenu -->
+		</div>
+
+		<div id="leftside">
+			<div id="sidebar_s">
+				<div class="collapse">
+					<div class="toggleCollapse"><div></div></div>
+				</div>
+			</div>
+			<div id="sidebar">
+				<div class="toggleCollapse"><h2>主菜单</h2><div>收缩</div></div>
+				<div class="accordion" fillSpace="sidebar">
+                    @Html.Partial("Sidebar")
+				</div>
+			</div>
+		</div>
+
+
+		<div id="container">
+			<div id="navTab" class="tabsPage">
+				<div class="tabsPageHeader">
+					<div class="tabsPageHeaderContent">@*显示左右控制时添加 class="tabsPageHeaderMargin"*@
+						<ul class="navTab-tab">
+							<li tabid="main" class="main"><a href="javascript:;"><span><span class="home_icon">我的主页</span></span></a></li>
+						</ul>
+					</div>
+					<div class="tabsLeft">left</div>@*禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled"*@
+					<div class="tabsRight">right</div>@*禁用只需要添加一个样式 class="tabsRight tabsRightDisabled"*@
+					<div class="tabsMore">more</div>
+				</div>
+				<ul class="tabsMoreList">
+					<li><a href="javascript:;">我的主页</a></li>
+				</ul>
+				<div class="navTab-panel tabsPageContent layoutBox">
+					<div class="page unitBox">
+						<div class="accountInfo">
+							<div class="alertInfo">
+                                <p><strong>技术支持</strong> 地址：浙江省台州市路桥区会展中心二楼<br />
+                                电话：0576-82923030  传真：0576-82923030.811</p>
+							</div>
+							<div class="right">
+							</div>
+							<p><strong>业务体系：</strong>门户网站平台、电子商务平台、实验室管理平台、危险品工业气体信息化方案</p>
+						</div>
+						<div class="pageFormContent" layoutH="80" style="margin-right:230px">
+						  <div>
+						    <div style="line-height:150%">
+					        </div>
+					      </div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div id="footer">Copyright &copy; 2012-@DateTime.Now.Year.ToString() <a href="http://www.xing-ao.net" target="blank">台州星奥网络科技有限公司</a> 版权所有</div>
+</body>
+</html>

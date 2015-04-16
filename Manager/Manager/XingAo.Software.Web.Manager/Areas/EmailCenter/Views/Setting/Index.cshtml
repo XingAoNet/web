@@ -1,0 +1,45 @@
+﻿@model XingAo.Software.ConfigCenter.Email.EmailSettingModel
+           
+@using (Html.BeginForm("Index", "Setting", FormMethod.Post, new { @class = "pageForm", onsubmit = "return validateCallback(this, navTabAjaxDone);" }))
+{
+    <div class="pageContent">
+    	<div class="pageFormContent nowrap" layoutH="56">
+            <div class="unit">
+                @Html.LabelFor(m=>m.SendName)
+                @Html.TextBoxFor(m => m.SendName, new { @class = "required", size = "30" })
+                @Html.ValidationMessageFor(M=>M.SendName)
+               
+            </div>
+            <div class="unit">
+                @Html.LabelFor(m => m.SendPwd)
+                @Html.TextBoxFor(m => m.SendPwd, new { @class = "required", type = "password", size = "30" })
+                @Html.ValidationMessageFor(M => M.SendPwd)
+            </div>
+            <div class="unit">
+                @Html.LabelFor(m=>m.SendAccount)
+                @Html.TextBoxFor(m => m.SendAccount, new { @class = "required", size = "30" })
+                @Html.ValidationMessageFor(M => M.SendAccount)
+            </div>
+            <div class="unit">
+                @Html.LabelFor(m=>m.SMPTServer)
+                @Html.TextBoxFor(m => m.SMPTServer, new { @class = "required", size = "30" })
+            </div>
+            <div class="unit">
+                @Html.LabelFor(m=>m.SMTPPort)
+                @Html.TextBoxFor(m => m.SMTPPort, new { @class = "required", size = "5" })
+            </div>
+            <div class="unit">
+                @Html.LabelFor(m=>m.SmtpValidation)
+                @Html.CheckBoxFor(m => m.SmtpValidation)SSL
+            </div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+				</li>
+			</ul>
+		</div>
+</div>
+}
