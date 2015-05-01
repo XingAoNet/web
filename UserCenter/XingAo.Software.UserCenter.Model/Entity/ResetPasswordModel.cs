@@ -12,13 +12,14 @@ namespace XingAo.Software.UserCenter.Model
     /// <summary>
     /// 用户密码重置申请表(只保留30分钟的数据)
     /// </summary>
+    [DBSource("XingAo_UserCenter")]
     [Table("XingAo_UserCenter_ResetPwd")]
     public partial class ResetPasswordModel
     {
         /// <summary>
         /// 重置编号
         /// </summary>
-        [Column("UId")]
+        [Key,Column("UId")]
         [DisplayName("重置编号")]
         public int Id { get; set; }
         /// <summary>
@@ -63,18 +64,18 @@ namespace XingAo.Software.UserCenter.Model
         /// <para>用户密码重置申请表(只保留30分钟的数据)；</para>
         /// <para>当用户点击多次重置密码时，获取最后一条数据</para>
         /// </summary>
-        public virtual ICollection<ResetPasswordModel> ResetPassword { get; set; }
+        public virtual ICollection<ResetPasswordModel> ResetPasswordList { get; set; }
     }
 }
 namespace XingAo.Software.UserCenter.Model.Mappings
 {
-    [Export("XingAo_UserCenter_ResetPwd")]
+    [Export("ResetPasswordMapping")]
     public partial class ResetPasswordMapping : MappingBase<ResetPasswordModel>
     {
         public ResetPasswordMapping()
         {
             this.ToTable("XingAo_UserCenter_ResetPwd");
-            this.HasRequired(m => m.User).WithMany(m => m.ResetPassword).HasForeignKey(t => t.UserId);
+            this.HasRequired(m => m.User).WithMany(m => m.ResetPasswordList).HasForeignKey(t => t.UserId);
         }
     }
 }

@@ -12,13 +12,14 @@ namespace XingAo.Software.UserCenter.Model
     /// <summary>
     /// 用户操作日志
     /// </summary>
+    [DBSource("XingAo_UserCenter")]
     [Table("XingAo_UserCenter_OperationLog")]
     public partial class OperationLogModel
     {
         /// <summary>
         /// 操作编号
         /// </summary>
-        [Column("UId")]
+        [Key,Column("UId", Order = 1)]
         [DisplayName("操作编号")]
         public int Id { get; set; }
         /// <summary>
@@ -69,7 +70,7 @@ namespace XingAo.Software.UserCenter.Model
 }
 namespace XingAo.Software.UserCenter.Model.Mappings
 {
-    [Export("XingAo_UserCenter_OperationLog")]
+    [Export("OperationLogMapping")]
     public partial class OperationLogMapping : MappingBase<OperationLogModel>
     {
         public OperationLogMapping()

@@ -29,6 +29,6 @@ namespace XingAo.Software.UserCenter
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        User GetUser(string userId);
+        UserModel GetUser(string userId);
     }
 }

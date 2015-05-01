@@ -12,11 +12,25 @@ namespace XingAo.Software.UserCenter.Account
     public interface IRegisterService
     {
         /// <summary>
-        /// 注册用户
+        /// 通过用户名注册用户
         /// </summary>
         /// <param name="user">用户信息</param>
         /// <returns>返回是否注册成功，true成功，false失败</returns>
-        bool Register(User user);
+        UserModel RegisterByUserName(string userName, string password);
+        /// <summary>
+        /// 通过手机号码注册用户
+        /// </summary>
+        /// <param name="mobile">手机号码</param>
+        /// <param name="verifyCode">验证码</param>
+        /// <returns></returns>
+        UserModel RegisterByMobile(string mobile, string verifyCode);
+        /// <summary>
+        /// 通过邮箱注册用户
+        /// </summary>
+        /// <param name="email">邮箱地址</param>
+        /// <param name="password">密码</param>
+        /// <returns></returns>
+        UserModel RegisterByEmail(string email, string password);
         /// <summary>
         /// 判断用户是否存在
         /// </summary>

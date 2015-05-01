@@ -2,47 +2,44 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Security;
-using System.Web.SessionState;
+using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace XingAo.Software.Web.UserCenter
 {
-    public class Global : System.Web.HttpApplication
+    public class MvcApplication : System.Web.HttpApplication
     {
-
-        protected void Application_Start(object sender, EventArgs e)
+        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new HandleErrorAttribute());
+        }
+
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            //忽略给定可用路由列表和约束列表的指定 URL 路由
+            //使路由系统忽略处理ASP.NET的Web资源文件(WebResource.axd或ScriptResource.axd)
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                "UserCenterDefault", // Route name
+                "Default", // URL with parameters
+                new { controller = "Default", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Default", // Route name
+                "{controller}/{action}/{id}", // URL with parameters
+                new { controller = "Default", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
 
         }
 
-        protected void Session_Start(object sender, EventArgs e)
+        protected void Application_Start()
         {
+            AreaRegistration.RegisterAllAreas();
 
-        }
-
-        protected void Application_BeginRequest(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Application_AuthenticateRequest(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Application_Error(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Session_End(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Application_End(object sender, EventArgs e)
-        {
-
+            RegisterGlobalFilters(GlobalFilters.Filters);
+            RegisterRoutes(RouteTable.Routes);
         }
     }
 }

@@ -38,6 +38,10 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3thLib\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,13 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GroupModel.cs" />
-    <Compile Include="MenuModel.cs" />
-    <Compile Include="OperationLogModel.cs" />
-    <Compile Include="PointRecordModel.cs" />
-    <Compile Include="ResetPasswordModel.cs" />
-    <Compile Include="RoleModel.cs" />
-    <Compile Include="UserModel.cs" />
+    <Compile Include="View\ChangePasswordModel.cs" />
+    <Compile Include="Entity\GroupModel.cs" />
+    <Compile Include="View\FindPassword.cs" />
+    <Compile Include="View\LogOnModel.cs" />
+    <Compile Include="Entity\NavModel.cs" />
+    <Compile Include="Entity\OperationLogModel.cs" />
+    <Compile Include="Entity\PointRecordModel.cs" />
+    <Compile Include="View\RegisterByPhoneModel.cs" />
+    <Compile Include="Entity\ResetPasswordModel.cs" />
+    <Compile Include="Entity\RoleModel.cs" />
+    <Compile Include="Entity\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

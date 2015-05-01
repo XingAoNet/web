@@ -12,13 +12,15 @@ namespace XingAo.Software.UserCenter.Model
     /// <summary>
     /// 用户积分流水记录
     /// </summary>
+    [DBSource("XingAo_UserCenter")]
     [Table("XingAo_UserCenter_PointRecord")]
     public partial class PointRecordModel
     {
         /// <summary>
         /// 主键ID
         /// </summary>	
-        [Key, Column("ID", Order = 1)]
+        [Key, Column("UID", Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("编号")]
         public int ID { get; set; }
         /// <summary>
@@ -98,7 +100,7 @@ namespace XingAo.Software.UserCenter.Model
 
 namespace XingAo.Software.UserCenter.Model.Mappings
 {
-    [Export("XingAo_UserCenter_PointRecord")]
+    [Export("PointRecordMapping")]
     public partial class PointRecordMapping : MappingBase<Model.PointRecordModel>
     {
         public PointRecordMapping()

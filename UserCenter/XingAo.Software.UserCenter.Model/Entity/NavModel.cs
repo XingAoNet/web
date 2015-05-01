@@ -9,13 +9,14 @@ namespace XingAo.Software.UserCenter.Model
     /// <summary>
     /// 用户菜单
     /// </summary>
+    [DBSource("XingAo_UserCenter")]
     [Table("XingAo_UserCenter_Menu")]
-    public partial class MenuModel
+    public partial class NavModel
     {
         /// <summary>
         /// 菜单编号
         /// </summary>
-        [Column("UId")]
+        [Key,Column("UId", Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("菜单编号")]
         public int Id { get; set; }
@@ -52,7 +53,7 @@ namespace XingAo.Software.UserCenter.Model
         /// <summary>
         /// 用户菜单列表
         /// </summary>
-        public virtual ICollection<MenuModel> MenuList { get; set; }
+        public virtual ICollection<NavModel> MenuList { get; set; }
     }
 }
 
@@ -61,14 +62,15 @@ namespace XingAo.Software.UserCenter.Model.Mappings
     /// <summary>
     /// 实体映射表
     /// </summary>
-    [Export("XingAo_UserCenter_Menu")]
-    public partial class MenuMapping : MappingBase<MenuModel>
+    [Export("NavMapping")]
+    public partial class NavMapping : MappingBase<NavModel>
     {
         /// <summary>
         /// 实体映射表名及表间关系
         /// </summary>
-        public MenuMapping()
+        public NavMapping()
         {
+            this.DBMapping("XingAo_UserCenter");
             //实体映射表名
             this.ToTable("XingAo_UserCenter_Menu");
             //表间关系映射

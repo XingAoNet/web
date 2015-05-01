@@ -32,7 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Account\IFindPasswordService.cs" />
     <Compile Include="Account\IOperationLogService.cs" />
+    <Compile Include="Account\UserProvider.cs" />
     <Compile Include="IMobileBind.cs" />
     <Compile Include="IPassportService.cs" />
     <Compile Include="IMobileBindAdmin.cs">
@@ -56,6 +60,10 @@
     <Compile Include="TokenResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\XingAo.Core.Data\XingAo.Core.Data.csproj">
+      <Project>{4CC6880C-ED52-433E-B42D-A82967756762}</Project>
+      <Name>XingAo.Core.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\XingAo.Core\XingAo.Core.csproj">
       <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
       <Name>XingAo.Core</Name>

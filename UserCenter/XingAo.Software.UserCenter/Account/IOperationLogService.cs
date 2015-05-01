@@ -15,19 +15,19 @@ namespace XingAo.Software.UserCenter.Account
         /// 查询所有操作日志
         /// </summary>
         /// <returns></returns>
-        ICollection<OperationLog> GetOperationLog();
+        ICollection<OperationLogModel> GetOperationLog();
         /// <summary>
         /// 根据用户编号查询操作日志
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        ICollection<OperationLog> GetOperationLogByUserId(int userId);
+        ICollection<OperationLogModel> GetOperationLogByUserId(int userId);
         /// <summary>
         /// 根据最新的个数查询操作日志
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="topN"></param>
         /// <returns></returns>
-        ICollection<OperationLog> GEtOperationLogByTop(int userId, int topN);
+        ICollection<OperationLogModel> GEtOperationLogByTop(int userId, int topN);
     }
 }

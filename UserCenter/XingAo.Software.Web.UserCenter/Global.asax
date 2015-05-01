@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="XingAo.Software.Web.UserCenter.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="XingAo.Software.Web.UserCenter.MvcApplication" Language="C#" %>

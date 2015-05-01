@@ -1,5 +1,5 @@
 ﻿/******************************************************************
- * 文件名 : ILogin.cs
+ * 文件名 : ILoginService.cs
  * 数据表 : no
  * 创建者 : 陈成杰
  * 发布日期 : 2015/1/24 22:43:50
@@ -31,22 +31,30 @@ namespace XingAo.Software.UserCenter.Account
     public interface ILoginService
     {
         /// <summary>
-        /// 用户登录
+        /// 通过账号密码登录
         /// </summary>
-        /// <param name="user">用户信息</param>
-        /// <returns>是否登录成功，true成功，false失败</returns>
-        bool Login(User user);
+        /// <param name="userName">用户信息（用户名、手机号码、邮箱地址）</param>
+        /// <param name="password">用户密码</param>
+        /// <returns>返回用户注册后的信息，为空则登录失败</returns>
+        UserModel LoginByUserName(string userInfo,string password);
+        /// <summary>
+        /// 通过手机号码登录
+        /// </summary>
+        /// <param name="Mobile">手机号码</param>
+        /// <param name="validateCode">手机验证码</param>
+        /// <returns>返回用户注册后的信息，为空则登录失败</returns>
+        UserModel LoginByMobile(string Mobile, string validateCode);
         /// <summary>
         /// 用户登出
         /// </summary>
-        /// <param name="user">用户信息</param>
+        /// <param name="user">编号</param>
         /// <returns>是否登出成功，true成功，false失败</returns>
-        bool Logout(User user);
+        bool Logout(string identity);
         /// <summary>
         /// 判断用户是否已经登录
         /// </summary>
         /// <param name="user">用户信息</param>
         /// <returns>是否已经登录，true已登录，false未登录</returns>
-        bool IsLogin(User user);
+        bool IsLogin(string identity);
     }
 }

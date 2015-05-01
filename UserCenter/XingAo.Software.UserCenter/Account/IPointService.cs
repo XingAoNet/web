@@ -16,12 +16,12 @@ namespace XingAo.Software.UserCenter.Account
         /// </summary>
         /// <param name="user">用户信息</param>
         /// <returns>返回添加后的积分值</returns>
-        int AddPoint(User user);
+        int AddPoint(UserModel user);
         /// <summary>
         /// 减少积分
         /// </summary>
         /// <param name="user">用户信息</param>
         /// <returns>返回减少后的积分值</returns>
-        int ReducePoint(User user);
+        int ReducePoint(UserModel user);
     }
 }

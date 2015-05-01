@@ -5,11 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.UserCenter"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.UserCenter.Card", "XingAo.Software.UserCenter.Card\XingAo.Software.UserCenter.Card.csproj", "{1FD753F5-4530-4DAE-BDCE-0D7C0FDA83FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.UserCenter.Impl", "XingAo.Software.UserCenter.Impl\XingAo.Software.UserCenter.Impl.csproj", "{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.UserCenter.Model", "XingAo.Software.UserCenter.Model\XingAo.Software.UserCenter.Model.csproj", "{64FBA8D1-982A-4177-99B4-00F75E5A5B87}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.Web.UserCenter", "XingAo.Software.Web.UserCenter\XingAo.Software.Web.UserCenter.csproj", "{448BBD2C-23C4-4960-AE25-8E98B8E2435A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{507964D0-6415-4526-A787-22A58AD478EC}"
 EndProject
@@ -19,7 +15,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Core.Data", "..\Core
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Core.Web", "..\Core\XingAo.Core.Web\XingAo.Core.Web.csproj", "{72E686BF-D234-4A2A-B4FD-48D858ED915E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.Web.Service.UserCenter", "XingAo.Software.Web.Service.UserCenter\XingAo.Software.Web.Service.UserCenter.csproj", "{6E71AED6-78D9-42DF-A23E-4767679604DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.SMS.Client", "..\..\..\SMS\trunk\XingAo.Software.SMS.Client\XingAo.Software.SMS.Client.csproj", "{1B3C313A-8E5C-4289-A311-8F36951EE20B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SMS", "SMS", "{D026385E-35D4-4938-BC27-EEDD95D1088D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.SMS", "..\..\..\SMS\trunk\XingAo.Software.SMS\XingAo.Software.SMS.csproj", "{CB414470-2B0C-4FEA-A6C9-13E1B677CF9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.Web.UserCenter", "XingAo.Software.Web.UserCenter\XingAo.Software.Web.UserCenter.csproj", "{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigCenter", "ConfigCenter", "{55019942-0CCE-422C-822F-C4C87C219984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.ConfigCenter", "..\ConfigCenter\XingAo.Software.ConfigCenter\XingAo.Software.ConfigCenter.csproj", "{D06EB792-0565-4084-8D4C-75AF74F83105}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,18 +41,10 @@ Global
 		{1FD753F5-4530-4DAE-BDCE-0D7C0FDA83FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FD753F5-4530-4DAE-BDCE-0D7C0FDA83FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FD753F5-4530-4DAE-BDCE-0D7C0FDA83FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,10 +57,22 @@ Global
 		{72E686BF-D234-4A2A-B4FD-48D858ED915E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72E686BF-D234-4A2A-B4FD-48D858ED915E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72E686BF-D234-4A2A-B4FD-48D858ED915E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E71AED6-78D9-42DF-A23E-4767679604DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E71AED6-78D9-42DF-A23E-4767679604DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E71AED6-78D9-42DF-A23E-4767679604DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E71AED6-78D9-42DF-A23E-4767679604DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B3C313A-8E5C-4289-A311-8F36951EE20B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3C313A-8E5C-4289-A311-8F36951EE20B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3C313A-8E5C-4289-A311-8F36951EE20B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3C313A-8E5C-4289-A311-8F36951EE20B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB414470-2B0C-4FEA-A6C9-13E1B677CF9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB414470-2B0C-4FEA-A6C9-13E1B677CF9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB414470-2B0C-4FEA-A6C9-13E1B677CF9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB414470-2B0C-4FEA-A6C9-13E1B677CF9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06EB792-0565-4084-8D4C-75AF74F83105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06EB792-0565-4084-8D4C-75AF74F83105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06EB792-0565-4084-8D4C-75AF74F83105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06EB792-0565-4084-8D4C-75AF74F83105}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +81,8 @@ Global
 		{4A59DB87-F77A-41B1-9EF3-ED99F06504B1} = {507964D0-6415-4526-A787-22A58AD478EC}
 		{4CC6880C-ED52-433E-B42D-A82967756762} = {507964D0-6415-4526-A787-22A58AD478EC}
 		{72E686BF-D234-4A2A-B4FD-48D858ED915E} = {507964D0-6415-4526-A787-22A58AD478EC}
+		{1B3C313A-8E5C-4289-A311-8F36951EE20B} = {D026385E-35D4-4938-BC27-EEDD95D1088D}
+		{CB414470-2B0C-4FEA-A6C9-13E1B677CF9D} = {D026385E-35D4-4938-BC27-EEDD95D1088D}
+		{D06EB792-0565-4084-8D4C-75AF74F83105} = {55019942-0CCE-422C-822F-C4C87C219984}
 	EndGlobalSection
 EndGlobal
