@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Core.Data", "..\..\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Core.Web", "..\..\Core\XingAo.Core.Web\XingAo.Core.Web.csproj", "{72E686BF-D234-4A2A-B4FD-48D858ED915E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserCenter", "UserCenter", "{63F0C6E7-2FDD-4D86-AAF9-2E951220DDE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.UserCenter.Model", "..\..\UserCenter\XingAo.Software.UserCenter.Model\XingAo.Software.UserCenter.Model.csproj", "{64FBA8D1-982A-4177-99B4-00F75E5A5B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.UserCenter", "..\..\UserCenter\XingAo.Software.UserCenter\XingAo.Software.UserCenter.csproj", "{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -45,6 +51,14 @@ Global
 		{72E686BF-D234-4A2A-B4FD-48D858ED915E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72E686BF-D234-4A2A-B4FD-48D858ED915E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72E686BF-D234-4A2A-B4FD-48D858ED915E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +68,7 @@ Global
 		{4CC6880C-ED52-433E-B42D-A82967756762} = {F0E5003F-66D7-4814-9D0B-085503A92A20}
 		{72E686BF-D234-4A2A-B4FD-48D858ED915E} = {F0E5003F-66D7-4814-9D0B-085503A92A20}
 		{D06EB792-0565-4084-8D4C-75AF74F83105} = {2979864D-838B-4223-94C2-F2E193743D2D}
+		{64FBA8D1-982A-4177-99B4-00F75E5A5B87} = {63F0C6E7-2FDD-4D86-AAF9-2E951220DDE8}
+		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00} = {63F0C6E7-2FDD-4D86-AAF9-2E951220DDE8}
 	EndGlobalSection
 EndGlobal

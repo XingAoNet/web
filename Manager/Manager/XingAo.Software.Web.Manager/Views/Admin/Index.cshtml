@@ -15,16 +15,16 @@
 	<div id="layout">
 		<div id="header">
 			<div class="headerNav">
-                <div id="navMenu">
-				    <ul>
-                        @Html.Partial("Headerbar")
-				    </ul>
-			    </div>
 				<ul class="nav">	
                     <li >@Html.Partial("AdminInfo")</li>
-					<li><a href="changepwd.aspx" target="dialog" max=false mask=true maxable=false minable=false resizable=false drawable=true width="370" height="190">修改密码</a></li>
-					<li><a href="logout.ashx">退出</a></li>
+					<li><a href="/Account/ChangePassword" target="dialog" max=false mask=true maxable=false minable=false resizable=false drawable=true width="370" height="190">修改密码</a></li>
+					<li><a href="/Account/LogOut">退出</a></li>
 				</ul>
+                <div id="navMenu">
+				    <ul>
+                        @Html.Partial("Headerbar", ViewData["MenuModel"])
+				    </ul>
+			    </div>
 			</div>
 			<!-- navMenu -->
 		</div>

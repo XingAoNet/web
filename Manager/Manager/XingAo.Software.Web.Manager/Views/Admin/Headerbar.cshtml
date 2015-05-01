@@ -1,1 +1,20 @@
-﻿
+﻿@model IList<XingAo.Software.ConfigCenter.MenuModel>
+           
+<div id="navMenu">
+	<ul>
+    @if (Model != null && Model is IList<XingAo.Software.ConfigCenter.MenuModel>)
+    {
+        foreach (var m in Model as IList<XingAo.Software.ConfigCenter.MenuModel>)
+        {
+            if (m.MenuID == ViewBag.menuid)
+            {
+		    <li class="selected"><a href="Admin/Sidebar/?menuId=@m.MenuID"><span>@m.NavName</span></a></li>
+            }
+            else
+            {
+		    <li><a href="Admin/Sidebar/?menuId=@m.MenuID"><span>@m.NavName</span></a></li>
+            }
+        }
+    }
+	</ul>
+</div>

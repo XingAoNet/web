@@ -11,7 +11,9 @@
 					$("#sidebar").find(".accordion").remove().end().append(html).initUI();
 					$box.find("li").removeClass("selected");
 					$a.parent().addClass("selected");
-					navTab.closeAllTab();
+					//ccj:当一级栏目切换时，不关闭Tab；
+                    //目的：切换栏目后，可以查看其它栏目下的内容，例如：模板设计时，需要用到文章信息；
+					//navTab.closeAllTab();
 				});
 				return false;
 			});

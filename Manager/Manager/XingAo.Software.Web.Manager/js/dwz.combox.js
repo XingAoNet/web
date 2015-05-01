@@ -122,7 +122,7 @@
                 修改成如下代码，目的是在于droupdownlist的enable=false时，jui不允许绘制其它选择项
                 */
                 var disabled = $(this).attr("disabled");
-                if (disabled != undefined && (disabled.toLowerCase() == "disabled" || disabled))
+                if (disabled != undefined && (!disabled || disabled.toString().toLowerCase() == "disabled"))
                     disabled=true;
                 $("option", $this).each(function ()
                 {

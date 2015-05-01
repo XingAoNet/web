@@ -1,9 +1,26 @@
-﻿<div class="accordionHeader">
-    <h2><span>Folder</span>用户中心</h2>
-</div>
-<div class="accordionContent">
-    <ul class="tree treeFolder expand">
-		<li><a href="UserCenter/User/Index" target="navTab" rel="userInfo_navTab">用户信息设置</a></li> @*title="页面三（自定义标签名）"*@
-		<li><a href="EmailCenter/Setting/Index" target="dialog" width="600" height="400" rel="userInfo_navTab" max="false" mask=true maxable=false minable=false resizable=false drawable=true>邮件设置</a></li> @*title="页面三（自定义标签名）"*@
-    </ul>
+﻿@model IList<XingAo.Software.ConfigCenter.MenuModel>
+<div class="accordion" fillSpace="sideBar">
+    <div class="accordionHeader">
+        <h2><span>Folder</span>@ViewData["MenuName"]</h2>
+    </div>
+    <div class="accordionContent">
+        <ul class="tree treeFolder expand">
+        @if (ViewData["SubMenuModel"] == null)
+        {
+            ViewData["SubMenuModel"] = ViewData["MenuModel"] as IList<XingAo.Software.ConfigCenter.MenuModel>;
+        }
+        @foreach (var m in ViewData["SubMenuModel"] as IList<XingAo.Software.ConfigCenter.MenuModel>)
+        {
+            if (@m.Target == "dialog")
+            {
+		    <li><a href="@m.Url?rel=@m.Rel" target="@m.Target" rel="@m.Rel" title="@m.NavName">@m.NavName</a></li>
+            }
+            else
+            {
+		    <li><a href="@m.Url?rel=@m.Rel" target="@m.Target" rel="@m.Rel" title="@m.NavName" width="@m.Width" height="@m.Height">@m.NavName</a></li>
+            }
+        }
+        </ul>
+    </div>
+
 </div>
