@@ -11,7 +11,7 @@ namespace XingAo.Core.Data
     public class AppDbContext : DbContext
     {
         [ImportMany]
-        private static IEnumerable<IMapping> m_Mappings = null;
+        public static IEnumerable<IMapping> m_Mappings = null;
 
         public AppDbContext()
             : base("DefaultConnectionString"){}

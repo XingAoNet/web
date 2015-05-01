@@ -6,13 +6,37 @@ using System.Data.Common;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using System.ComponentModel.Composition.Hosting;
+using System.IO;
 
 namespace XingAo.Core.Data
 {
     public class UnitOfWork : IDisposable
     {
-
         DbConnectionProvider provider { get; set; }
+        static Dictionary<string, DbConnectionProvider> _dic = new Dictionary<string, DbConnectionProvider>();
+        static IEnumerable<IMapping> m_Mappings = null;
+        static Dictionary<Type, IMapping> _mappingDic = null;
+
+
+        private void LoadMapping()
+        {
+            DirectoryCatalog catalog;
+            try
+            {
+                if (Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\bin"))
+                    catalog = new DirectoryCatalog(AppDomain.CurrentDomain.BaseDirectory + @"\bin");
+                else
+                    catalog = new DirectoryCatalog(AppDomain.CurrentDomain.BaseDirectory);
+                var container = new CompositionContainer(catalog);
+                m_Mappings = container.GetExportedValues<IMapping>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// 延时加载,默认为true
         /// </summary>
@@ -22,16 +46,45 @@ namespace XingAo.Core.Data
         /// </summary>
         public UnitOfWork()
         {
-            provider = new DbConnectionProvider("DefaultConnectionString", ConfigStringType.appSettings);
+            if (!_dic.ContainsKey("DefaultConnectionString"))
+            {
+              var _provider = new DbConnectionProvider("DefaultConnectionString", ConfigStringType.appSettings);
+              _dic["DefaultConnectionString"] = _provider;
+            }
+            provider = _dic["DefaultConnectionString"];
+            Init();
+        }
+
+        DbConnectionProvider GetDbConnectionProvider(string connectionName)
+        {
+            if (!_dic.ContainsKey(connectionName))
+            {
+                var _provider = new DbConnectionProvider(connectionName, ConfigStringType.connectionStrings);
+                _dic[connectionName] = _provider;
+                return _provider;
+            }
+            return _dic[connectionName];
+        }
+
+        void Init() {
+            lock (typeof(UnitOfWork))
+            {
+                this.LoadMapping();
+                _mappingDic = m_Mappings.ToDictionary(p => p.TEntityType);
+            }
+            
         }
         /// <summary>
         /// 多库操作时使用，指定哪个连接名称
         /// </summary>
-        /// <param name="DefaultConnectionString">配置多库操作，先在appconfig指定连接名称，再在Connection.config写上此名称对应连接字符串</param>
+        /// <param name="DefaultConnectionString">配置多库操作，在Connection.config查找到该连接库信息</param>
         public UnitOfWork(string DefaultConnectionString = "DefaultConnectionString")
         {
-            provider = new DbConnectionProvider(DefaultConnectionString, ConfigStringType.appSettings);
+            provider = new DbConnectionProvider(DefaultConnectionString, ConfigStringType.connectionStrings);
+            Init();
         }
+
+
         /// <summary>
         /// 数据库操作类
         /// </summary>
@@ -40,11 +93,13 @@ namespace XingAo.Core.Data
         {
             _lazyLoadingEnabled = LazyLoadingEnabled;
             provider = new DbConnectionProvider("DefaultConnectionString", ConfigStringType.appSettings);
+            Init();
         }
         public UnitOfWork(ConfigStringType type, bool lazyLoadingEnabled, string DefaultConnectionString = "DefaultConnectionString")
         {
             _lazyLoadingEnabled = lazyLoadingEnabled;
             provider = new DbConnectionProvider(DefaultConnectionString, type);
+            Init();
         }
         private AppDbContext dbContext;
         /// <summary>
@@ -82,8 +137,8 @@ namespace XingAo.Core.Data
         /// </summary>
         public void Dispose()
         {
-            if (DbContext != null)
-                DbContext.Dispose();
+            if (dbContext != null)
+                dbContext.Dispose();
             GC.SuppressFinalize(this);
         }
 
@@ -112,6 +167,7 @@ namespace XingAo.Core.Data
             catch (Exception ex)
             {
                 errMsg = ex.Message;
+                throw ex;
             }
             return result;
         }
@@ -120,7 +176,7 @@ namespace XingAo.Core.Data
         /// 检测能否链接数据库
         /// </summary>
         /// <returns></returns>
-        public bool CheckConnect(out string err)
+         bool CheckConnect(out string err)
         {
             try
             {
@@ -147,10 +203,11 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public IQueryable<TEntity> FindAll<TEntity>() where TEntity : class
         {
+            EnsureMapping<TEntity>();
             return DbContext.Set<TEntity>();
         }
         /// <summary>
-        /// 保存数据
+        /// 保存数据并提交
         /// </summary>
         /// <typeparam name="TEntity"></typeparam>
         /// <param name="entity"></param>
@@ -158,27 +215,34 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public TEntity Save<TEntity>(TEntity entity,int KeyId) where TEntity : class
         {
-            return KeyId > 0 ? Update(entity) : Insert(entity);
+            EnsureMapping<TEntity>();
+            TEntity _entity = KeyId > 0 ? Update(entity) : Insert(entity);
+            if (Commit() > 0)
+                return _entity;
+            else
+                return null;
         } 
         /// <summary>
-        /// 插入数据
+        /// 插入数据（未提交,需要Commit)
         /// </summary>
         /// <typeparam name="TEntity"></typeparam>
         /// <param name="entity">实体对象</param>
         /// <returns></returns>
         public TEntity Insert<TEntity>(TEntity entity) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             TEntity e = DbContext.Set<TEntity>().Add(entity);
             return e;
         }        
         /// <summary>
-        /// 更新数据
+        /// 更新数据（未提交,需要Commit)
         /// </summary>
         /// <typeparam name="TEntity"></typeparam>
         /// <param name="entity">实体对象</param>
         /// <returns></returns>
         public TEntity Update<TEntity>(TEntity entity) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             DbContext.Set<TEntity>().Attach(entity);
             DbContext.Entry<TEntity>(entity).State = System.Data.EntityState.Modified;
             return entity;
@@ -191,6 +255,7 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public TEntity GetByKey<TEntity>(object keyValue) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             //需要改进，当主键不为Id的时候，将会报错
             return GetByKey<TEntity>("ID", keyValue);
         }
@@ -203,6 +268,7 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public TEntity GetByKey<TEntity>(string PrimaryKey, object keyValue) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             try
             {
                 Type type = typeof(TEntity).GetType();
@@ -220,6 +286,7 @@ namespace XingAo.Core.Data
 
         public IEnumerable<TEntity> FindBySpecification<TEntity>(Expression<Func<TEntity, bool>> spec) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             return DbContext.Set<TEntity>().Where(spec);
         }
         /// <summary>
@@ -230,6 +297,7 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public IEnumerable<TEntity> FindByFunc<TEntity>(Func<TEntity, bool> spec) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             return DbContext.Set<TEntity>().Where(spec);
         }
 
@@ -241,6 +309,7 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public TEntity FindSigne<TEntity>(Expression<Func<TEntity, bool>> spec) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             return DbContext.Set<TEntity>().Where(spec).FirstOrDefault();
         }
 
@@ -252,7 +321,8 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public bool Remove<TEntity>(Func<TEntity, bool> whereLambda) where TEntity : class
         {
-            return Remove<TEntity>(whereLambda,false);
+            EnsureMapping<TEntity>();
+            return Remove<TEntity>(whereLambda,true);
         }
 
         /// <summary>
@@ -265,6 +335,7 @@ namespace XingAo.Core.Data
         /// <returns>返回是否删除成功，true-成功，false-不成功</returns>
         public bool Remove<TEntity>(Func<TEntity, bool> whereLambda, bool isCommit, out string errMsg) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             errMsg = "";
             try
             {
@@ -291,6 +362,7 @@ namespace XingAo.Core.Data
         /// <returns>返回是否删除成功，true-成功，false-不成功</returns>
         public bool Remove<TEntity>(Func<TEntity, bool> whereLambda, bool isCommit) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             string errMsg = string.Empty;
             return Remove<TEntity>(whereLambda, isCommit, out errMsg);
         }
@@ -304,6 +376,7 @@ namespace XingAo.Core.Data
         /// <returns>返回是否删除成功，true-成功，false-不成功</returns>
         public bool Remove<TEntity>(TEntity entity, bool isCommit) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             try
             {
                 DbContext.Entry<TEntity>(entity).State = System.Data.EntityState.Deleted;
@@ -329,7 +402,15 @@ namespace XingAo.Core.Data
             return DbContext.Database.SqlQuery<TEntity>(query, parameters).ToList();
         }
 
-       
+
+        void EnsureMapping<TEntity>() {
+            System.Reflection.MemberInfo info = typeof(TEntity); //通过反射得到TEntity类的信息
+            DBSourceAttribute DBSourceAttr = (DBSourceAttribute)Attribute.GetCustomAttribute(info, typeof(DBSourceAttribute));
+            if (DBSourceAttr != null)
+            {
+                provider = this.GetDbConnectionProvider(DBSourceAttr.ConnectionName);
+            }
+        }
 
         #region 分页
         /// <summary>

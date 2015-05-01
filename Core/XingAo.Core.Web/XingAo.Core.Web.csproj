@@ -8,7 +8,7 @@
     <ProjectGuid>{72E686BF-D234-4A2A-B4FD-48D858ED915E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XingAo.Core</RootNamespace>
+    <RootNamespace>XingAo.Core.Web</RootNamespace>
     <AssemblyName>XingAo.Core.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -43,6 +43,10 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3thLib\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,7 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filter\ErrorFilter.cs" />
+    <Compile Include="Filter\UserAuthorizationFitler.cs" />
+    <Compile Include="Filter\VistorLogFitler.cs" />
+    <Compile Include="JUIJsonResult.cs" />
+    <Compile Include="MsgResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebRouteEx\DomainUrlHelper.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

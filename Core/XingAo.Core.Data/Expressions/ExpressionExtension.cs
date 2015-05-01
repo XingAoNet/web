@@ -13,7 +13,6 @@ namespace XingAo.Core.Data
 
         public static Expression<Func<T, bool>> Or<T>(this Expression<Func<T, bool>> expr1, Expression<Func<T, bool>> expr2)
         {
-
             var invokedExpr = Expression.Invoke(expr2, expr1.Parameters.Cast<Expression>());
             return Expression.Lambda<Func<T, bool>>(Expression.Or(expr1.Body, invokedExpr), expr1.Parameters);
         }
@@ -25,7 +24,6 @@ namespace XingAo.Core.Data
     }
     public static class ExpressionUtility
     {
-
         /// <summary>
         /// 组合查询条件
         /// </summary>
@@ -36,26 +34,13 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public static Expression<T> Compose<T>(this Expression<T> first, Expression<T> second, Func<Expression, Expression, Expression> merge)
         {
-
             // build parameter map (from parameters of second to parameters of first)
-
             var map = first.Parameters.Select((f, i) => new { f, s = second.Parameters[i] }).ToDictionary(p => p.s, p => p.f);
-
-
-
             // replace parameters in the second lambda expression with parameters from the first
-
             var secondBody = ParameterRebinder.ReplaceParameters(map, second.Body);
-
-
-
             // apply composition of lambda expression bodies to parameters from the first expression 
-
             return Expression.Lambda<T>(merge(first.Body, secondBody), first.Parameters);
-
         }
-
-
         /// <summary>
         /// 添加“并且”条件（即sql where xxx=xxx and xx=xx中的and）
         /// </summary>
@@ -65,9 +50,7 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> first, Expression<Func<T, bool>> second)
         {
-
             return first.Compose(second, Expression.And);
-
         }
 
 
@@ -80,9 +63,7 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public static Expression<Func<T, bool>> Or<T>(this Expression<Func<T, bool>> first, Expression<Func<T, bool>> second)
         {
-
             return first.Compose(second, Expression.Or);
-
         }
 
     }

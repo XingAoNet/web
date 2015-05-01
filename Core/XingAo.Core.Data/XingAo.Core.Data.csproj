@@ -54,17 +54,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
+    <Compile Include="DataException.cs" />
     <Compile Include="DbConnectionProvider.cs" />
-    <Compile Include="ExpressionExtension.cs" />
-    <Compile Include="ExpressionVisitor.cs" />
-    <Compile Include="Extensions.cs" />
-    <Compile Include="IMapping.cs" />
-    <Compile Include="IQueryBuilder.cs" />
-    <Compile Include="MappingBase.cs" />
-    <Compile Include="MSSQLImp.cs" />
-    <Compile Include="OledbImp.cs" />
+    <Compile Include="Expressions\DBSource.cs" />
+    <Compile Include="Expressions\ExpressionExtension.cs" />
+    <Compile Include="Expressions\ExpressionVisitor.cs" />
+    <Compile Include="Expressions\Extensions.cs" />
+    <Compile Include="Pagination.cs" />
+    <Compile Include="Expressions\RepositoryBase.cs" />
+    <Compile Include="Mapping\IMapping.cs" />
+    <Compile Include="Expressions\IQueryBuilder.cs" />
+    <Compile Include="Mapping\MappingBase.cs" />
+    <Compile Include="Imp\MSSQLImp.cs" />
+    <Compile Include="Imp\OledbImp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScratchCardImp.cs" />
+    <Compile Include="Imp\ScratchCardImp.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>

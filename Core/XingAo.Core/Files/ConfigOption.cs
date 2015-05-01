@@ -117,7 +117,14 @@ namespace XingAo.Core
 
         public static string GetProviderName(string connectionStringName)
         {
-            return ConfigurationManager.ConnectionStrings[connectionStringName].ProviderName;
+            try
+            {
+                return ConfigurationManager.ConnectionStrings[connectionStringName].ProviderName;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         /// <summary>

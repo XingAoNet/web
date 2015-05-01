@@ -65,7 +65,7 @@ namespace XingAo.Core.Mail
             }
         }
 
-        public static bool Send(
+        public static void Send(
             MailSendAddr mailSendAddress,
             MailReceiveAddr mailReceiveAddress,
             MailMsg mailMessage)
@@ -82,13 +82,11 @@ namespace XingAo.Core.Mail
                 InitSmtpClinet(mailSendAddress);
                 client.Timeout = mailMessage.TimeOut;
                 client.Send(InitMailMessage(mailSendAddress, mailMessage, mailReceiveAddress));
-                return true;
             }
-            catch
+            catch(Exception ex)
             {
-                return false;
+                throw ex;
             }
-            
         }
 
 

@@ -15,5 +15,24 @@ namespace XingAo.Core.Data
         {
             configurationRegistrar.Add(this);
         }
+
+        public MappingBase<TEntity> DBMapping(string connectionName) {
+            this.connectionName = connectionName;
+            return this;
+        }
+
+        public System.Type TEntityType
+        {
+            get
+            {
+                return typeof(TEntity);
+            }
+        }
+
+        string connectionName;
+        public string ConnectionName
+        {
+            get { return connectionName; }
+        }
     }
 }

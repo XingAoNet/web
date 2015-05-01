@@ -46,7 +46,7 @@ namespace XingAo.Core.Mail
         /// <summary>
         /// 邮件超时时间
         /// </summary>
-        private int _timeOut = 1000;
+        private int _timeOut = 1000 * 60;
         public int TimeOut { get { return _timeOut; } set { _timeOut = value; } }
     }
 }
