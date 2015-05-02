@@ -62,7 +62,8 @@ namespace XingAo.Software.UserCenter.Model
         /// </summary>
         [Column("RegisterTime")]
         [Display(Name = "注册时间")]
-        public DateTime? RegisterTime { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm:ss}", ApplyFormatInEditMode = true)]
+        public DateTime RegisterTime { get; set; }
         /// <summary>
         /// 最后登录时间
         /// </summary>
@@ -99,7 +100,7 @@ namespace XingAo.Software.UserCenter.Model
         /// </summary>
         [Column("Point")]
         [Display(Name = "用户积分")]
-        public Int64? Point { get; set; }
+        public Int64 Point { get; set; }
         /// <summary>
         /// 用户组编号(外键）
         /// </summary>

@@ -6,7 +6,7 @@
     .selectUser{ border:#CCC solid 1px; padding:3px; margin:3px; line-height:26px;}
     .del{cursor:pointer; color:#f00; float:right;}
     #sendUserList{overflow:auto; height:98px; border:#ccc solid 1px;}
-     #sendUserList div{ display:block; float:left; width:80px;}
+     #sendUserList div{ display:block; float:left; width:90px;}
     .OptionInfo{ line-height:30px;}
     #BtnSender.disable{ color:Gray;}
 </style>
@@ -131,9 +131,9 @@ function kkk() {
         }
     });
 }
-//创建“手机号码”里面的姓名列表
-//mobile:手机号码
-//name：姓名
+    //创建“手机号码”里面的姓名列表
+    //mobile:手机号码
+    //name：姓名
     function CreateSendName(mobile, name)
     {
         if ($("#sendUserList").find("[mobile='" + mobile + "']").size() == 0)

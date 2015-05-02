@@ -13,7 +13,7 @@ namespace XingAo.Software.UserCenter.Model
     /// 用户操作日志
     /// </summary>
     [DBSource("XingAo_UserCenter")]
-    [Table("XingAo_UserCenter_OperationLog")]
+    [Table("XingAo_UserCenter_Log_Operation")]
     public partial class OperationLogModel
     {
         /// <summary>
@@ -22,12 +22,6 @@ namespace XingAo.Software.UserCenter.Model
         [Key,Column("UId", Order = 1)]
         [DisplayName("操作编号")]
         public int Id { get; set; }
-        /// <summary>
-        /// 用户编号
-        /// </summary>
-        [Column("UserId")]
-        [DisplayName("用户编号")]
-        public int UserId { get; set; }
         /// <summary>
         /// 操作类型(可根据配置读取类型）
         /// </summary>
@@ -51,7 +45,18 @@ namespace XingAo.Software.UserCenter.Model
         /// </summary>
         [Column("CreateTime")]
         [DisplayName("操作时间")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm:ss}", ApplyFormatInEditMode = true)]
         public DateTime CreateTime { get; set; }
+
+        [Column("Remark")]
+        [DisplayName("备注")]
+        public string Remark { get; set; }
+        /// <summary>
+        /// 用户编号
+        /// </summary>
+        [Column("UserId")]
+        [DisplayName("用户编号")]
+        public int UserId { get; set; }
         /// <summary>
         /// 用户信息
         /// </summary>
@@ -75,7 +80,7 @@ namespace XingAo.Software.UserCenter.Model.Mappings
     {
         public OperationLogMapping()
         {
-            this.ToTable("XingAo_UserCenter_OperationLog");
+            this.ToTable("XingAo_UserCenter_Log_Operation");
             this.HasRequired(m => m.User).WithMany(m => m.OperationLogList).HasForeignKey(t => t.UserId);
         }
     }

@@ -29,8 +29,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Core.Web", "Core\Xin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.UserCenter", "UserCenter\XingAo.Software.UserCenter\XingAo.Software.UserCenter.csproj", "{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.UserCenter.Impl", "UserCenter\XingAo.Software.UserCenter.Impl\XingAo.Software.UserCenter.Impl.csproj", "{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.UserCenter.Model", "UserCenter\XingAo.Software.UserCenter.Model\XingAo.Software.UserCenter.Model.csproj", "{64FBA8D1-982A-4177-99B4-00F75E5A5B87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.CMS.Template.Engine", "Template\XingAo.Networks.CMS.Template.Engine\XingAo.Networks.CMS.Template.Engine.csproj", "{7D7159A7-A842-44C8-B12E-527DCB72044C}"
@@ -53,7 +51,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.CMS.HttpMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Networks.VerifyPermissions", "Permission\XingAo.Networks.VerifyPermissions\XingAo.Networks.VerifyPermissions.csproj", "{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.Web.UserCenter", "UserCenter\XingAo.Software.Web.UserCenter\XingAo.Software.Web.UserCenter.csproj", "{448BBD2C-23C4-4960-AE25-8E98B8E2435A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingAo.Software.Web.UserCenter", "UserCenter\XingAo.Software.Web.UserCenter\XingAo.Software.Web.UserCenter.csproj", "{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,10 +87,6 @@ Global
 		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64FBA8D1-982A-4177-99B4-00F75E5A5B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -137,10 +131,10 @@ Global
 		{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209}.Release|Any CPU.Build.0 = Release|Any CPU
-		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{448BBD2C-23C4-4960-AE25-8E98B8E2435A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -162,9 +156,8 @@ Global
 		{DFCE7CDF-5C6A-4A8E-A4E4-2B264CAC4209} = {6F7FBEF5-A344-46AC-808A-02EEEDA3DE95}
 		{BA5F4142-17E8-49F0-850C-5BF3C8660AC2} = {933CBBD9-A5BB-45AB-8A02-5C33324482AB}
 		{454BE7B8-51AA-4731-BAC0-3B4E61B94C00} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
-		{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
 		{64FBA8D1-982A-4177-99B4-00F75E5A5B87} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
 		{1FD753F5-4530-4DAE-BDCE-0D7C0FDA83FC} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
-		{448BBD2C-23C4-4960-AE25-8E98B8E2435A} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
+		{F5586294-AEAD-4C4C-AFE0-8C883D10AC0E} = {87B48384-19A4-4FF3-A0EE-EA3675DBBC41}
 	EndGlobalSection
 EndGlobal

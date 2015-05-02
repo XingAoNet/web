@@ -6,61 +6,48 @@ using System.Web.Mvc;
 using XingAo.Core.Data;
 using System.Collections;
 using XingAo.Software.UserCenter.Model;
+using XingAo.Core;
 using XingAo.Core.Web;
+using XingAo.Software.UserCenter.Impl;
 
 namespace XingAo.Software.Web.Manager.Areas.UserCenter.Controllers
 {
     public class UserController : Controller
     {
-        UnitOfWork uk = new UnitOfWork();
+        UserRepository repository = new UserRepository();
+        Pagination pagination = new Pagination();
         //
         // GET: /UserCenter/User/
 
         public ActionResult Index()
         {
-            UnitOfWork uk = new UnitOfWork();
-            IList<UserModel> userModels = uk.FindAll<UserModel>().ToList();
-            return View(userModels);
+            pagination.PageNum = Request["PageNum"].ObjToInt() == -1 ? 1 : Request["PageNum"].ObjToInt();
+            var where = QueryBuilder.Create<UserModel>()
+                   .Like(c => c.UserName, "");
+            IList<UserModel> model = repository.Search(where, p => p.OrderByDescending(m => m.RegisterTime), pagination);
+            ViewBag.Pagination = pagination;
+            return View(model);
         }
 
-        public ActionResult Edit(string rel, int id = 0)
+        public ActionResult ChangePassword(int id)
         {
-            ViewBag.Rel = rel;
-            UserModel userModel = uk.FindSigne<UserModel>(u => u.Id == id) ;
-
-            return View(userModel);
-        }
-
-        [HttpPost]
-        public JsonResult Edit(UserModel model, string rel)
-        {
-            uk.Save<UserModel>(model, model.Id);
-            return Json(MsgResult.SuccessAndClosedDailog("修改成功。", rel));
-        }
-
-        [HttpPost]
-        public JsonResult Del(int[] ids, string rel)
-        {
-            if (uk.Remove<UserModel>(u => ids.Contains(u.Id)))
-                return Json(MsgResult.Success("删除成功。", rel));
-            else
-                return Json(MsgResult.Success("删除失败。", rel));
-        }
-
-        public ActionResult ChangePassword(string rel, int id)
-        {
-            ViewBag.Rel = rel;
+            ViewBag.Rel = Request["rel"];
             ViewBag.Id = id;
             return View();
         }
 
         [HttpPost]
-        public JsonResult ChangePassword(ChangePasswordModel model, string rel, int id)
+        public JsonResult ChangePassword(ChangePasswordModel model, int id)
         {
-            UserModel userModel = uk.FindSigne<UserModel>(u => u.Id == id);
-            userModel.Password = model.NewPassword;
-            uk.Save<UserModel>(userModel, id);
-            return Json(MsgResult.SuccessAndClosedDailog("修改成功。", rel));
+            UserModel userModel = repository.FindSign(u => u.Id == id);
+            if (userModel != null)
+            {
+                userModel.Password = model.NewPassword.ToMD5Two();
+                repository.Edit(id, userModel);
+                return Json(MsgResult.SuccessAndClosedDailog("修改成功。", Request["rel"]));
+            }
+            else
+                return Json(MsgResult.Error("修改的用户不存在。", Request["rel"]));
         }
     }
 }

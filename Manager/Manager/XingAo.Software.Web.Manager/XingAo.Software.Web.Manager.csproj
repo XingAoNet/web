@@ -78,10 +78,13 @@
     <Compile Include="Areas\Templates\TemplatesAreaRegistration.cs" />
     <Compile Include="Areas\UserCenter\Controllers\GroupController.cs" />
     <Compile Include="Areas\UserCenter\Controllers\HistoryController.cs" />
-    <Compile Include="Areas\UserCenter\Controllers\LevelController.cs" />
+    <Compile Include="Areas\UserCenter\Controllers\PointRecordController.cs" />
+    <Compile Include="Areas\UserCenter\Controllers\LogLoginController.cs" />
     <Compile Include="Areas\UserCenter\Controllers\MenuController.cs" />
+    <Compile Include="Areas\UserCenter\Controllers\PointRecordSenderRepository.cs" />
     <Compile Include="Areas\UserCenter\Controllers\RoleController.cs" />
     <Compile Include="Areas\UserCenter\Controllers\UserController.cs" />
+    <Compile Include="Areas\UserCenter\Controllers\UserHistoryRepository.cs" />
     <Compile Include="Areas\UserCenter\UserCenterAreaRegistration.cs" />
     <Compile Include="Areas\Wechats\WechatsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -630,6 +633,10 @@
       <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
       <Name>XingAo.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\UserCenter\XingAo.Software.UserCenter.Impl\XingAo.Software.UserCenter.Impl.csproj">
+      <Project>{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}</Project>
+      <Name>XingAo.Software.UserCenter.Impl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\UserCenter\XingAo.Software.UserCenter.Model\XingAo.Software.UserCenter.Model.csproj">
       <Project>{64FBA8D1-982A-4177-99B4-00F75E5A5B87}</Project>
       <Name>XingAo.Software.UserCenter.Model</Name>
@@ -657,9 +664,6 @@
     <Content Include="Areas\SysConfig\Views\SiteSetting\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\UserCenter\Views\User\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Areas\UserCenter\Views\User\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -676,6 +680,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\EmailCenter\Views\Sender\Review.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_PaginationPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\UserCenter\Views\Role\Add.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\UserCenter\Views\Group\Add.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\UserCenter\Views\Group\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\UserCenter\Views\LogLogin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\UserCenter\Views\PointRecord\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\UserCenter\Views\History\Index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -421,6 +421,7 @@ namespace XingAo.Core.Data
         /// <returns></returns>
         public IEnumerable<TEntity> LoadWhereLambda<TEntity>(Expression<Func<TEntity, bool>> Lambda) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             return DbContext.Set<TEntity>().Where(Lambda);
         }
         /// <summary>
@@ -436,6 +437,7 @@ namespace XingAo.Core.Data
         public IEnumerable<TEntity> LoadWhereLambda<TEntity>(Expression<Func<TEntity, bool>> Lambda, Func<IQueryable<TEntity>,
           IOrderedQueryable<TEntity>> orderBy, int CurPage, int PageSize, out int RecordCount) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             var source = DbContext.Set<TEntity>().Where(Lambda);
             RecordCount = source.Count();
             return orderBy(source).Skip((CurPage - 1) * PageSize).Take(PageSize).ToList();
@@ -454,6 +456,7 @@ namespace XingAo.Core.Data
         public IEnumerable<TEntity> LoadWhereLambda<TEntity>(Expression<Func<TEntity, bool>> Lambda, Func<IQueryable<TEntity>,
           IOrderedQueryable<TEntity>> orderBy, int CurPage, int PageSize) where TEntity : class
         {
+            EnsureMapping<TEntity>();
             var source = DbContext.Set<TEntity>().Where(Lambda);
             return orderBy(source).Skip((CurPage - 1) * PageSize).Take(PageSize);
         }

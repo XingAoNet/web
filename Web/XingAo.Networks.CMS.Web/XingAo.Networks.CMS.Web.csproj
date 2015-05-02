@@ -2461,6 +2461,7 @@
     <Folder Include="Manager\Article\Navigation\" />
     <Folder Include="Manager\kindeditor417\attached\" />
     <Folder Include="Manager\SysConfigs\Users\" />
+    <Folder Include="Templates\yesee\" />
     <Folder Include="upload\AdJS\" />
     <Folder Include="upload\flash\" />
   </ItemGroup>

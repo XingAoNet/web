@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\LogLoginModel.cs" />
     <Compile Include="View\ChangePasswordModel.cs" />
     <Compile Include="Entity\GroupModel.cs" />
     <Compile Include="View\FindPassword.cs" />

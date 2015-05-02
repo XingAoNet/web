@@ -13,7 +13,7 @@ namespace XingAo.Software.UserCenter.Model
     /// 用户积分流水记录
     /// </summary>
     [DBSource("XingAo_UserCenter")]
-    [Table("XingAo_UserCenter_PointRecord")]
+    [Table("XingAo_UserCenter_Point_Record")]
     public partial class PointRecordModel
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace XingAo.Software.UserCenter.Model
         [Key, Column("UID", Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("编号")]
-        public int ID { get; set; }
+        public int Id { get; set; }
         /// <summary>
         /// 影响积分的名称，比如：兑换xxx、签到得xxx分、注册时系统赠送等之类的描述
         /// </summary>	
@@ -58,7 +58,8 @@ namespace XingAo.Software.UserCenter.Model
         /// </summary>	
         [Column("CreateTime")]
         [DisplayName("操作时间")]
-        public DateTime CreateTime { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm:ss}", ApplyFormatInEditMode = true)]
+        public DateTime? CreateTime { get; set; }
         /// <summary>
         /// 是否审核通过，0--未处理 1--通过 2--拒绝(征对兑换之类需要审核的情况，如果无需审核的，请在数据操作时直接提交成通过状态即可)
         /// </summary>	
@@ -70,19 +71,20 @@ namespace XingAo.Software.UserCenter.Model
         /// </summary>	
         [Column("AuditUserID")]
         [DisplayName("审核人编号(征对兑换之类需要审核的情况，如果无需审核的，此字段值为用户自己的id)")]
-        public int AuditUserID { get; set; }
+        public int? AuditUserID { get; set; }
         /// <summary>
         /// 审核通过时间
         /// </summary>	
         [Column("AuditTime")]
         [DisplayName("审核通过时间")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm:ss}", ApplyFormatInEditMode = true)]
         public DateTime AuditTime { get; set; }
         /// <summary>
         /// 备注
         /// </summary>	
-        [Column("Descriptions")]
+        [Column("Descrption")]
         [DisplayName("备注")]
-        public string Descriptions { get; set; }
+        public string Descrption { get; set; }
         /// <summary>
         /// 用户信息
         /// </summary>
@@ -105,7 +107,7 @@ namespace XingAo.Software.UserCenter.Model.Mappings
     {
         public PointRecordMapping()
         {
-            this.ToTable("XingAo_UserCenter_PointRecord");
+            this.ToTable("XingAo_UserCenter_Point_Record");
             this.HasRequired(m => m.User).WithMany(m => m.PointRecordList).HasForeignKey(t => t.UserID);
             //当用户时审核人时，关联审核信息（建议用管理员ID）
             //this.HasRequired(m => m.User).WithMany(m => m.PointRecordList).HasForeignKey(t => t.AuditUserID);

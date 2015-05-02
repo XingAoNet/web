@@ -20,9 +20,6 @@
     <div class="pageContent">
 	    <div class="panelBar">
 		    <ul class="toolBar">
-			    <li><a class="add" href="UserCenter/User/Edit?rel=@Request["rel"]" target="dialog" width="760" height="440" title="添加会员信息" rel="@Request["rel"]_"><span>添加</span></a></li>
-			    <li><a class="delete"href="UserCenter/User/del?id={ids}&rel=@Request["rel"]" target="selectedTodo" title="确实要删除这些记录吗?"  rel="@Request["rel"]_delete"><span>删除所选</span></a></li>
-			    <li><a class="edit" href="UserCenter/User/Edit?id={sid}&rel=@Request["rel"]" target="dialog" title="修改会员信息" rel="@Request["rel"]_edit" warn="请选择一条数据" width="760" height="440"><span>修改会员信息</span></a></li>
 			    <li><a class="edit" href="UserCenter/User/ChangePassword?id={sid}&rel=@Request["rel"]" target="dialog" title="修改密码" rel="@Request["rel"]_password" warn="请选择一条数据" width="550" height="200"><span>修改密码</span></a></li>
 		    </ul>
 	    </div>
@@ -38,7 +35,11 @@
                     <th>邮箱</th>
                     <th width="50" align="center">可用</th>
                     <th width="50" align="center">审核</th>
+                    <th width="50" align="center">删除</th>
                     <th width="140">最后登录时间</th>
+                    <th width="140">注册时间</th>
+                    <th width="80">角色</th>
+                    <th width="80">用户组</th>
 			    </tr>
 		    </thead>
 		    <tbody>
@@ -46,7 +47,7 @@
             {
 			    <tr target="sid" rel="@m.Id">
 				    <td><input name="ids" value="@m.Id" type="checkbox"></td>
-				    <td><a href="UserCenter/User/Edit?id=@m.Id" target="dialog"  title="会员详细">@m.UserName</a></td>
+				    <td>@m.UserName</td>
                     <td>@m.Phone</td>
 				    <td>@m.RealName</td>
 				    <td>@m.Point</td>
@@ -54,24 +55,45 @@
                     <td><a href="mailto:@m.Email">@m.Email</a></td>
                     <td align="center">@Html.CheckBox("Enable", m.Enable, new { disabled = "disabled" })</td>
                     <td align="center">@Html.CheckBox("Enable", m.Audit, new { disabled = "disabled" })</td>			
+                    <td align="center">@Html.CheckBox("Enable", m.IsDel, new { disabled = "disabled" })</td>			
                     <td>@Html.DisplayFor(p=>m.LastLoginTime)</td>
+                    <td>@Html.DisplayFor(p=>m.LastLoginTime)</td>
+                    <td>@m.Role.Name</td>	
+                    <td>@m.Group.Name</td>	
 			    </tr>
             }
             </tbody>
 	    </table>
+        @*分页控件*@
+        @{XingAo.Core.Data.Pagination pagination = ViewBag.Pagination; }
+        @using (Html.BeginForm("Index", "User", FormMethod.Post, new { @id = "pagerForm" }))
+        {
+            <input type="hidden" name="pageNum" value="@pagination.PageNum" /><!--【必须】value=1可以写死-->  
+            <input type="hidden" name="numPerPage" value="@pagination.NumPerPage" /><!--【可选】每页显示多少条-->
+        }
 	    <div class="panelBar">
 		    <div class="pages">
 			    <span>显示</span>
-			    <select name="numPerPage"> @* class="combox" 会导致页面一致在加载，还没有找到原因*@
-				    <option value="20">20</option>
-				    <option value="50">50</option>
-				    <option value="100">100</option>
-				    <option value="200">200</option>
+			    <select name="numPerPage" class="combox" onchange="navTabPageBreak({numPerPage:this.value})">
+                @{  
+                    int[] nums = new int[] { 20, 50, 100, 200 };
+                    foreach (var num in nums)
+                    {
+                        if (Int32.Parse(pagination.NumPerPage.ToString()) == num)
+                        {  
+                            <option value="@num" selected="selected">@num</option>
+                        }
+                        else
+                        {
+                            <option value="@num">@num</option>
+                        }
+                    }
+                }
 			    </select>
-			    <span>条，共1条，每页1条，当前第1/1页</span>
+			    <span>条，共 @pagination.TotalCount 条，每页显示 @pagination.NumPerPage 条，当前第 @pagination.PageNum/@pagination.PageCount 页</span>
 		    </div>
-	        <div id="moveContent" style="position:absolute; width:600px; border:3px solid red; top:0; left:0; display:none; background:#FFF; padding:5px;"></div>	
-            <div class="pagination" targetType="navTab" totalCount="<%=TotalCount %>" numPerPage="<%=PageSize %>" pageNumShown="<%=PageNumShown %>" currentPage="<%=PageNum %>"></div>
+            <div class="pagination" targetType="navTab" totalCount="@pagination.TotalCount" numPerPage="@pagination.NumPerPage" 
+                pageNumShown="@pagination.PageNumShown" currentPage="@pagination.PageNum"></div>
 	    </div>
     </div>
 </div>

@@ -28,6 +28,7 @@ namespace XingAo.Software.UserCenter.Model
         /// </summary>
         [Column("CreateTime")]
         [Display(Name = "创建时间")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm:ss}", ApplyFormatInEditMode = true)]
         public DateTime CreateTime { get; set; }
         /// <summary>
         /// 角色类型

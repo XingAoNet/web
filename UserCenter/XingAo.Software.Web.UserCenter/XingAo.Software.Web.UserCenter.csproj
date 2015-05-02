@@ -200,7 +200,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Config\AppSetting.config" />
+    <Content Include="Config\AppSetting.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Config\Connection.config" />
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +230,10 @@
     <ProjectReference Include="..\..\Core\XingAo.Core\XingAo.Core.csproj">
       <Project>{4A59DB87-F77A-41B1-9EF3-ED99F06504B1}</Project>
       <Name>XingAo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XingAo.Software.UserCenter.Impl\XingAo.Software.UserCenter.Impl.csproj">
+      <Project>{2E72B9F3-BCB0-482E-AACE-E604CD4EAABA}</Project>
+      <Name>XingAo.Software.UserCenter.Impl</Name>
     </ProjectReference>
     <ProjectReference Include="..\XingAo.Software.UserCenter.Model\XingAo.Software.UserCenter.Model.csproj">
       <Project>{64FBA8D1-982A-4177-99B4-00F75E5A5B87}</Project>
