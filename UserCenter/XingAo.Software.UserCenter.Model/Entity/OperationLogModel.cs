@@ -27,7 +27,7 @@ namespace XingAo.Software.UserCenter.Model
         /// </summary>
         [Column("Type")]
         [DisplayName("操作类型(可根据配置读取类型）")]
-        public int Type { get; set; }
+        public Int16 Type { get; set; }
         /// <summary>
         /// 操作IP地址
         /// </summary>
@@ -57,10 +57,9 @@ namespace XingAo.Software.UserCenter.Model
         [Column("UserId")]
         [DisplayName("用户编号")]
         public int UserId { get; set; }
-        /// <summary>
-        /// 用户信息
-        /// </summary>
         public virtual UserModel User { get; set; }
+        [DisplayName("用户名称")]
+        public string UserName { get; set; }
     }
     /// <summary>
     /// 用户信息

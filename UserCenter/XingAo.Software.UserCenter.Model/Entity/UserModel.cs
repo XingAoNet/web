@@ -72,19 +72,19 @@ namespace XingAo.Software.UserCenter.Model
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm:ss}", ApplyFormatInEditMode = true)]
         public DateTime LastLoginTime { get; set; }
         /// <summary>
-        /// 帐号是否可用（1--可用，0--禁用）
+        /// 帐号是否可用（true--可用，false--禁用）
         /// </summary>
         [Column("Enable")]
         [Display(Name = "是否可用")]
         public bool Enable { get; set; }
         /// <summary>
-        /// 审核状态：0--未审核 1--审核通过
+        /// 审核状态：false--未审核 true--审核通过
         /// </summary>	
         [Column("Audit")]
         [Display(Name = "审核状态")]
         public bool Audit { get; set; }
         /// <summary>
-        /// 帐号是否被删除:0--未删除 1--已删除
+        /// 帐号是否被删除:false--未删除 true--已删除
         /// </summary>
         [Column("IsDel")]
         [Display(Name = "是否删除")]

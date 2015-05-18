@@ -56,6 +56,14 @@
     <Compile Include="MenuModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteSettingModel.cs" />
+    <Compile Include="SMS\Model\SendListModel.cs" />
+    <Compile Include="SMS\Model\SendLogModel.cs" />
+    <Compile Include="SMS\Model\SMSSettingModel.cs" />
+    <Compile Include="SMS\Model\SMSSenderModel.cs" />
+    <Compile Include="SMS\SMSSenderRepository.cs" />
+    <Compile Include="SMS\SMSSettingRepository.cs" />
+    <Compile Include="SMS\Model\SMSTemplateModel.cs" />
+    <Compile Include="SMS\SMSTemplateRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\XingAo.Core.Data\XingAo.Core.Data.csproj">

@@ -57,11 +57,13 @@
     <Compile Include="Entity\NavModel.cs" />
     <Compile Include="Entity\OperationLogModel.cs" />
     <Compile Include="Entity\PointRecordModel.cs" />
+    <Compile Include="View\RegisterByEMailModel.cs" />
     <Compile Include="View\RegisterByPhoneModel.cs" />
     <Compile Include="Entity\ResetPasswordModel.cs" />
     <Compile Include="Entity\RoleModel.cs" />
     <Compile Include="Entity\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\RegisterModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\XingAo.Core.Data\XingAo.Core.Data.csproj">

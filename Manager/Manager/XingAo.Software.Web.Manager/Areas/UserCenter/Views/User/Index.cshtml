@@ -21,6 +21,9 @@
 	    <div class="panelBar">
 		    <ul class="toolBar">
 			    <li><a class="edit" href="UserCenter/User/ChangePassword?id={sid}&rel=@Request["rel"]" target="dialog" title="修改密码" rel="@Request["rel"]_password" warn="请选择一条数据" width="550" height="200"><span>修改密码</span></a></li>
+			    <li><a class="edit" href="UserCenter/User/Audit?id={sid}&rel=@Request["rel"]" rel="ids" title="您确定审核该用户?" warn="请选择一条数据" target="selectedTodo"><span>审核</span></a></li>
+			    <li><a class="edit" href="UserCenter/User/Enable?id={sid}&rel=@Request["rel"]" rel="ids" title="您确定禁用该用户?" warn="请选择一条数据" target="selectedTodo"><span>禁用</span></a></li>
+			    <li><a class="edit" href="UserCenter/User/IsDel?id={sid}&rel=@Request["rel"]" rel="ids" title="您确定删除该用户?" warn="请选择一条数据" target="selectedTodo"><span>删除</span></a></li>
 		    </ul>
 	    </div>
 	    <table class="table" width="100%" layoutH="138">

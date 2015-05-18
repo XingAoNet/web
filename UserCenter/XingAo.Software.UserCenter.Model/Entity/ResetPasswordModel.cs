@@ -19,7 +19,8 @@ namespace XingAo.Software.UserCenter.Model
         /// <summary>
         /// 重置编号
         /// </summary>
-        [Key,Column("UId")]
+        [Key,Column("UId",Order=1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("重置编号")]
         public int Id { get; set; }
         /// <summary>
@@ -28,12 +29,6 @@ namespace XingAo.Software.UserCenter.Model
         [Column("Code")]
         [DisplayName("申请的唯一标志，程序将根据此值来决定对应的用户是否可以直接打开页面就修改密码")]
         public string Code { get; set; }
-        /// <summary>
-        /// 用户编号
-        /// </summary>
-        [Column("UserId")]
-        [DisplayName("用户编号")]
-        public int UserId { get; set; }
         /// <summary>
         /// 创建时间（30分钟后数据将被清除）
         /// </summary>
@@ -52,6 +47,12 @@ namespace XingAo.Software.UserCenter.Model
         [Column("ClientIP")]
         [DisplayName("客户端IP（用于验证同一个用户）")]
         public string ClientIP { get; set; }
+        /// <summary>
+        /// 用户编号
+        /// </summary>
+        [Column("UserId")]
+        [DisplayName("用户编号")]
+        public int UserId { get; set; }
         /// <summary>
         /// 用户信息
         /// </summary>

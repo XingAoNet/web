@@ -20,6 +20,7 @@ namespace XingAo.Software.Web.Manager.Areas.EmailCenter.Controllers
             EmailSettingRepository repository = new EmailSettingRepository();
             return View(repository.GetLastEmailSetting());
         }
+
         [HttpPost]
         public JsonResult Index(EmailSettingModel model)
         {

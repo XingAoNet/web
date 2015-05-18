@@ -19,6 +19,7 @@ namespace XingAo.Software.ConfigCenter
     /// <summary>
     ///表名：XingAo_SysConfigs_Setting的实体
     /// </summary>	
+    [DBSource("XingAo_SysConfigs")]
     [Table("XingAo_SysConfigs_Setting")]//数据库真实表名
     public partial class SettingModel
     {

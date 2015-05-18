@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using XingAo.Core;
 using XingAo.Core.Data;
 using XingAo.Software.UserCenter.Model;
+using XingAo.Software.UserCenter.Impl;
 
 namespace XingAo.Software.Web.Manager.Areas.UserCenter.Controllers
 {

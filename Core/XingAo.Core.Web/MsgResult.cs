@@ -33,31 +33,35 @@ namespace XingAo.Core.Web
         /// 返回成功消息
         /// </summary>
         /// <param name="msg"></param>
-        /// <param name="Id"></param>
+        /// <param name="navTabId"></param>
         /// <returns></returns>
-        public static MsgResultModel Success(string msg, string Id)
+        public static MsgResultModel Success(string msg, string navTabId)
         {
-            return ShowResult(msg, 200, Id,"", "", "", "");
+            return ShowResult(msg, 200, navTabId, "", "", "", "");
         }
         /// <summary>
         /// 返回成功的消息并关闭当前对话框
         /// </summary>
         /// <param name="msg"></param>
-        /// <param name="Id"></param>
+        /// <param name="navTabId"></param>
         /// <returns></returns>
-        public static MsgResultModel SuccessAndClosedDailog(string msg, string Id)
+        public static MsgResultModel SuccessAndClosedDailog(string msg, string navTabId)
         {
-            return ShowResult(msg, 200, Id, "", "closeCurrent", "", "");
+            return ShowResult(msg, 200, navTabId, "", "closeCurrent", "", "");
+        }
+        public static MsgResultModel SuccessAndClosedDailog(string msg, string navTabId, string forwardUrl)
+        {
+            return ShowResult(msg, 200, navTabId, "", "closeCurrent", forwardUrl, "");
         }
         /// <summary>
         /// 返回错误消息
         /// </summary>
         /// <param name="msg"></param>
-        /// <param name="Id"></param>
+        /// <param name="navTabId"></param>
         /// <returns></returns>
-        public static MsgResultModel Error(string msg, string Id)
+        public static MsgResultModel Error(string msg, string navTabId)
         {
-            return ShowResult(msg, 300, Id, "", "", "", "");
+            return ShowResult(msg, 300, navTabId, "", "", "", "");
         }
         /// <summary>
         /// 登录超时消息
@@ -80,9 +84,9 @@ namespace XingAo.Core.Web
         /// <param name="forwardUrl"></param>
         /// <param name="confirmMsg"></param>
         /// <returns></returns>
-        public static MsgResultModel ShowResult(string msg, int statsCode,string id, string rel, string callbackType, string forwardUrl, string confirmMsg)
+        public static MsgResultModel ShowResult(string msg, int statsCode, string navTabId, string rel, string callbackType, string forwardUrl, string confirmMsg)
         {
-            return new MsgResultModel() { message = msg, statusCode = statsCode, navTabId = id, rel = rel, callbackType = callbackType, forwardUrl = forwardUrl, confirmMsg = confirmMsg };
+            return new MsgResultModel() { message = msg, statusCode = statsCode, navTabId = navTabId, rel = rel, callbackType = callbackType, forwardUrl = forwardUrl, confirmMsg = confirmMsg };
         }
     }
 }
